@@ -10,6 +10,18 @@ The IG can be built locally; if you have the [IG publisher environment](https://
 
 The json examples can be pulled from the CI build or a local build; and uploaded to a HAPI server using the `hapi-fhir-cli` `upload-dir` command.
 
+## manual expansion
+
+Given that the IG publisher doesn't like to expand large valueSets, one can look at the SAMHSA valuesets either by going to vsac, or by manually expanding on tx.
+
+SAMHSA big valueset - https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1142.58/expansion/Latest
+
+tx.fhir.org using the URL method:
+- `http://tx.fhir.org/r4/ValueSet/?url={url}`
+
+For example the SAMHSA `.36` valueset which has 1436 items in it can be expanded as such:
+http://tx.fhir.org/r4/ValueSet/?url=http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.36
+
 ## Issues
 
 - The valueSets do have some info warnings that I left in as they are beyond my skills
