@@ -4,7 +4,9 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: SHIFT-Task-Force.slsValueSets
 canonical: http://SHIFT-Task-Force.github.io/slsValueSets
-name: ShiftSlsValueSets 
+name: ShiftSlsValueSets
+title: SHIFT SLS ValueSets Implementation Guide
+description: An Implementation Guide for Security Labeling Services (SLS) ValueSets developed by the SHIFT Task Force.
 status: active
 version: 0.0.1
 fhirVersion: 4.0.1

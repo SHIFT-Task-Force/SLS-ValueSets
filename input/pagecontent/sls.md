@@ -30,7 +30,7 @@ graph TD
 
 <div markdown="1" class="stu-note">
 
-Note that there are [example ValueSets of sensitive codes](artifacts.html#securitylabelingservices) included here, but they are included only as examples. Formal ValueSet building is being done in HL7 as part of the [HL7 Cross-Paradigm Sensitive Data and Sensitivity Flags Library and Guidance](https://confluence.hl7.org/spaces/CGP/pages/321160258/Cross-Paradigm+Sensitive+Data+and+Sensitivity+Flags+Library+and+Guidance).
+Note that there are [example ValueSets of sensitive codes](artifacts.html) included here, but they are included only as examples. Formal ValueSet building is being done in HL7 as part of the [HL7 Cross-Paradigm Sensitive Data and Sensitivity Flags Library and Guidance](https://confluence.hl7.org/spaces/CGP/pages/321160258/Cross-Paradigm+Sensitive+Data+and+Sensitivity+Flags+Library+and+Guidance).
 </div>
 
 ### Sensitive Topic ValueSets from the SLS Reference Implementation

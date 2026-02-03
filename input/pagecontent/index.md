@@ -1,4 +1,4 @@
-Privacy Consent driven access control through data sensitivity tagging.
+Privacy Consent driven access control through data sensitivity tagging. These ValueSets and SLS are in support of the [SHIFT Task Force's demo patients IG](https://build.fhir.org/ig/SHIFT-Task-Force/demo-fhir-data)
 
 [Security Labeling Service Discussion](sls.html) and Reference Implementation.
 

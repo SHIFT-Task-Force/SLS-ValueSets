@@ -241,7 +241,7 @@ Code system defining sensitivity categories for health information segmentation 
 Note did not use HL7 v2-ActCodes as two of the three categories are not represented there, and the GENDER code may be more broad than GENDER_AFFIRMING_CARE as intended here.
 """
 * content = #complete
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/CodeSystem/cs-health-sensitivity"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/CodeSystem/cs-health-sensitivity"
 * version = "0.1.0"
 * jurisdiction[0] = http://unstats.un.org/unsd/methods/m49/m49.htm#840 "United States of America"
 * caseSensitive = true
@@ -281,9 +281,9 @@ Usage: #definition
 * title = "AB352 Segmentation Tags"
 * name = "VS_Ab352_Segmentation_Tags"
 * description = "ValueSet of security labels used to segment AB352-sensitive health information in meta.security."
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/vs-ab352-segmentation-tags"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/vs-ab352-segmentation-tags"
 //* compose.inactive = true
-* compose.include[0].system = "http://SHIFT-Task-Force.github.io/demo-fhir-data/CodeSystem/cs-health-sensitivity"
+* compose.include[0].system = "http://SHIFT-Task-Force.github.io/slsValueSets/CodeSystem/cs-health-sensitivity"
 
 
 Alias: $loinc = http://loinc.org

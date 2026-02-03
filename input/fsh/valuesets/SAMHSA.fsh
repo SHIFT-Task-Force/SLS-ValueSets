@@ -92,7 +92,7 @@ PSY - psychiatry disorder information sensitivity
 //*  http://loinc.org#74013-4
 
 * name = "SamhsaSensitivePSY"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitivePSY"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitivePSY"
 * status = #active
 * experimental = false
 * compose.inactive = true
@@ -169,7 +169,7 @@ ETH - substance abuse information sensitivity (alcohol or drug-abuse information
 """
 
 * name = "SamhsaSensitiveETH"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitiveETH"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETH"
 * status = #active
 * experimental = false
 * compose.inactive = true
@@ -248,7 +248,7 @@ ETHUD - alcohol abuse information sensitivity (alcohol abuse information)
 """
 
 * name = "SamhsaSensitiveETHUD"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitiveETHUD"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHUD"
 * status = #active
 * experimental = false
 * compose.inactive = true
@@ -320,7 +320,7 @@ OPIOIDUD - Opioid substance abuse information sensitivity (drug-abuse informatio
 """
 
 * name = "SamhsaSensitiveOPIOIDUD"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitiveOPIOIDUD"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
 * status = #active
 * experimental = false
 * compose.inactive = true
@@ -387,7 +387,7 @@ SDV - Sexual assault, abuse or domestic violence
 """
 
 * name = "SamhsaSensitiveSDV"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitiveSDV"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveSDV"
 * status = #active
 * experimental = false
 * compose.inactive = true
@@ -416,7 +416,7 @@ HIV/AIDS information
 """
 
 * name = "SamhsaSensitiveHIV"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitiveHIV"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveHIV"
 * status = #active
 * experimental = false
 * compose.inactive = true
@@ -444,7 +444,7 @@ ETH - substance abuse information sensitivity (alcohol or drug-abuse information
 These valueSets are `not maintained`, the codes in these valueSets are inactive/retired. However they don't show in some distributions of vsac such as the HL7 package.
 """
 * name = "SamhsaSensitiveETHJustRx"
-* url = "http://SHIFT-Task-Force.github.io/demo-fhir-data/ValueSet/SamhsaSensitiveETHJustRx"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHJustRx"
 * status = #active
 * experimental = false
 * compose.inactive = true
