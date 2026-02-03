@@ -1,0 +1,72 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: SHIFT-Task-Force.slsValueSets
+canonical: http://SHIFT-Task-Force.github.io/slsValueSets
+name: ShiftSlsValueSets 
+status: active
+version: 0.0.1
+fhirVersion: 4.0.1
+copyrightYear: 2025+
+releaseLabel: ci-build
+publisher:
+  name: SHIFT-Task-Force
+  url: http://shift-project.org
+license: CC-BY-4.0
+jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
+
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontent
+#    - fsh-generated/includes
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'false'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+
+## vsac Must use 0.19.0 as higher versions removed the SAMHSA valueSets
+dependencies:
+  us.nlm.vsac: 
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    version: 0.19.0
+#    version: 0.24.0
+
+#dependencies:
+#  hl7.fhir.us.core: 4.0.0
+#  hl7.fhir.us.core: current
+#  ihe.iti.pcf: 1.1.0
+#  hl7.xprod.uv.gender-harmony: current
+
+# ╭────────────────────────────────────────────pages───────────────────────────────────────────────╮
+# │  The pages property corresponds to IG.definition.page.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+pages:
+  index.md:
+    title: "SHIFT IG Home"
+  sls.md:
+    title: "Security Labeling Services (SLS)"
+  synthea.md:
+    title: "Synthea Modules Used"
+  ab352.md:
+    title: "California AB352 Use Case"
+  download.md:
+    title: "About and Download"
+
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  SLS: sls.html
+  Artifacts: artifacts.html
+  About: download.html
+
