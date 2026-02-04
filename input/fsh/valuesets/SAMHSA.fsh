@@ -95,7 +95,11 @@ PSY - psychiatry disorder information sensitivity
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitivePSY"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
 * compose.inactive = true
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PSY "psychiatry disorder information sensitivity"
 // SAMHSA C2S Mental Health Disorders
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.32" // ICD10CM
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.33" // ICD9CM
@@ -172,6 +176,10 @@ ETH - substance abuse information sensitivity (alcohol or drug-abuse information
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETH"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#ETH
 * compose.inactive = true
 // SAMHSA  C2S Alcohol Use Disorders
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.1" // SNOMEDCD
@@ -251,6 +259,10 @@ ETHUD - alcohol abuse information sensitivity (alcohol abuse information)
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHUD"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#ETHUD 
 * compose.inactive = true
 // SAMHSA  C2S Alcohol Use Disorders
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.1" // SNOMEDCD
@@ -323,6 +335,10 @@ OPIOIDUD - Opioid substance abuse information sensitivity (drug-abuse informatio
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
 * compose.inactive = true
 // SAMHSA C2S Amphetamine Use Disorders
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.10" // RXNORM
@@ -390,6 +406,10 @@ SDV - Sexual assault, abuse or domestic violence
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveSDV"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SDV
 * compose.inactive = true
 // SAMHSA C2S Sexuality and reproductive health information sensitivity
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.49" // ICD9CM
@@ -419,6 +439,10 @@ HIV/AIDS information
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveHIV"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIV
 * compose.inactive = true
 // SAMHSA C2S HIV/AIDS Information
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.23" // HCPCS
@@ -447,7 +471,33 @@ These valueSets are `not maintained`, the codes in these valueSets are inactive/
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHJustRx"
 * status = #active
 * experimental = false
+* version = "0.1.0"
+* date = "2016-09-09" // based on vsac publication date
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#ETH 
 * compose.inactive = true
 // SAMHSA C2S Amphetamine Use Disorders
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.10" // RXNORM
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.57" // RXNORM
+
+// Bundle of all of the SAMHSA sensitive valueSets
+Instance: SamhsaSensitiveBundle
+InstanceOf: Bundle
+Usage: #example
+Title: "Bundle of all SAMHSA sensitive ValueSets"
+Description: "A bundle containing all of the SAMHSA sensitive ValueSets defined in this file."
+* type = #collection
+* entry[+].resource = SamhsaSensitivePSY
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitivePSY"
+* entry[+].resource = SamhsaSensitiveETH
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETH"
+* entry[+].resource = SamhsaSensitiveETHUD
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHUD"
+* entry[+].resource = SamhsaSensitiveOPIOIDUD
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
+* entry[+].resource = SamhsaSensitiveSDV
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveSDV"
+* entry[+].resource = SamhsaSensitiveHIV
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveHIV"
+
+

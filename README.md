@@ -22,6 +22,21 @@ tx.fhir.org using the URL method:
 For example the SAMHSA `.36` valueset which has 1436 items in it can be expanded as such:
 http://tx.fhir.org/r4/ValueSet/?url=http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.36
 
+## SAMHSA ValueSet Viewer App
+
+A web application has been created to easily browse and explore all SAMHSA ValueSets using tx.fhir.org. The app is available at:
+
+**[SAMHSA ValueSet Viewer](https://shift-task-force.github.io/SLS-ValueSets/)** *(after GitHub Pages is enabled)*
+
+Features:
+- Browse all SAMHSA C2S ValueSets from a dropdown menu
+- View expanded ValueSets in a sortable, filterable table
+- Display system, version, code, display name, and active status for each code
+- Export data to CSV or JSON format
+- View statistics about each ValueSet
+
+See [docs/README.md](docs/README.md) for more information about deploying and using the viewer.
+
 ## Issues
 
 - The valueSets do have some info warnings that I left in as they are beyond my skills

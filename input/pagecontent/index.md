@@ -6,7 +6,7 @@ Privacy Consent driven access control through data sensitivity tagging. These Va
 
 The following ValueSets are derived from the SAMHSA
 
-SAMHSA big valueset - https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1142.58/expansion/Latest
+SAMHSA big valueset - [https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1142.58/expansion/Latest](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1142.58/expansion/Latest)
 
 - [Set of codes that indicate ETH (alcohol and drug)](ValueSet-SamhsaSensitiveETH.html)
   - [Set of codes that indicate ETHUD (alcohol)](ValueSet-SamhsaSensitiveETHUD.html)

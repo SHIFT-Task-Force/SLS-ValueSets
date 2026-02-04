@@ -1,9 +1,9 @@
 
 I have been looking at Synthea for inspiration on medical health data. I did not know that it does have some ability to create some sensitive health topics. It does not know these are sensitive health topics, it just knows they are kinds of health episodes, that they call "Modules".
 
-Synthea is an effort by Mitre https://github.com/synthetichealth to create tooling to create test data that should be realistic, but is completely fabricated. As such they have "modules" for various kinds of health episodes, for which each module covers the lifecycle of that health topic.
+Synthea is an effort by Mitre [https://github.com/synthetichealth](https://github.com/synthetichealth) to create tooling to create test data that should be realistic, but is completely fabricated. As such they have "modules" for various kinds of health episodes, for which each module covers the lifecycle of that health topic.
 
-https://github.com/synthetichealth/synthea/wiki/Module-Gallery
+[Synthea Module Gallery](https://github.com/synthetichealth/synthea/wiki/Module-Gallery)
 
 It would be good to be able to identify which of these modules fall into which of our concepts of sensitive categories.
 
@@ -13,9 +13,9 @@ From that, we can grab the clinical codes that Synthea uses in those sensitive m
 
 The [synthea module Opioid Addiction](https://github.com/synthetichealth/synthea/wiki/Module-Gallery#Opioid-Addiction) is well aligned with our Behavioral Health use-case, as that also includes Opioid codes.
 
-Here is their [graphical UI for modules and creating of new modules](https://synthetichealth.github.io/module-builder#opioid_addiction). It becomes very clear that doing a code match against codes in the data object is not sufficient.  The module creates many encounters that are not themselves problematic, but because of a pattern (of abuse) the patient becomes understood as having Opioid Addiction... So, should the non-problematic, but behavioral displaying, encounters to be somehow detected by the SLS? If so, it is not going to do it because of some clear code. I can look at the example data to see if the condition reference these encounters, which would be one way to detect this; but that brings up the point that these indirect linkages are likely to tag everything. 
+Here is their [graphical UI for modules and creating of new modules](https://synthetichealth.github.io/module-builder#opioid_addiction). It becomes very clear that doing a code match against codes in the data object is not sufficient.  The module creates many encounters that are not themselves problematic, but because of a pattern (of abuse) the patient becomes understood as having Opioid Addiction... So, should the non-problematic, but behavioral displaying, encounters to be somehow detected by the SLS? If so, it is not going to do it because of some clear code. I can look at the example data to see if the condition reference these encounters, which would be one way to detect this; but that brings up the point that these indirect linkages are likely to tag everything.
 
-Here are the codes I find in that module that seem indicative in sushi valueSet form (I could add these to our demo github, but that does not update the SLS code.I will note that NONE of the codes used in the synthea opioid addiction use-case are in our current valueSet or SLS, none of them.
+Here are the codes I find in that module that seem indicative in sushi valueSet form. I could add these to our demo github, but that does not update the SLS code. I will note that NONE of the codes used in the synthea opioid addiction use-case are in our current valueSet or SLS, none of them.
 
 ```fsh
 * http://snomed.info/sct#1149222004 "Overdose (disorder)"
@@ -33,7 +33,7 @@ Here are the codes I find in that module that seem indicative in sushi valueSet 
 Many years ago, the clinicians the Security WG was working with on privacy, pointed out that Clinicians are amazingly good inference engines, which at the time was caution that anything left in the record can be evidence to a clinician. So, who are we protecting against? Meaning we need to have a good definition of who we are trying to protect against, what level of healthcare informatics expertise?
 
 Note that I think the synthea pre-built dataset has 20 patients in "Drug rehabilitation and detoxification" treatment.
-https://github.com/synthetichealth/synthea-sample-data/blob/main/downloads/synthea_sample_data_fhir_r4_sep2019.zip
+[Synthea Sample Data](https://github.com/synthetichealth/synthea-sample-data/blob/main/downloads/synthea_sample_data_fhir_r4_sep2019.zip)
 
 Note that this dataset can be easily entered into the HAPI server. The zip is full of transaction Bundles that are accepted by HAPI. YOU MUST first submit the hospitalInformation and the practitionerInformation bundles; then all the patient bundles can be submitted without  a problem. (I just renamed the hospital and practitioner json with "AAA" prefix and they went in with simple loop.)
 

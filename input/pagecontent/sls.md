@@ -4,7 +4,7 @@ The [SHIFT LEAP SLS GitHub](https://github.com/SHIFT-Task-Force/leap-sls) focuse
 - Matching codes against internal rule sets for sensitive categories
 - Applying meta.security labels directly to those FHIR resources
 - Add tagging attribution to the LEAP SLS
-  - extension-sec-label-basis = v3-ActCode#42CFRPart2
+  - extension-sec-label-basis = `v3-ActCode#42CFRPart2`
   - extension-sec-label-classifier = "LEAP+ Security Labeling Service"
 
 There is no logic in the codebase for:
@@ -35,12 +35,12 @@ Note that there are [example ValueSets of sensitive codes](artifacts.html) inclu
 
 ### Sensitive Topic ValueSets from the SLS Reference Implementation
 
-- [All Sensitive Codes](ValueSet-ExampleSensitiveCodes.html)
-- [Behavioral Health Codes (BH)](ValueSet-ExampleBehavioralHealthCodes.html)
-- [Sexuality and Reproductive Health Codes (SEX)](ValueSet-ExampleSexualityAndReproductiveHealthCodes.html)
-- [Substance Use Codes (SUD)](ValueSet-ExampleSubstanceUseCodes.html)
-  - [Opioid Abuse Codes (SUD+opiod)](ValueSet-ExampleOpioidCodes.html)
-  - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-ExampleHallucinogenCodes.html)
+- [All Sensitive Codes](ValueSet-LeapSlsSensitiveCodes.html)
+- [Behavioral Health Codes (BH)](ValueSet-LeapSlsBehavioralHealthCodes.html)
+- [Sexuality and Reproductive Health Codes (SEX)](ValueSet-LeapSlsSexualityAndReproductiveHealthCodes.html)
+- [Substance Use Codes (SUD)](ValueSet-LeapSlsSubstanceUseCodes.html)
+  - [Opioid Abuse Codes (SUD+opiod)](ValueSet-LeapSlsOpioidCodes.html)
+  - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-LeapSlsHallucinogenCodes.html)
 
 Note that "Normal" data are those that are none of these sensitive categories, otherwise known as "Medical" data.
 
