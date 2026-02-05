@@ -32,10 +32,10 @@ graph TD
 
 - [All Sensitive Codes](ValueSet-LeapSlsSensitiveCodes.html)
 - [Behavioral Health Codes (BH)](ValueSet-LeapSlsBehavioralHealthCodes.html)
+- [Psychiatric Notes Codes (PSYTHPN, BH)](ValueSet-LeapSlsPsychiatricNotesCodes.html)
 - [Sexuality and Reproductive Health Codes (SEX)](ValueSet-LeapSlsSexualityAndReproductiveHealthCodes.html)
-- [Substance Use Codes (SUD)](ValueSet-LeapSlsSubstanceUseCodes.html)
-  - [Opioid Abuse Codes (SUD+opiod)](ValueSet-LeapSlsOpioidCodes.html)
-  - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-LeapSlsHallucinogenCodes.html)
+- [Opioid Abuse Codes (SUD+opiod)](ValueSet-LeapSlsOpioidCodes.html)
+- [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-LeapSlsHallucinogenCodes.html)
 - [Bundle of Leap SLS Sensitive Kind Codes](Bundle-LeapSlsBundledSensitiveKindCodes.html)
 
 Note that "Normal" data are those that are none of these sensitive categories, otherwise known as "Medical" data.

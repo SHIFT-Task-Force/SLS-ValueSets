@@ -50,7 +50,6 @@ Identified as: v3-ActCode#BH
 * compose.include[=].concept[+].code = #310496002  // "Major depressive disorder, recurrent, moderate"
 * compose.include[=].concept[+].code = #1376001  // "Obsessive-compulsive personality disorder"
 * compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
-* compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record" // JFM 10/23/2025 - in leap-sls code for PSY
 
 // ICD-10-CM Conditions
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -89,32 +88,30 @@ Identified as: v3-ActCode#SEX
 // combined medication, conditions, and observations; 
 // as it does not matter where these codes show up they would indicate the sensitivity kind SUD
 //------------------------------------------------------------------------------
-Instance: LeapSlsSubstanceUseCodes
+Instance: LeapSlsPsychiatricNotesCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Leap SLS Substance Use Codes"
+Title: "ValueSet - Leap SLS Psychiatric Notes Use Codes"
 Description: """
-Leap SLS set of codes representing substance use requiring special privacy protections. 
-Inclusive of medications, conditions, and observations; as no matter where these codes show up they would indicate the sensitivity kind SUD.
+Leap SLS set of codes representing psychiatric notes requiring special privacy protections. 
 
-Identified as: SUD
+Identified as: PSYTHPN, BH
 """
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "LeapSlsSubstanceUseCodes"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSubstanceUseCodes"
-* title = "ValueSet - Leap SLS Substance Use Codes"
+* name = "LeapSlsPsychiatricNotesCodes"
+* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
+* title = "ValueSet - Leap SLS Psychiatric Notes Use Codes"
 * description = """
-Leap SLS set of codes representing substance use requiring special privacy protections. 
-Inclusive of medications, conditions, and observations; as no matter where these codes show up they would indicate the sensitivity kind SUD.
+Leap SLS set of codes representing psychiatric notes requiring special privacy protections. 
 
-Identified as: SUD
+Identified as: PSYTHPN, BH
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PSYTHPN
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#42CFRPart2
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
@@ -209,7 +206,7 @@ Description: "Leap SLS set of codes representing kinds of sensitive information 
 * codes from valueset LeapSlsOpioidCodes
 * codes from valueset LeapSlsBehavioralHealthCodes
 * codes from valueset LeapSlsSexualityAndReproductiveHealthCodes
-* codes from valueset LeapSlsSubstanceUseCodes
+* codes from valueset LeapSlsPsychiatricNotesCodes
 
 
 
@@ -227,8 +224,8 @@ Description: "Leap SLS Bundle containing ValueSets representing kinds of sensiti
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
 * entry[+].resource = LeapSlsSexualityAndReproductiveHealthCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
-* entry[+].resource = LeapSlsSubstanceUseCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSubstanceUseCodes"
+* entry[+].resource = LeapSlsPsychiatricNotesCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
 //* entry[+].resource = LeapSlsSensitiveCodes
 //* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSensitiveCodes"
 
