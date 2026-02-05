@@ -1,14 +1,5 @@
 
 
-ValueSet: LeapSlsSensitiveCodes
-Title: "ValueSet - Leap SLS Sensitive Kind Codes"
-Description: "Leap SLS set of codes representing kinds of sensitive information requiring special privacy protections"
-* ^experimental = false
-* ^version = "0.1.0"
-* codes from valueset LeapSlsBehavioralHealthCodes
-* codes from valueset LeapSlsSexualityAndReproductiveHealthCodes
-* codes from valueset LeapSlsSubstanceUseCodes
-
 //------------------------------------------------------------------------------
 // BEHAVIORAL HEALTH (BH) CODES
 //------------------------------------------------------------------------------
@@ -135,7 +126,7 @@ Title: "ValueSet - Leap SLS Opioid Codes"
 Description: """
 Leap SLS set of codes representing opioid abuse requiring special privacy protections.
 
-Identified as: local#opioid
+Identified as: v3-ActCode#OPIOIDUD
 """
 * status = #active
 * experimental = false
@@ -146,10 +137,10 @@ Identified as: local#opioid
 * description = """
 Leap SLS set of codes representing opioid abuse requiring special privacy protections.
 
-Identified as: local#opioid
+Identified as: v3-ActCode#OPIOIDUD
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = LocalSensitiveKindCodes#opioid
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #425741009  // "Buprenorphine/naloxone"
 * compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
@@ -178,7 +169,7 @@ Title: "ValueSet - Leap SLS Hallucinogen Codes"
 Description: """
 Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
-Identified as: local#hallucinogen and local#bh_substances/SUD
+Identified as: OPIOIDUD
 """
 * status = #active
 * experimental = false
@@ -189,24 +180,25 @@ Identified as: local#hallucinogen and local#bh_substances/SUD
 * description = """
 Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
-Identified as: local#hallucinogen and local#bh_substances/SUD
+Identified as: OPIOIDUD
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = LocalSensitiveKindCodes#hallucinogen
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" // 10/23/2025 - in leap-sls code for HALL
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" // 10/23/2025 - in leap-sls code for HALL
 
-CodeSystem: LocalSensitiveKindCodes
-Title: "CodeSystem - Local Sensitive Kind Codes"
-Description: "Local CodeSystem for Sensitive Kind Codes used in meta.security labels"
-* ^experimental = false
-* ^caseSensitive = false
-* version = "0.1.0"
-* #opioid "Opioid Abuse" "Opioid Abuse"
-* #hallucinogen "Hallucinogen Abuse" "Hallucinogen Abuse"
 
+
+ValueSet: LeapSlsSensitiveCodes
+Title: "ValueSet - Leap SLS Sensitive Kind Codes"
+Description: "Leap SLS set of codes representing kinds of sensitive information requiring special privacy protections"
+* ^experimental = false
+* ^version = "0.1.0"
+* codes from valueset LeapSlsBehavioralHealthCodes // brings in hallucinogen codes
+* codes from valueset LeapSlsSexualityAndReproductiveHealthCodes
+* codes from valueset LeapSlsSubstanceUseCodes // brings in both opioid and hallucinogen codes
 
 
 
@@ -216,13 +208,10 @@ Usage: #example
 Title: "Bundle - Leap SLS Sensitive Kind Codes"
 Description: "Leap SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
 * type = #collection
-* entry[+].resource = LocalSensitiveKindCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/CodeSystem/LocalSensitiveKindCodes"
 * entry[+].resource = LeapSlsHallucinogenCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsHallucinogenCodes"
 * entry[+].resource = LeapSlsOpioidCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsOpioidCodes"
-
 * entry[+].resource = LeapSlsBehavioralHealthCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
 * entry[+].resource = LeapSlsSexualityAndReproductiveHealthCodes
