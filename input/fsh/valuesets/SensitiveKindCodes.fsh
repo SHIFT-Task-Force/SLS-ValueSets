@@ -49,13 +49,13 @@ Identified as: v3-ActCode#BH
 * compose.include[=].concept[+].code = #372767007  // "Fluoxetine (substance)" // 10/23/2025 - in leap-sls code for BH
 * compose.include[=].concept[+].code = #310496002  // "Major depressive disorder, recurrent, moderate"
 * compose.include[=].concept[+].code = #1376001  // "Obsessive-compulsive personality disorder"
-* compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
+//* compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
 
 // ICD-10-CM Conditions
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F33.1  // "Major depressive disorder, recurrent, moderate"
 * compose.include[=].concept[+].code = #F60.5  // "Obsessive-compulsive personality disorder"
-* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
+//* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 
 //------------------------------------------------------------------------------
 // SEXUALITY & REPRODUCTIVE HEALTH (SEX) CODES
@@ -84,7 +84,7 @@ Identified as: v3-ActCode#SEX
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX "sexuality and reproductive health information sensitivity"
 
 //------------------------------------------------------------------------------
-// SUBSTANCE USE DISORDER (SUD) CODES
+// PSYCHIATRIC NOTES (PSYTHPN, BH) CODES
 // combined medication, conditions, and observations; 
 // as it does not matter where these codes show up they would indicate the sensitivity kind SUD
 //------------------------------------------------------------------------------
