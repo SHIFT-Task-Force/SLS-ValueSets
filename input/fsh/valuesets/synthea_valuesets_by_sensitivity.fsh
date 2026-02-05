@@ -15,7 +15,7 @@ Description: "A ValueSet containing all clinical codes found in the sensitive Sy
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: attention_deficit_disorder."
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PSY "psychiatry disorder information sensitivity"
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PSY
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #192127007 // "Child attention deficit disorder (disorder)"
 * compose.include[=].concept[+].code = #185347001 // "Encounter for problem (procedure)"
@@ -103,7 +103,7 @@ v3-ActCode#GDIS"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: cystic_fibrosis.\n\nv3-ActCode#GDIS"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#GDIS "genetic disease information sensitivity"
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#GDIS
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #190905008 // "Cystic fibrosis (disorder)"
 * compose.include[=].concept[+].code = #67799006 // "Cystic fibrosis, prenatal detection (procedure)"

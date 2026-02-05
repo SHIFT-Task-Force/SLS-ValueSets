@@ -81,7 +81,11 @@ Leap SLS set of codes representing sexuality and reproductive health requiring s
 Identified as: v3-ActCode#SEX
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX "sexuality and reproductive health information sensitivity"
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+
+// bring this over just to have something in this valueSet
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #72892002 // "Normal pregnancy (finding)"
 
 //------------------------------------------------------------------------------
 // PSYCHIATRIC NOTES (PSYTHPN, BH) CODES

@@ -99,7 +99,7 @@ PSY - psychiatry disorder information sensitivity
 * date = "2016-09-09" // based on vsac publication date
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PSY "psychiatry disorder information sensitivity"
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PSY
 // SAMHSA C2S Mental Health Disorders
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.32" // ICD10CM
 * compose.include[+].valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1142.33" // ICD9CM
