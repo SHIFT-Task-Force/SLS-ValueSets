@@ -63,3 +63,5 @@ Here is the list of Synthea modules, categorized by Sensitive Topic, with the hy
 Note that we should not accept all the codes found in a module as being sensitive to that sensitive topic. For example in the Opioid Abuse module, there are some precursor scenarios where the patient goes to the emergency room. These emergency room visits use codes to cover the stated reason to visit the emergency room. The module has them in, as it is drug seeking behavior but itself would likely not be protected by Drug Abuse protections.
 
 Note that the module-builder shows more modules than are found in Synthea. Without their json definition, the codes can't be extracted. 
+
+Note [a Bundle of all the Synthea Sensitive Topic ValueSets](Bundle-SyntheaSensitiveValueSetsBundle.html) is also provided.

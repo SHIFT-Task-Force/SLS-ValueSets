@@ -1,8 +1,8 @@
 
 
 ValueSet: LeapSlsSensitiveCodes
-Title: "ValueSet - Example Sensitive Kind Codes"
-Description: "Example set of codes representing kinds of sensitive information requiring special privacy protections"
+Title: "ValueSet - Leap SLS Sensitive Kind Codes"
+Description: "Leap SLS set of codes representing kinds of sensitive information requiring special privacy protections"
 * ^experimental = false
 * ^version = "0.1.0"
 * codes from valueset LeapSlsBehavioralHealthCodes
@@ -15,9 +15,9 @@ Description: "Example set of codes representing kinds of sensitive information r
 Instance: LeapSlsBehavioralHealthCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Example Behavioral Health Codes"
+Title: "ValueSet - Leap SLS Behavioral Health Codes"
 Description: """
-Example set of codes representing behavioral health conditions requiring special privacy protections
+Leap SLS set of codes representing behavioral health conditions requiring special privacy protections
 
 Identified as: v3-ActCode#BH
 """
@@ -26,9 +26,9 @@ Identified as: v3-ActCode#BH
 * version = "0.1.0"
 * name = "LeapSlsBehavioralHealthCodes"
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
-* title = "ValueSet - Example Behavioral Health Codes"
+* title = "ValueSet - Leap SLS Behavioral Health Codes"
 * description = """
-Example set of codes representing behavioral health conditions requiring special privacy protections
+Leap SLS set of codes representing behavioral health conditions requiring special privacy protections
 
 Identified as: v3-ActCode#BH
 """
@@ -74,9 +74,9 @@ Identified as: v3-ActCode#BH
 Instance: LeapSlsSexualityAndReproductiveHealthCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Example Sexuality and Reproductive Health Codes"
+Title: "ValueSet - Leap SLS Sexuality and Reproductive Health Codes"
 Description: """
-Example set of codes representing sexuality and reproductive health requiring special privacy protections
+Leap SLS set of codes representing sexuality and reproductive health requiring special privacy protections
 
 Identified as: v3-ActCode#SEX
 """
@@ -85,9 +85,9 @@ Identified as: v3-ActCode#SEX
 * version = "0.1.0"
 * name = "LeapSlsSexualityAndReproductiveHealthCodes"
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
-* title = "ValueSet - Example Sexuality and Reproductive Health Codes"
+* title = "ValueSet - Leap SLS Sexuality and Reproductive Health Codes"
 * description = """
-Example set of codes representing sexuality and reproductive health requiring special privacy protections
+Leap SLS set of codes representing sexuality and reproductive health requiring special privacy protections
 
 Identified as: v3-ActCode#SEX
 """
@@ -102,9 +102,9 @@ Identified as: v3-ActCode#SEX
 Instance: LeapSlsSubstanceUseCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Example Substance Use Codes"
+Title: "ValueSet - Leap SLS Substance Use Codes"
 Description: """
-Example set of codes representing substance use requiring special privacy protections. 
+Leap SLS set of codes representing substance use requiring special privacy protections. 
 Inclusive of medications, conditions, and observations; as no matter where these codes show up they would indicate the sensitivity kind SUD.
 
 Identified as: SUD
@@ -114,9 +114,9 @@ Identified as: SUD
 * version = "0.1.0"
 * name = "LeapSlsSubstanceUseCodes"
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSubstanceUseCodes"
-* title = "ValueSet - Example Substance Use Codes"
+* title = "ValueSet - Leap SLS Substance Use Codes"
 * description = """
-Example set of codes representing substance use requiring special privacy protections. 
+Leap SLS set of codes representing substance use requiring special privacy protections. 
 Inclusive of medications, conditions, and observations; as no matter where these codes show up they would indicate the sensitivity kind SUD.
 
 Identified as: SUD
@@ -131,9 +131,9 @@ Identified as: SUD
 Instance: LeapSlsOpioidCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Example Opioid Codes"
+Title: "ValueSet - Leap SLS Opioid Codes"
 Description: """
-Example set of codes representing opioid abuse requiring special privacy protections.
+Leap SLS set of codes representing opioid abuse requiring special privacy protections.
 
 Identified as: local#opioid
 """
@@ -142,9 +142,9 @@ Identified as: local#opioid
 * version = "0.1.0"
 * name = "LeapSlsOpioidCodes"
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsOpioidCodes"
-* title = "ValueSet - Example Opioid Codes"
+* title = "ValueSet - Leap SLS Opioid Codes"
 * description = """
-Example set of codes representing opioid abuse requiring special privacy protections.
+Leap SLS set of codes representing opioid abuse requiring special privacy protections.
 
 Identified as: local#opioid
 """
@@ -174,9 +174,9 @@ Identified as: local#opioid
 Instance: LeapSlsHallucinogenCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Example Hallucinogen Codes"
+Title: "ValueSet - Leap SLS Hallucinogen Codes"
 Description: """
-Example set of codes representing hallucinogen abuse requiring special privacy protections
+Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
 Identified as: local#hallucinogen and local#bh_substances/SUD
 """
@@ -185,9 +185,9 @@ Identified as: local#hallucinogen and local#bh_substances/SUD
 * version = "0.1.0"
 * name = "LeapSlsHallucinogenCodes"
 * url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsHallucinogenCodes"
-* title = "ValueSet - Example Hallucinogen Codes"
+* title = "ValueSet - Leap SLS Hallucinogen Codes"
 * description = """
-Example set of codes representing hallucinogen abuse requiring special privacy protections
+Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
 Identified as: local#hallucinogen and local#bh_substances/SUD
 """
@@ -212,8 +212,8 @@ Description: "Local CodeSystem for Sensitive Kind Codes used in meta.security la
 Instance: LeapSlsBundledSensitiveKindCodes
 InstanceOf: Bundle
 Usage: #example
-Title: "Bundle - Example Sensitive Kind Codes"
-Description: "Example Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
+Title: "Bundle - Leap SLS Sensitive Kind Codes"
+Description: "Leap SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
 * type = #collection
 * entry[+].resource = LeapSlsSensitiveCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSensitiveCodes"

@@ -1,6 +1,11 @@
 Privacy Consent driven access control through data sensitivity tagging. These ValueSets and SLS are in support of the [SHIFT Task Force's demo patients IG](https://build.fhir.org/ig/SHIFT-Task-Force/demo-fhir-data)
 
-[Security Labeling Service Discussion](sls.html) and Reference Implementation.
+<div markdown="1" class="stu-note">
+
+Published here are many variety of sensitive codes in ValueSets, but they are included only as examples. Formal ValueSet building is being done in HL7 as part of the [HL7 Cross-Paradigm Sensitive Data and Sensitivity Flags Library and Guidance](https://confluence.hl7.org/spaces/CGP/pages/321160258/Cross-Paradigm+Sensitive+Data+and+Sensitivity+Flags+Library+and+Guidance).
+</div>
+
+[Leap Security Labeling Service Discussion](sls.html) and Reference Implementation.
 
 ### SAMHSA
 
@@ -14,6 +19,7 @@ SAMHSA big valueset - [https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1
 - [Set of codes that indicate PSY](ValueSet-SamhsaSensitivePSY.html)
 - [Set of codes that indicate SDV](ValueSet-SamhsaSensitiveSDV.html)
 - [Set of codes that indicate HIV](ValueSet-SamhsaSensitiveHIV.html)
+- [Bundle of SAMHSA Sensitive Kind Codes](Bundle-SamhsaSensitiveBundle.html)
 
 ### Synthea
 

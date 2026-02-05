@@ -28,12 +28,7 @@ graph TD
   J --> K[Who/What/When/Where]
   ```
 
-<div markdown="1" class="stu-note">
-
-Note that there are [example ValueSets of sensitive codes](artifacts.html) included here, but they are included only as examples. Formal ValueSet building is being done in HL7 as part of the [HL7 Cross-Paradigm Sensitive Data and Sensitivity Flags Library and Guidance](https://confluence.hl7.org/spaces/CGP/pages/321160258/Cross-Paradigm+Sensitive+Data+and+Sensitivity+Flags+Library+and+Guidance).
-</div>
-
-### Sensitive Topic ValueSets from the SLS Reference Implementation
+### Leap SLS Sensitive Topic ValueSets from the SLS Reference Implementation
 
 - [All Sensitive Codes](ValueSet-LeapSlsSensitiveCodes.html)
 - [Behavioral Health Codes (BH)](ValueSet-LeapSlsBehavioralHealthCodes.html)
@@ -41,6 +36,7 @@ Note that there are [example ValueSets of sensitive codes](artifacts.html) inclu
 - [Substance Use Codes (SUD)](ValueSet-LeapSlsSubstanceUseCodes.html)
   - [Opioid Abuse Codes (SUD+opiod)](ValueSet-LeapSlsOpioidCodes.html)
   - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-LeapSlsHallucinogenCodes.html)
+- [Bundle of Leap SLS Sensitive Kind Codes](Bundle-LeapSlsBundledSensitiveKindCodes.html)
 
 Note that "Normal" data are those that are none of these sensitive categories, otherwise known as "Medical" data.
 
