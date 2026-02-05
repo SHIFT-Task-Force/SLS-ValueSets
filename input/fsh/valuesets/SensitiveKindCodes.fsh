@@ -24,18 +24,7 @@ Leap SLS set of codes representing behavioral health conditions requiring specia
 Identified as: v3-ActCode#BH
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH "behavioral health information sensitivity"
-
-/* ============================ alternative to include the ValueSet vs manually enumeratign the same thing
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsHallucinogenCodes"
-   ================================================================================ */
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
-* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
-* compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" // 10/23/2025 - in leap-sls code for HALL
-* compose.include[+].system = "http://snomed.info/sct"
-* compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" // 10/23/2025 - in leap-sls code for HALL
-/* ================================ */
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 
 // SNOMED CT BH Observation Codes
 * compose.include[+].system = "http://snomed.info/sct"
@@ -123,45 +112,9 @@ Inclusive of medications, conditions, and observations; as no matter where these
 Identified as: SUD
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD "substance use disorder information sensitivity"
-
-/* ============================ alternative to include the ValueSet vs manually enumerating the same thing
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsOpioidCodes"
-================ */
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
-* compose.include[+].system = "http://snomed.info/sct"
-* compose.include[=].concept[+].code = #425741009  // "Buprenorphine/naloxone"
-* compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
-* compose.include[=].concept[+].code = #145121000119106 // "Intravenous nondependent opioid abuse" //10/23/2025 - in leap-sls code for OUD
-// The following codes added from Synthea opioid abuse module
-* compose.include[=].concept[+].code = #1149222004 // "Overdose (disorder)"
-* compose.include[=].concept[+].code = #56876005 // "Drug rehabilitation and detoxification (regime/therapy)"
-* compose.include[=].concept[+].code = #60112009 // "Drug addiction counseling (procedure)"
-* compose.include[=].concept[+].code = #61480009 // "Drug detoxification (regime/therapy)"
-* compose.include[=].concept[+].code = #266707007 // "Drug addiction therapy (regime/therapy)"
-* compose.include[=].concept[+].code = #52052004 // "Rehabilitation therapy (regime/therapy)"
-* compose.include[=].concept[+].code = #6525002 // "Dependent drug abuse (disorder)"
-* compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
-* compose.include[=].concept[+].code = #352364  // "Buprenorphine 8 MG / Naloxone 2 MG Sublingual Tablet"
-* compose.include[=].concept[+].code = #1049221 // "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet"
-* compose.include[=].concept[+].code = #856987 // "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet"
-* compose.include[=].concept[+].code = #1860154 // "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet"
-* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
-* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
-* compose.include[=].concept[+].code = #F11.1 // "Opioid abuse" //10/23/2025 - in leap-sls code for OUD
-/* ================================================================ */
-
-/* ============================ alternative to include the ValueSet vs manually enumerating the same thing
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsHallucinogenCodes"
-   ================================================================================ */
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
-* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
-* compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" // 10/23/2025 - in leap-sls code for HALL
-* compose.include[+].system = "http://snomed.info/sct"
-* compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" // 10/23/2025 - in leap-sls code for HALL
-/* ================================ */
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#42CFRPart2
 
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
@@ -188,6 +141,10 @@ Identified as: v3-ActCode#OPIOIDUD
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#42CFRPart2
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #425741009  // "Buprenorphine/naloxone"
 * compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
@@ -216,7 +173,7 @@ Title: "ValueSet - Leap SLS Hallucinogen Codes"
 Description: """
 Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
-Identified as: OPIOIDUD
+Identified as: SUD
 """
 * status = #active
 * experimental = false
@@ -227,10 +184,15 @@ Identified as: OPIOIDUD
 * description = """
 Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
-Identified as: OPIOIDUD
+Identified as: SUD
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#OPIOIDUD
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#42CFRPart2
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" // 10/23/2025 - in leap-sls code for HALL
 * compose.include[+].system = "http://snomed.info/sct"
@@ -243,9 +205,11 @@ Title: "ValueSet - Leap SLS Sensitive Kind Codes"
 Description: "Leap SLS set of codes representing kinds of sensitive information requiring special privacy protections"
 * ^experimental = false
 * ^version = "0.1.0"
-* codes from valueset LeapSlsBehavioralHealthCodes // brings in hallucinogen codes
+* codes from valueset LeapSlsHallucinogenCodes
+* codes from valueset LeapSlsOpioidCodes
+* codes from valueset LeapSlsBehavioralHealthCodes
 * codes from valueset LeapSlsSexualityAndReproductiveHealthCodes
-* codes from valueset LeapSlsSubstanceUseCodes // brings in both opioid and hallucinogen codes
+* codes from valueset LeapSlsSubstanceUseCodes
 
 
 
