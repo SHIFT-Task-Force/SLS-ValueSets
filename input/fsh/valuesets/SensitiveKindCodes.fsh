@@ -57,6 +57,32 @@ Identified as: v3-ActCode#BH
 * compose.include[=].concept[+].code = #F60.5  // "Obsessive-compulsive personality disorder"
 //* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 
+* expansion.timestamp = "2025-05-08T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #372767007
+* expansion.contains[+].system =  "http://snomed.info/sct"
+* expansion.contains[=].code = #310496002
+* expansion.contains[+].system =  "http://snomed.info/sct"
+* expansion.contains[=].code = #1376001
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #720433000
+* expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
+* expansion.contains[=].code = #96127
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #44249-1
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #89204-2
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #315952
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #352364
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #F33.1
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #F60.5
+
+
+
 //------------------------------------------------------------------------------
 // SEXUALITY & REPRODUCTIVE HEALTH (SEX) CODES
 //------------------------------------------------------------------------------
@@ -86,6 +112,10 @@ Identified as: v3-ActCode#SEX
 // bring this over just to have something in this valueSet
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #72892002 // "Normal pregnancy (finding)"
+
+* expansion.timestamp = "2025-05-10T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #72892002 // "Normal pregnancy (finding)"
 
 //------------------------------------------------------------------------------
 // PSYCHIATRIC NOTES (PSYTHPN, BH) CODES
@@ -119,6 +149,11 @@ Identified as: PSYTHPN, BH
 
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
+
+* expansion.timestamp = "2025-05-10T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #444175001  // "Cognitive behavioral therapy record"
+
 
 Instance: LeapSlsOpioidCodes
 InstanceOf: ValueSet
@@ -167,6 +202,40 @@ Identified as: v3-ActCode#OPIOIDUD
 * compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 * compose.include[=].concept[+].code = #F11.1 // "Opioid abuse" //10/23/2025 - in leap-sls code for OUD
 
+* expansion.timestamp = "2025-05-08T08:00:00-05:00" // last time leap-sls codes were edited
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #425741009  // "Buprenorphine/naloxone"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #5602001  // "Opioid abuse"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #145121000119106 // "Intravenous nondependent opioid abuse"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #1149222004 // "Overdose (disorder)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #56876005 // "Drug rehabilitation and detoxification (regime/therapy)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #60112009 // "Drug addiction counseling (procedure)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #61480009 // "Drug detoxification (regime/therapy)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #266707007 // "Drug addiction therapy (regime/therapy)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #52052004 // "Rehabilitation therapy (regime/therapy)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #6525002 // "Dependent drug abuse (disorder)"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #352364  // "Buprenorphine 8 MG / Naloxone 2 MG Sublingual Tablet"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #1049221 // "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #856987 // "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #1860154 // "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet"
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #F11.11  // "Opioid abuse, in remission"
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #F11.1 // "Opioid abuse"
+
 Instance: LeapSlsHallucinogenCodes
 InstanceOf: ValueSet
 Usage: #definition
@@ -195,10 +264,15 @@ Identified as: SUD
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
-* compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" // 10/23/2025 - in leap-sls code for HALL
+* compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" 
 * compose.include[+].system = "http://snomed.info/sct"
-* compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" // 10/23/2025 - in leap-sls code for HALL
+* compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" 
 
+* expansion.timestamp = "2025-03-31T08:00:00-05:00" // last time leap-sls codes were edited
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #F16.20 // "Hallucinogen dependence, uncomplicated" 
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #724713006  // "Harmful use of ketamine" 
 
 
 ValueSet: LeapSlsSensitiveCodes
