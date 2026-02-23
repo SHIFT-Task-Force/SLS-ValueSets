@@ -26,6 +26,8 @@ Identified as: v3-ActCode#BH
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 
+* compose.inactive = true
+
 // SNOMED CT BH Observation Codes
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #720433000  // "PHQ-9 depression screening instrument" // JFM 10/23/2025 - in leap-sls code for PSY
@@ -109,6 +111,8 @@ Identified as: v3-ActCode#SEX
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 
+* compose.inactive = true
+
 // bring this over just to have something in this valueSet
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #72892002 // "Normal pregnancy (finding)"
@@ -147,6 +151,8 @@ Identified as: PSYTHPN, BH
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 
+* compose.inactive = true
+
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
 
@@ -181,6 +187,8 @@ Identified as: v3-ActCode#OPIOIDUD
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#42CFRPart2
+* compose.inactive = true
+
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #425741009  // "Buprenorphine/naloxone"
 * compose.include[=].concept[+].code = #5602001  // "Opioid abuse"
@@ -262,6 +270,7 @@ Identified as: SUD
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#42CFRPart2
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* compose.inactive = true
 
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F16.20 // "Hallucinogen dependence, uncomplicated" 
