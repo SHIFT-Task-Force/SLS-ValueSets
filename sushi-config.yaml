@@ -36,10 +36,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   pin-canonicals: pin-multiples
   
 ## vsac Must use 0.19.0 as higher versions removed the SAMHSA valueSets
-dependencies:
-  us.nlm.vsac: 
-    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-    version: 0.19.0
+#dependencies:
+#  us.nlm.vsac: 
+#    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+#    version: 0.19.0
 #    version: 0.24.0
 
 #dependencies:
