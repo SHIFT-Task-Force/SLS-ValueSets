@@ -92,7 +92,7 @@ PSY - psychiatry disorder information sensitivity
 //*  http://loinc.org#74013-4
 
 * name = "SamhsaSensitivePSY"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitivePSY"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitivePSY"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -173,7 +173,7 @@ ETH - substance abuse information sensitivity (alcohol or drug-abuse information
 """
 
 * name = "SamhsaSensitiveETH"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETH"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveETH"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -256,7 +256,7 @@ ETHUD - alcohol abuse information sensitivity (alcohol abuse information)
 """
 
 * name = "SamhsaSensitiveETHUD"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHUD"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveETHUD"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -332,7 +332,7 @@ OPIOIDUD - Opioid substance abuse information sensitivity (drug-abuse informatio
 """
 
 * name = "SamhsaSensitiveOPIOIDUD"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -403,7 +403,7 @@ SDV - Sexual assault, abuse or domestic violence
 """
 
 * name = "SamhsaSensitiveSDV"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveSDV"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveSDV"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -436,7 +436,7 @@ HIV/AIDS information
 """
 
 * name = "SamhsaSensitiveHIV"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveHIV"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveHIV"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -468,7 +468,7 @@ ETH - substance abuse information sensitivity (alcohol or drug-abuse information
 These valueSets are `not maintained`, the codes in these valueSets are inactive/retired. However they don't show in some distributions of vsac such as the HL7 package.
 """
 * name = "SamhsaSensitiveETHJustRx"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHJustRx"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveETHJustRx"
 * status = #active
 * experimental = false
 * version = "0.1.0"
@@ -488,16 +488,16 @@ Title: "Bundle of all SAMHSA sensitive ValueSets"
 Description: "A bundle containing all of the SAMHSA sensitive ValueSets defined in this file."
 * type = #collection
 * entry[+].resource = SamhsaSensitivePSY
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitivePSY"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitivePSY"
 * entry[+].resource = SamhsaSensitiveETH
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETH"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveETH"
 * entry[+].resource = SamhsaSensitiveETHUD
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveETHUD"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveETHUD"
 * entry[+].resource = SamhsaSensitiveOPIOIDUD
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveOPIOIDUD"
 * entry[+].resource = SamhsaSensitiveSDV
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveSDV"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveSDV"
 * entry[+].resource = SamhsaSensitiveHIV
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SamhsaSensitiveHIV"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SamhsaSensitiveHIV"
 
 
