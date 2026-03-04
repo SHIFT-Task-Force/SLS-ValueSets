@@ -241,7 +241,7 @@ Code system defining sensitivity categories for health information segmentation 
 Note did not use HL7 v2-ActCodes as two of the three categories are not represented there, and the GENDER code may be more broad than GENDER_AFFIRMING_CARE as intended here.
 """
 * content = #complete
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/CodeSystem/AB352HealthSensitivityCs"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/AB352HealthSensitivityCs"
 * version = "0.1.0"
 * jurisdiction[0] = http://unstats.un.org/unsd/methods/m49/m49.htm#840 "United States of America"
 * caseSensitive = true
@@ -283,9 +283,9 @@ Usage: #definition
 * title = "AB352 Segmentation Tags"
 * name = "AB352SegmentationTags"
 * description = "ValueSet of security labels used to segment AB352-sensitive health information in meta.security."
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/AB352SegmentationTags"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/AB352SegmentationTags"
 //* compose.inactive = true
-* compose.include[0].system = "http://SHIFT-Task-Force.github.io/slsValueSets/CodeSystem/AB352HealthSensitivityCs"
+* compose.include[0].system = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/AB352HealthSensitivityCs"
 
 
 Alias: $loinc = http://loinc.org
@@ -342,7 +342,7 @@ According to the site's AB 352 guidance, Health Net recommends that IT and Billi
 * version = "0.1.0"
 * date = "2023-01-01T00:00:00Z" // Best guess at publication date, as there is not a date on the PDF itself.
 * name = "AB352AbortionTopicsHealthNet"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/AB352AbortionTopicsHealthNet"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/AB352AbortionTopicsHealthNet"
 * title = "Abortion-Related Health Topics (Health Net California)"
 * description = """
 Health Net explains and references 500073-Abortion-DX-Code-List.pdf file primarily within its Provider Library and through Provider Bulletins related to legislative compliance. The specific explanation is found in the context of Assembly Bill (AB) 352, which mandates the segregation and protection of sensitive health data.
@@ -511,7 +511,7 @@ Health Net's [bulletin 24-351](https://providerlibrary.healthnetcalifornia.com/)
 - **Direct PDF Link:** [HNCA.CP.MP.496 - Gender Affirming Procedures](https://providerlibrary.healthnetcalifornia.com/content/dam/centene/healthnet/pdfs/providerlibrary/HNCA.CP.MP.496.pdf)
 - **The Provider Library Archive:** You can find this by navigating to Health Net Provider Library > Resources > Clinical Policies and searching for `Gender Affirming Procedures` or the code `496.`
 """
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/AB352GenderAffirmingCareHealthNet"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/AB352GenderAffirmingCareHealthNet"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = AB352HealthSensitivityCs#GENDER_AFFIRMING_CARE

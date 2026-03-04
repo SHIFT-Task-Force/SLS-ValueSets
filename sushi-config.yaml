@@ -2,9 +2,9 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: SHIFT-Task-Force.slsValueSets
-canonical: http://SHIFT-Task-Force.github.io/slsValueSets
-name: ShiftSlsValueSets
+id: SHIFT-Task-Force.SLS-ValueSets
+canonical: http://SHIFT-Task-Force.github.io/SLS-ValueSets
+name: ShiftSLSValueSets
 title: SHIFT SLS ValueSets Implementation Guide
 description: An Implementation Guide for Security Labeling Services (SLS) ValueSets developed by the SHIFT Task Force.
 status: active

@@ -16,7 +16,7 @@ Identified as: v3-ActCode#BH
 * experimental = false
 * version = "0.1.0"
 * name = "LeapSlsBehavioralHealthCodes"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
 * title = "ValueSet - Leap SLS Behavioral Health Codes"
 * description = """
 Leap SLS set of codes representing behavioral health conditions requiring special privacy protections
@@ -101,7 +101,7 @@ Identified as: v3-ActCode#SEX
 * experimental = false
 * version = "0.1.0"
 * name = "LeapSlsSexualityAndReproductiveHealthCodes"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
 * title = "ValueSet - Leap SLS Sexuality and Reproductive Health Codes"
 * description = """
 Leap SLS set of codes representing sexuality and reproductive health requiring special privacy protections
@@ -139,7 +139,7 @@ Identified as: PSYTHPN, BH
 * experimental = false
 * version = "0.1.0"
 * name = "LeapSlsPsychiatricNotesCodes"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
 * title = "ValueSet - Leap SLS Psychiatric Notes Use Codes"
 * description = """
 Leap SLS set of codes representing psychiatric notes requiring special privacy protections. 
@@ -174,7 +174,7 @@ Identified as: v3-ActCode#OPIOIDUD
 * experimental = false
 * version = "0.1.0"
 * name = "LeapSlsOpioidCodes"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsOpioidCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsOpioidCodes"
 * title = "ValueSet - Leap SLS Opioid Codes"
 * description = """
 Leap SLS set of codes representing opioid abuse requiring special privacy protections.
@@ -257,7 +257,7 @@ Identified as: SUD
 * experimental = false
 * version = "0.1.0"
 * name = "LeapSlsHallucinogenCodes"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsHallucinogenCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsHallucinogenCodes"
 * title = "ValueSet - Leap SLS Hallucinogen Codes"
 * description = """
 Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
@@ -304,15 +304,15 @@ Title: "Bundle - Leap SLS Sensitive Kind Codes"
 Description: "Leap SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
 * type = #collection
 * entry[+].resource = LeapSlsHallucinogenCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsHallucinogenCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsHallucinogenCodes"
 * entry[+].resource = LeapSlsOpioidCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsOpioidCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsOpioidCodes"
 * entry[+].resource = LeapSlsBehavioralHealthCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
 * entry[+].resource = LeapSlsSexualityAndReproductiveHealthCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
 * entry[+].resource = LeapSlsPsychiatricNotesCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
 //* entry[+].resource = LeapSlsSensitiveCodes
-//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/LeapSlsSensitiveCodes"
+//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsSensitiveCodes"
 

@@ -10,7 +10,7 @@ Description: "A ValueSet containing all clinical codes found in the sensitive Sy
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaAttentionDeficitDisorderVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaAttentionDeficitDisorderVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaAttentionDeficitDisorderVS"
 * title = "Synthea Codes for attention_deficit_disorder"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: attention_deficit_disorder."
 * compose.inactive = true
@@ -34,7 +34,7 @@ Description: "A ValueSet containing all clinical codes found in the sensitive Sy
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaCerebralPalsyVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCerebralPalsyVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCerebralPalsyVS"
 * title = "Synthea Codes for cerebral_palsy"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: cerebral_palsy."
 * compose.inactive = true
@@ -98,7 +98,7 @@ v3-ActCode#GDIS"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaCysticFibrosisVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCysticFibrosisVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCysticFibrosisVS"
 * title = "Synthea Codes for cystic_fibrosis"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: cystic_fibrosis.\n\nv3-ActCode#GDIS"
 * compose.inactive = true
@@ -152,7 +152,7 @@ v3-ActCode#COGN"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaDementiaVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaDementiaVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaDementiaVS"
 * title = "Synthea Codes for dementia"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: dementia.\n\nv3-ActCode#COGN"
 * compose.inactive = true
@@ -186,7 +186,7 @@ v3-ActCode#OPIOIDUD"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaOpioidAddictionVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaOpioidAddictionVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaOpioidAddictionVS"
 * title = "Synthea Codes for opioid_addiction"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: opioid_addiction.\n\nv3-ActCode#OPIOIDUD"
 * compose.inactive = true
@@ -223,7 +223,7 @@ v3-ActCode#PREGNANT"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaPregnancyVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaPregnancyVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaPregnancyVS"
 * title = "Synthea Codes for pregnancy"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: pregnancy.\n\nv3-ActCode#PREGNANT"
 * compose.inactive = true
@@ -306,7 +306,7 @@ v3-ActCode#SDV"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaSelfHarmVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSelfHarmVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSelfHarmVS"
 * title = "Synthea Codes for self_harm"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: self_harm.\n\nv3-ActCode#SDV"
 * compose.inactive = true
@@ -338,7 +338,7 @@ v3-ActCode#GDIS"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaSpinaBifidaVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSpinaBifidaVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSpinaBifidaVS"
 * title = "Synthea Codes for spina_bifida"
 * description = "A ValueSet containing all clinical codes found in the sensitive Synthea module: spina_bifida.\n\nv3-ActCode#GDIS"
 * compose.inactive = true
@@ -385,13 +385,13 @@ v3-ActCode#SUD"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaSubstanceAbuseVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSubstanceAbuseVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSubstanceAbuseVS"
 * title = "Synthea Substance Abuse Codes"
 * description = "A comprehensive ValueSet encompassing codes from all Synthea modules related to Opioid Addiction, OUD treatment, and chronic pain prescribing.\n\nv3-ActCode#SUD"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaOpioidAddictionVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaOpioidAddictionVS"
 
 Instance: SyntheaGeneticVS
 InstanceOf: ValueSet
@@ -404,13 +404,13 @@ v3-ActCode#GDIS"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaGeneticVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaGeneticVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaGeneticVS"
 * title = "Synthea Genetic Disability Codes"
 * description = "A comprehensive ValueSet encompassing codes from all Synthea modules related to genetic diseases.\n\nv3-ActCode#GDIS"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#GDIS
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCysticFibrosisVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCysticFibrosisVS"
 
 Instance: SyntheaMentalBehavioralHealthVS
 InstanceOf: ValueSet
@@ -423,14 +423,14 @@ v3-ActCode#BH"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaMentalBehavioralHealthVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaMentalBehavioralHealthVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaMentalBehavioralHealthVS"
 * title = "Synthea Mental and Behavioral Health Codes"
 * description = "A comprehensive ValueSet encompassing codes from all Synthea modules related to mental health conditions, including ADD, PTSD, and self-harm events.\n\nv3-ActCode#BH"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaAttentionDeficitDisorderVS"
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSelfHarmVS"    
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaAttentionDeficitDisorderVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSelfHarmVS"    
 
 Instance: SyntheaReproductiveHealthVS
 InstanceOf: ValueSet
@@ -443,13 +443,13 @@ v3-ActCode#SEX"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaReproductiveHealthVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaReproductiveHealthVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaReproductiveHealthVS"
 * title = "Synthea Reproductive Health Codes"
 * description = "A comprehensive ValueSet encompassing codes from all Synthea modules related to reproductive health, including pregnancy, contraception, and sexual activity.\n\nv3-ActCode#SEX"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaPregnancyVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaPregnancyVS"
 
 Instance: SyntheaCognitiveVS
 InstanceOf: ValueSet
@@ -462,15 +462,15 @@ v3-ActCode#COGN"
 * experimental = false
 * version = "0.1.0"
 * name = "SyntheaCognitiveVS"
-* url = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCognitiveVS"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCognitiveVS"
 * title = "Synthea Cognitive Disability Codes"
 * description = "A comprehensive ValueSet encompassing codes from all Synthea modules related to cognitive and neurological disabilities.\n\nv3-ActCode#COGN"
 * compose.inactive = true
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#COGN
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCerebralPalsyVS"
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaDementiaVS"
-* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSpinaBifidaVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCerebralPalsyVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaDementiaVS"
+* compose.include[+].valueSet = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSpinaBifidaVS"
 
 
 // Bundle of all of the Synthea Sensitive Value Sets
@@ -481,19 +481,19 @@ Title: "Synthea Sensitive Value Sets Bundle"
 Description: "A FHIR Bundle containing all Synthea sensitive ValueSets."
 * type = #collection
 * entry[+].resource = SyntheaAttentionDeficitDisorderVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaAttentionDeficitDisorderVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaAttentionDeficitDisorderVS"
 * entry[+].resource = SyntheaCerebralPalsyVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCerebralPalsyVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCerebralPalsyVS"
 * entry[+].resource = SyntheaCysticFibrosisVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaCysticFibrosisVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaCysticFibrosisVS"
 * entry[+].resource = SyntheaDementiaVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaDementiaVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaDementiaVS"
 * entry[+].resource = SyntheaOpioidAddictionVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaOpioidAddictionVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaOpioidAddictionVS"
 * entry[+].resource = SyntheaPregnancyVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaPregnancyVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaPregnancyVS"
 * entry[+].resource = SyntheaSelfHarmVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSelfHarmVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSelfHarmVS"
 * entry[+].resource = SyntheaSpinaBifidaVS
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/slsValueSets/ValueSet/SyntheaSpinaBifidaVS"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/SyntheaSpinaBifidaVS"
 
