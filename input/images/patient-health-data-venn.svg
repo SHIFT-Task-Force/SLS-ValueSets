@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+  <title id="title">Patient health data Venn-style diagram</title>
+  <desc id="desc">A large circle for all patient health data, partitioned into normal and restricted data, with three overlapping circles inside restricted data for substance abuse, behavioral health, and sexual health.</desc>
+
+  <defs>
+    <clipPath id="allHealthClip">
+      <circle cx="420" cy="350" r="280" />
+    </clipPath>
+    <style>
+      .label { font-family: "Segoe UI", Arial, sans-serif; fill: #111827; }
+      .region-label { font-size: 28px; font-weight: 700; }
+      .sub-label { font-size: 19px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- 1) All health data: large containing circle -->
+  <circle cx="420" cy="350" r="280" fill="#DBEAFE" stroke="#1F2937" stroke-width="4" />
+
+  <!-- 2) Restricted health data region overlaid inside the large circle -->
+  <g clip-path="url(#allHealthClip)">
+    <ellipse cx="565" cy="350" rx="190" ry="255" fill="#FECACA" />
+  </g>
+
+  <!-- 3) Overlapping circles inside restricted region -->
+  <circle cx="480" cy="300" r="95" fill="#FCA5A5" fill-opacity="0.75" stroke="#7F1D1D" stroke-width="2.5" />
+  <circle cx="590" cy="320" r="95" fill="#FDBA74" fill-opacity="0.75" stroke="#9A3412" stroke-width="2.5" />
+  <circle cx="535" cy="420" r="95" fill="#F9A8D4" fill-opacity="0.75" stroke="#9D174D" stroke-width="2.5" />
+
+  <!-- Labels -->
+  <text x="420" y="48" text-anchor="middle" class="label region-label">All Health Data (Patient)</text>
+
+  <text x="285" y="335" text-anchor="middle" class="label region-label">
+    <tspan x="285" dy="0">Normal</tspan>
+    <tspan x="285" dy="32">Health Data</tspan>
+  </text>
+  <text x="560" y="170" text-anchor="middle" class="label region-label">
+    <tspan x="560" dy="0">Restricted</tspan>
+    <tspan x="560" dy="32">Health Data</tspan>
+  </text>
+
+  <text x="480" y="305" text-anchor="middle" class="label sub-label">Substance</text>
+  <text x="480" y="330" text-anchor="middle" class="label sub-label">Abuse</text>
+
+  <text x="590" y="326" text-anchor="middle" class="label sub-label">Behavioral</text>
+  <text x="590" y="351" text-anchor="middle" class="label sub-label">Health</text>
+
+  <text x="535" y="425" text-anchor="middle" class="label sub-label">Sexual</text>
+  <text x="535" y="450" text-anchor="middle" class="label sub-label">Health</text>
+</svg>

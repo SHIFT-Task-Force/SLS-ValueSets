@@ -17,3 +17,4 @@ input/fsh/auto-bundle.fsh
 
 node_modules
 .env*
+shift/package/package.json

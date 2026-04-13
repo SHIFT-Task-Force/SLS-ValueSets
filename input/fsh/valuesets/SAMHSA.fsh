@@ -459,7 +459,7 @@ HIV/AIDS information
 Instance: SamhsaSensitiveETHJustRx
 InstanceOf: ValueSet
 Usage: #definition
-Title: "clinical codes that indicate ETH"
+Title: "clinical codes that indicate ETH medications"
 Description: """
 codes that when found in data would indicate the data is likely ETH related
 
