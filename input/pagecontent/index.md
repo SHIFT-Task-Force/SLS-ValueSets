@@ -7,7 +7,7 @@ Published here are many variety of sensitive codes in ValueSets, but they are in
 
 ### Sensitive data as Venn diagram
 
-Normal data is all data that is identifiable and not specifically sensitive, any data that is sensitive would be Restricted. Sensitive data can be categorized into sensitivity topics, and some data may fall into multiple sensitive categories, as illustrated in the Venn diagram below.
+Normal data is all data that is identifiable and not specifically sensitive, any data that is sensitive would be Restricted. "Normal" refers to the normal average curve, thus the majority of data. Sensitive data can be categorized into sensitivity topics, and some data may fall into multiple sensitive categories, as illustrated in the Venn diagram below.
 
 Sensitive topics are generally potentially stigmatizing information, for which exposure would present high risk of harm to an individual's reputation and sense of privacy. These sensitivity topics are indicated as a "sensitivity" code in the meta.security tag of FHIR resources, and can be used for access control decisions in a Privacy Consent driven access control model.
 
