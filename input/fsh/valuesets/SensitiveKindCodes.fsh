@@ -1,25 +1,32 @@
+// Initially created from the LEAP SLS codes, but have evolved along with the SHIFT data for use with the SHIFT SLS RI.
 
+CodeSystem: ExtraSensitiveCodes
+Title: "Extra Sensitive Codes"
+Description: "Sensitivity codes that are not defined in HL7"
+* ^experimental = false
+* ^caseSensitive = false
+* #ABORTION "Abortion-related? TODO find the right code"
 
 //------------------------------------------------------------------------------
 // BEHAVIORAL HEALTH (BH) CODES
 //------------------------------------------------------------------------------
-Instance: LeapSlsBehavioralHealthCodes
+Instance: ShiftSlsBehavioralHealthCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Leap SLS Behavioral Health Codes"
+Title: "ValueSet - SHIFT SLS Behavioral Health Codes"
 Description: """
-Leap SLS set of codes representing behavioral health conditions requiring special privacy protections
+SHIFT SLS set of codes representing behavioral health conditions requiring special privacy protections
 
 Identified as: v3-ActCode#BH
 """
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "LeapSlsBehavioralHealthCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
-* title = "ValueSet - Leap SLS Behavioral Health Codes"
+* name = "ShiftSlsBehavioralHealthCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBehavioralHealthCodes"
+* title = "ValueSet - SHIFT SLS Behavioral Health Codes"
 * description = """
-Leap SLS set of codes representing behavioral health conditions requiring special privacy protections
+SHIFT SLS set of codes representing behavioral health conditions requiring special privacy protections
 
 Identified as: v3-ActCode#BH
 """
@@ -88,23 +95,23 @@ Identified as: v3-ActCode#BH
 //------------------------------------------------------------------------------
 // SEXUALITY & REPRODUCTIVE HEALTH (SEX) CODES
 //------------------------------------------------------------------------------
-Instance: LeapSlsSexualityAndReproductiveHealthCodes
+Instance: ShiftSlsSexualityAndReproductiveHealthCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Leap SLS Sexuality and Reproductive Health Codes"
+Title: "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
 Description: """
-Leap SLS set of codes representing sexuality and reproductive health requiring special privacy protections
+SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections
 
 Identified as: v3-ActCode#SEX
 """
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "LeapSlsSexualityAndReproductiveHealthCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
-* title = "ValueSet - Leap SLS Sexuality and Reproductive Health Codes"
+* name = "ShiftSlsSexualityAndReproductiveHealthCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSexualityAndReproductiveHealthCodes"
+* title = "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
 * description = """
-Leap SLS set of codes representing sexuality and reproductive health requiring special privacy protections
+SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections
 
 Identified as: v3-ActCode#SEX
 """
@@ -113,36 +120,451 @@ Identified as: v3-ActCode#SEX
 
 * compose.inactive = true
 
-// bring this over just to have something in this valueSet
+// Sexual orientation
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #76690-7 // "Sexual orientation"
 * compose.include[+].system = "http://snomed.info/sct"
-* compose.include[=].concept[+].code = #72892002 // "Normal pregnancy (finding)"
+* compose.include[=].concept[+].code = #42035005 // "Bisexual (finding)"
 
-* expansion.timestamp = "2025-05-10T20:42:00-05:00" // last time leap-sls codes were edited
+// Irregular periods / menstrual conditions
+* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* compose.include[=].concept[+].code = #N92.6 // "Irregular menstruation, unspecified"
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #80182007 // "Irregular periods (finding)"
+
+// Abortion / elective termination of pregnancy
+* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* compose.include[=].concept[+].code = #Z33.2 // "Encounter for elective termination of pregnancy"
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #18391007 // "Elective abortion (disorder)"
+* compose.include[+].system = "http://www.ama-assn.org/go/cpt"
+* compose.include[=].concept[+].code = #59840 // "Induced abortion, by dilation and curettage"
+* compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+* compose.include[=].concept[+].code = #S2260 // "Induced abortion 17-24 weeks"
+
+// Contraception
+* compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* compose.include[=].concept[+].code = #1358781 // "Loestrin 1/20 21 Day Pack"
+
+// Abortion medications
+* compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* compose.include[=].concept[+].code = #330381 // "mifepristone 200 MG"
+* compose.include[=].concept[+].code = #317128 // "misoprostol 0.2 MG Oral Tablet"
+
+// Obstetric imaging / screening
+* compose.include[+].system = "http://www.ama-assn.org/go/cpt"
+* compose.include[=].concept[+].code = #76801 // "Ultrasound, pregnant uterus, first trimester"
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel"
+
+// Obstetric history and pregnancy observations
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #364324000 // "Measure of pregnancy (observable entity)"
+* compose.include[=].concept[+].code = #440425000 // "Number of births at term (observable entity)"
+* compose.include[=].concept[+].code = #440013005 // "Number of preterm births (observable entity)"
+* compose.include[=].concept[+].code = #252113007 // "Number of abortions (observable entity)"
+* compose.include[=].concept[+].code = #248991006 // "Number of live deliveries (observable entity)"
+* compose.include[=].concept[+].code = #21840007 // "Date of last menstrual period (observable entity)"
+
+* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+
+// Sexual orientation
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #76690-7
+* expansion.contains[=].display = "Sexual orientation"
 * expansion.contains[+].system = "http://snomed.info/sct"
-* expansion.contains[=].code = #72892002 // "Normal pregnancy (finding)"
+* expansion.contains[=].code = #42035005
+* expansion.contains[=].display = "Bisexual (finding)"
+
+// Irregular periods / menstrual conditions
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #N92.6
+* expansion.contains[=].display = "Irregular menstruation, unspecified"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #80182007
+* expansion.contains[=].display = "Irregular periods (finding)"
+
+// Abortion / elective termination of pregnancy
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #Z33.2
+* expansion.contains[=].display = "Encounter for elective termination of pregnancy"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #18391007
+* expansion.contains[=].display = "Elective abortion (disorder)"
+* expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
+* expansion.contains[=].code = #59840
+* expansion.contains[=].display = "Induced abortion, by dilation and curettage"
+* expansion.contains[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+* expansion.contains[=].code = #S2260
+* expansion.contains[=].display = "Induced abortion 17-24 weeks"
+
+// Contraception
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #1358781
+* expansion.contains[=].display = "Loestrin 1/20 21 Day Pack"
+
+// Abortion medications
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #330381
+* expansion.contains[=].display = "mifepristone 200 MG"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #317128
+* expansion.contains[=].display = "misoprostol 0.2 MG Oral Tablet"
+
+// Obstetric imaging / screening
+* expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
+* expansion.contains[=].code = #76801
+* expansion.contains[=].display = "Ultrasound, pregnant uterus, first trimester"
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #48800-7
+* expansion.contains[=].display = "Second trimester quad maternal screen panel - Serum or Plasma"
+
+// Obstetric history and pregnancy observations
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #364324000
+* expansion.contains[=].display = "Measure of pregnancy (observable entity)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #440425000
+* expansion.contains[=].display = "Number of births at term (observable entity)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #440013005
+* expansion.contains[=].display = "Number of preterm births (observable entity)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #252113007
+* expansion.contains[=].display = "Number of abortions (observable entity)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #248991006
+* expansion.contains[=].display = "Number of live deliveries (observable entity)"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #21840007
+* expansion.contains[=].display = "Date of last menstrual period (observable entity)"
+
+//------------------------------------------------------------------------------
+// ABORTION CODES
+//------------------------------------------------------------------------------
+Instance: ShiftSlsAbortionCodes
+InstanceOf: ValueSet
+Usage: #definition
+Title: "ValueSet - SHIFT SLS Abortion Codes"
+Description: """
+SHIFT SLS set of codes representing abortion-related conditions, procedures, diagnostics, and medications requiring special privacy protections
+
+Identified as: ExtraSensitiveCodes#ABORTION
+"""
+* status = #active
+* experimental = false
+* version = "0.1.0"
+* name = "ShiftSlsAbortionCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsAbortionCodes"
+* title = "ValueSet - SHIFT SLS Abortion Codes"
+* description = """
+SHIFT SLS set of codes representing abortion-related conditions, procedures, diagnostics, and medications requiring special privacy protections
+
+Identified as: ExtraSensitiveCodes#ABORTION
+"""
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/extraSensitivityCodes#ABORTION
+
+* compose.inactive = true
+
+// Abortion conditions
+* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* compose.include[=].concept[+].code = #Z33.2 // "Encounter for elective termination of pregnancy"
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #18391007 // "Elective abortion (disorder)"
+
+// Abortion procedures
+* compose.include[+].system = "http://www.ama-assn.org/go/cpt"
+* compose.include[=].concept[+].code = #59840 // "Induced abortion, by dilation and curettage"
+* compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+* compose.include[=].concept[+].code = #S2260 // "Induced abortion 17-24 weeks"
+
+// Abortion medications
+* compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* compose.include[=].concept[+].code = #330381 // "mifepristone 200 MG"
+* compose.include[=].concept[+].code = #317128 // "misoprostol 0.2 MG Oral Tablet"
+
+// Abortion-related imaging and screening
+* compose.include[+].system = "http://www.ama-assn.org/go/cpt"
+* compose.include[=].concept[+].code = #76801 // "Ultrasound, pregnant uterus, first trimester"
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel"
+
+* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+
+// Abortion conditions
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #Z33.2
+* expansion.contains[=].display = "Encounter for elective termination of pregnancy"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #18391007
+* expansion.contains[=].display = "Elective abortion (disorder)"
+
+// Abortion procedures
+* expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
+* expansion.contains[=].code = #59840
+* expansion.contains[=].display = "Induced abortion, by dilation and curettage"
+* expansion.contains[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+* expansion.contains[=].code = #S2260
+* expansion.contains[=].display = "Induced abortion 17-24 weeks"
+
+// Abortion medications
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #330381
+* expansion.contains[=].display = "mifepristone 200 MG"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #317128
+* expansion.contains[=].display = "misoprostol 0.2 MG Oral Tablet"
+
+// Abortion-related imaging and screening
+* expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
+* expansion.contains[=].code = #76801
+* expansion.contains[=].display = "Ultrasound, pregnant uterus, first trimester"
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #48800-7
+* expansion.contains[=].display = "Second trimester quad maternal screen panel - Serum or Plasma"
+
+//------------------------------------------------------------------------------
+// SEXUALLY TRANSMITTED DISEASE (STD) CODES
+//------------------------------------------------------------------------------
+Instance: ShiftSlsSTDCodes
+InstanceOf: ValueSet
+Usage: #definition
+Title: "ValueSet - SHIFT SLS Sexually Transmitted Disease Codes"
+Description: """
+SHIFT SLS set of codes representing sexually transmitted diseases requiring special privacy protections
+
+Identified as: v3-ActCode#STD
+"""
+* status = #active
+* experimental = false
+* version = "0.1.0"
+* name = "ShiftSlsSTDCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSTDCodes"
+* title = "ValueSet - SHIFT SLS Sexually Transmitted Disease Codes"
+* description = """
+SHIFT SLS set of codes representing sexually transmitted diseases requiring special privacy protections
+
+Identified as: v3-ActCode#STD
+"""
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#STD
+
+* compose.inactive = true
+
+// STD conditions
+* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* compose.include[=].concept[+].code = #A56.2 // "Chlamydial infection of genitourinary tract, unspecified"
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #428015005 // "Chlamydia trachomatis infection of genital structure (disorder)"
+
+// STD diagnostic panels
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #92684-0 // "CT + NG + TV DNA panel - Urine by NAA with probe detection"
+
+// STD treatment medications
+* compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* compose.include[=].concept[+].code = #330623 // "azithromycin 500 MG"
+
+* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+
+// STD conditions
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #A56.2
+* expansion.contains[=].display = "Chlamydial infection of genitourinary tract, unspecified"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #428015005
+* expansion.contains[=].display = "Chlamydia trachomatis infection of genital structure (disorder)"
+
+// STD diagnostic panels
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #92684-0
+* expansion.contains[=].display = "Chlamydia trachomatis and Neisseria gonorrhoeae and Trichomonas vaginalis DNA panel - Urine by NAA with probe detection"
+
+// STD treatment medications
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #330623
+* expansion.contains[=].display = "azithromycin 500 MG"
+
+
+//------------------------------------------------------------------------------
+// HIV CODES
+//------------------------------------------------------------------------------
+Instance: ShiftSlsHIVCodes
+InstanceOf: ValueSet
+Usage: #definition
+Title: "ValueSet - SHIFT SLS HIV Codes"
+Description: """
+SHIFT SLS set of codes representing HIV-related conditions and treatments requiring special privacy protections
+
+Identified as: v3-ActCode#HIV
+"""
+* status = #active
+* experimental = false
+* version = "0.1.0"
+* name = "ShiftSlsHIVCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHIVCodes"
+* title = "ValueSet - SHIFT SLS HIV Codes"
+* description = """
+SHIFT SLS set of codes representing HIV-related conditions and treatments requiring special privacy protections
+
+Identified as: v3-ActCode#HIV
+"""
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIV
+
+* compose.inactive = true
+
+// HIV diagnostic tests
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #80203-3 // "HIV 1 & 2 Ab SerPlBld IA.rapid (HIV ELISA with reflex Western blot)"
+
+// HIV prevention / treatment medications
+* compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* compose.include[=].concept[+].code = #1747692 // "Descovy (tenofovir alafenamide / emtricitabine) - PrEP"
+
+* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+
+// HIV diagnostic tests
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #80203-3
+* expansion.contains[=].display = "HIV 1 & 2 Ab SerPlBld IA.rapid"
+
+// HIV prevention / treatment medications
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #1747692
+* expansion.contains[=].display = "Descovy"
+
+
+//------------------------------------------------------------------------------
+// GENETIC DISEASE INFORMATION (GDIS) CODES
+//------------------------------------------------------------------------------
+Instance: ShiftSlsGDISCodes
+InstanceOf: ValueSet
+Usage: #definition
+Title: "ValueSet - SHIFT SLS Genetic Disease Information Codes"
+Description: """
+SHIFT SLS set of codes representing genetic disease information requiring special privacy protections
+
+Identified as: v3-ActCode#GDIS
+"""
+* status = #active
+* experimental = false
+* version = "0.1.0"
+* name = "ShiftSlsGDISCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsGDISCodes"
+* title = "ValueSet - SHIFT SLS Genetic Disease Information Codes"
+* description = """
+SHIFT SLS set of codes representing genetic disease information requiring special privacy protections
+
+Identified as: v3-ActCode#GDIS
+"""
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#GDIS
+
+* compose.inactive = true
+
+// Genetic / chromosomal screening panels
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel - Serum or Plasma"
+
+* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+
+// Genetic / chromosomal screening panels
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #48800-7
+* expansion.contains[=].display = "Second trimester quad maternal screen panel - Serum or Plasma"
+
+
+//------------------------------------------------------------------------------
+// SEXUAL ASSAULT / DOMESTIC VIOLENCE (SDV) CODES
+//------------------------------------------------------------------------------
+Instance: ShiftSlsSDVCodes
+InstanceOf: ValueSet
+Usage: #definition
+Title: "ValueSet - SHIFT SLS Sexual Assault / Domestic Violence Codes"
+Description: """
+SHIFT SLS set of codes representing sexual assault and domestic violence requiring special privacy protections
+
+Identified as: v3-ActCode#SDV
+"""
+* status = #active
+* experimental = false
+* version = "0.1.0"
+* name = "ShiftSlsSDVCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSDVCodes"
+* title = "ValueSet - SHIFT SLS Sexual Assault / Domestic Violence Codes"
+* description = """
+SHIFT SLS set of codes representing sexual assault and domestic violence requiring special privacy protections
+
+Identified as: v3-ActCode#SDV
+"""
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SDV
+
+* compose.inactive = true
+
+// Intimate partner violence
+* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* compose.include[=].concept[+].code = #T74.11 // "Adult physical abuse, confirmed"
+* compose.include[=].concept[+].code = #T74.11XA // "Adult physical abuse, confirmed, initial encounter"
+* compose.include[=].concept[+].code = #T74.11XS // "Adult physical abuse, confirmed, sequela"
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #706893006 // "Victim of intimate partner abuse (finding)"
+
+// Child sexual abuse history
+* compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* compose.include[=].concept[+].code = #Z62.810 // "Personal history of physical and sexual abuse in childhood"
+* compose.include[+].system = "http://snomed.info/sct"
+* compose.include[=].concept[+].code = #713834002 // "Victim of child sexual exploitation (finding)"
+
+* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+
+// Intimate partner violence
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #T74.11
+* expansion.contains[=].display = "Adult physical abuse, confirmed"
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #T74.11XA
+* expansion.contains[=].display = "Adult physical abuse, confirmed, initial encounter"
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #T74.11XS
+* expansion.contains[=].display = "Adult physical abuse, confirmed, sequela"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #706893006
+* expansion.contains[=].display = "Victim of intimate partner abuse (finding)"
+
+// Child sexual abuse history
+* expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
+* expansion.contains[=].code = #Z62.810
+* expansion.contains[=].display = "Personal history of physical and sexual abuse in childhood"
+* expansion.contains[+].system = "http://snomed.info/sct"
+* expansion.contains[=].code = #713834002
+* expansion.contains[=].display = "Victim of child sexual exploitation (finding)"
+
 
 //------------------------------------------------------------------------------
 // PSYCHIATRIC NOTES (PSYTHPN, BH) CODES
 // combined medication, conditions, and observations; 
 // as it does not matter where these codes show up they would indicate the sensitivity kind SUD
 //------------------------------------------------------------------------------
-Instance: LeapSlsPsychiatricNotesCodes
+Instance: ShiftSlsPsychiatricNotesCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Leap SLS Psychiatric Notes Use Codes"
+Title: "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
 Description: """
-Leap SLS set of codes representing psychiatric notes requiring special privacy protections. 
+SHIFT SLS set of codes representing psychiatric notes requiring special privacy protections. 
 
 Identified as: PSYTHPN, BH
 """
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "LeapSlsPsychiatricNotesCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
-* title = "ValueSet - Leap SLS Psychiatric Notes Use Codes"
+* name = "ShiftSlsPsychiatricNotesCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPsychiatricNotesCodes"
+* title = "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
 * description = """
-Leap SLS set of codes representing psychiatric notes requiring special privacy protections. 
+SHIFT SLS set of codes representing psychiatric notes requiring special privacy protections. 
 
 Identified as: PSYTHPN, BH
 """
@@ -161,23 +583,23 @@ Identified as: PSYTHPN, BH
 * expansion.contains[=].code = #444175001  // "Cognitive behavioral therapy record"
 
 
-Instance: LeapSlsOpioidCodes
+Instance: ShiftSlsOpioidCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Leap SLS Opioid Codes"
+Title: "ValueSet - SHIFT SLS Opioid Codes"
 Description: """
-Leap SLS set of codes representing opioid abuse requiring special privacy protections.
+SHIFT SLS set of codes representing opioid abuse requiring special privacy protections.
 
 Identified as: v3-ActCode#OPIOIDUD
 """
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "LeapSlsOpioidCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsOpioidCodes"
-* title = "ValueSet - Leap SLS Opioid Codes"
+* name = "ShiftSlsOpioidCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsOpioidCodes"
+* title = "ValueSet - SHIFT SLS Opioid Codes"
 * description = """
-Leap SLS set of codes representing opioid abuse requiring special privacy protections.
+SHIFT SLS set of codes representing opioid abuse requiring special privacy protections.
 
 Identified as: v3-ActCode#OPIOIDUD
 """
@@ -244,23 +666,23 @@ Identified as: v3-ActCode#OPIOIDUD
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.1 // "Opioid abuse"
 
-Instance: LeapSlsHallucinogenCodes
+Instance: ShiftSlsHallucinogenCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "ValueSet - Leap SLS Hallucinogen Codes"
+Title: "ValueSet - SHIFT SLS Hallucinogen Codes"
 Description: """
-Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
+SHIFT SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
 Identified as: SUD
 """
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "LeapSlsHallucinogenCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsHallucinogenCodes"
-* title = "ValueSet - Leap SLS Hallucinogen Codes"
+* name = "ShiftSlsHallucinogenCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHallucinogenCodes"
+* title = "ValueSet - SHIFT SLS Hallucinogen Codes"
 * description = """
-Leap SLS set of codes representing hallucinogen abuse requiring special privacy protections
+SHIFT SLS set of codes representing hallucinogen abuse requiring special privacy protections
 
 Identified as: SUD
 """
@@ -284,35 +706,50 @@ Identified as: SUD
 * expansion.contains[=].code = #724713006  // "Harmful use of ketamine" 
 
 
-ValueSet: LeapSlsSensitiveCodes
-Title: "ValueSet - Leap SLS Sensitive Kind Codes"
-Description: "Leap SLS set of codes representing kinds of sensitive information requiring special privacy protections"
+ValueSet: ShiftSlsSensitiveCodes
+Title: "ValueSet - SHIFT SLS Sensitive Kind Codes"
+Description: "SHIFT SLS set of codes representing kinds of sensitive information requiring special privacy protections"
 * ^experimental = false
 * ^version = "0.1.0"
-* codes from valueset LeapSlsHallucinogenCodes
-* codes from valueset LeapSlsOpioidCodes
-* codes from valueset LeapSlsBehavioralHealthCodes
-* codes from valueset LeapSlsSexualityAndReproductiveHealthCodes
-* codes from valueset LeapSlsPsychiatricNotesCodes
+* codes from valueset ShiftSlsHallucinogenCodes
+* codes from valueset ShiftSlsOpioidCodes
+* codes from valueset ShiftSlsBehavioralHealthCodes
+* codes from valueset ShiftSlsSexualityAndReproductiveHealthCodes
+* codes from valueset ShiftSlsAbortionCodes
+* codes from valueset ShiftSlsSTDCodes
+* codes from valueset ShiftSlsHIVCodes
+* codes from valueset ShiftSlsGDISCodes
+* codes from valueset ShiftSlsSDVCodes
+* codes from valueset ShiftSlsPsychiatricNotesCodes
 
 
 
-Instance: LeapSlsBundledSensitiveKindCodes
+Instance: ShiftSlsBundledSensitiveKindCodes
 InstanceOf: Bundle
 Usage: #example
-Title: "Bundle - Leap SLS Sensitive Kind Codes"
-Description: "Leap SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
+Title: "Bundle - SHIFT SLS Sensitive Kind Codes"
+Description: "SHIFT SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
 * type = #collection
-* entry[+].resource = LeapSlsHallucinogenCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsHallucinogenCodes"
-* entry[+].resource = LeapSlsOpioidCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsOpioidCodes"
-* entry[+].resource = LeapSlsBehavioralHealthCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsBehavioralHealthCodes"
-* entry[+].resource = LeapSlsSexualityAndReproductiveHealthCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsSexualityAndReproductiveHealthCodes"
-* entry[+].resource = LeapSlsPsychiatricNotesCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsPsychiatricNotesCodes"
-//* entry[+].resource = LeapSlsSensitiveCodes
-//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/LeapSlsSensitiveCodes"
+* entry[+].resource = ShiftSlsHallucinogenCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHallucinogenCodes"
+* entry[+].resource = ShiftSlsOpioidCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsOpioidCodes"
+* entry[+].resource = ShiftSlsBehavioralHealthCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBehavioralHealthCodes"
+* entry[+].resource = ShiftSlsSexualityAndReproductiveHealthCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSexualityAndReproductiveHealthCodes"
+* entry[+].resource = ShiftSlsAbortionCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsAbortionCodes"
+* entry[+].resource = ShiftSlsSTDCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSTDCodes"
+* entry[+].resource = ShiftSlsHIVCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHIVCodes"
+* entry[+].resource = ShiftSlsGDISCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsGDISCodes"
+* entry[+].resource = ShiftSlsSDVCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSDVCodes"
+* entry[+].resource = ShiftSlsPsychiatricNotesCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPsychiatricNotesCodes"
+//* entry[+].resource = ShiftSlsSensitiveCodes
+//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSensitiveCodes"
 

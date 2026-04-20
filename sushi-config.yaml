@@ -54,8 +54,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
   index.md:
     title: "SHIFT IG Home"
-  sls.md:
-    title: "Security Labeling Services (SLS)"
+  SHIFTsls.md:
+    title: "SHIFT SLS valueSets"
+  LeapSls.md:
+    title: "Leap SLS valueSets"
   synthea.md:
     title: "Synthea Modules Used"
   ab352.md:
@@ -69,7 +71,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  SLS: sls.html
+  SHIFT ValueSets: SHIFTsls.html
   Artifacts: artifacts.html
   About: download.html
 

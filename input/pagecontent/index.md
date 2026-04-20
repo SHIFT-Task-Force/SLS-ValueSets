@@ -19,11 +19,17 @@ Normal data is often not tagged as Normal, but rather is just the absence of any
 
 The data are tagged purely due to their data content, and not due to any other factors such as the Patient consent status. The labeling does not imply that there is any particular access control policy in place, but rather that the data is sensitive and may require special handling. The access control policies would be defined separately, and could use the presence of these sensitivity tag to make decisions about who can access the data and under what circumstances.
 
+### SHIFT SLS ValueSets
+
+The [SHIFT SLS ValueSets](SHIFTsls.html) are a set of ValueSets that are being developed in support of the SHIFT demo use-cases and the SHIFT SLS Reference Implementation. They are based on the codes that are being used in the SHIFT demo data, and are intended to be used as configuration files for the SLS-RI. They are not intended to be comprehensive, but rather to support the specific use-cases that SHIFT is working on.
+
+[SHIFT SLS Reference Implementation](SHIFTsls.html)
+
 ### Leap SLS implicit valueSets
 
 The Leap SLS reference implementation contains an internal set of codes and logic. The following has extracted that logic into ValueSets.
 
-[Leap Security Labeling Service Discussion](sls.html) and Reference Implementation.
+[Leap Security Labeling Service Discussion](LeapSls.html) and Reference Implementation.
 
 ### SAMHSA
 
