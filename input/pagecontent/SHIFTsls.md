@@ -9,16 +9,16 @@ The [SHIFT GitHub](https://github.com/SHIFT-Task-Force) has:
 The following are working drafts of the ValueSets. They are minimal ValueSets to support the SHIFT Demo data and are formatted to be configuration files for the SLS-RI.
 
 - [All Sensitive Codes](ValueSet-ShiftSlsSensitiveCodes.html)
-- [Behavioral Health Codes (BH)](ValueSet-ShiftSlsBehavioralHealthCodes.html)
-- [Psychiatric Notes Codes (PSYTHPN, BH)](ValueSet-ShiftSlsPsychiatricNotesCodes.html)
-- [Sexuality and Reproductive Health Codes (SEX)](ValueSet-ShiftSlsSexualityAndReproductiveHealthCodes.html)
+- [Behavioral Health Codes (BH)](ValueSet-ShiftSlsBHCodes.html)
+- [Psychiatric Notes Codes (PSYTHPN, BH)](ValueSet-ShiftSlsPSYTHPNCodes.html)
+- [Sexuality and Reproductive Health Codes (SEX)](ValueSet-ShiftSlsSEXCodes.html)
 - [Opioid Abuse Codes (SUD+opiod)](ValueSet-ShiftSlsOpioidCodes.html)
 - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-ShiftSlsHallucinogenCodes.html)
-- HIV - TODO
-- STD - TODO
-- SDV - TODO
-- GDIS - TODO
-- SICKVIS - TODO
+- [HIV Codes](ValueSet-ShiftSlsHIVCodes.html)
+- [STD Codes](ValueSet-ShiftSlsSTDcodes.html)
+- [SDV Codes](ValueSet-ShiftSlsSDVCodes.html)
+- [GDIS Codes](ValueSet-ShiftSlsGDISCodes.html)
+- [Abortion Codes](ValueSet-ShiftSlsAbortionCodes.html)
 - [Bundle of SHIFT SLS Sensitive Kind Codes](Bundle-ShiftSlsBundledSensitiveKindCodes.html)
 
 Note that "Normal" data are those that are none of these sensitive categories, otherwise known as "Medical" data.

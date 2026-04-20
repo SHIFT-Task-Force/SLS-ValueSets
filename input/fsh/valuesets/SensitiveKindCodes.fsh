@@ -10,7 +10,7 @@ Description: "Sensitivity codes that are not defined in HL7"
 //------------------------------------------------------------------------------
 // BEHAVIORAL HEALTH (BH) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsBehavioralHealthCodes
+Instance: ShiftSlsBHCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Behavioral Health Codes"
@@ -22,8 +22,8 @@ Identified as: v3-ActCode#BH
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsBehavioralHealthCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBehavioralHealthCodes"
+* name = "ShiftSlsBHCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBHCodes"
 * title = "ValueSet - SHIFT SLS Behavioral Health Codes"
 * description = """
 SHIFT SLS set of codes representing behavioral health conditions requiring special privacy protections
@@ -95,7 +95,7 @@ Identified as: v3-ActCode#BH
 //------------------------------------------------------------------------------
 // SEXUALITY & REPRODUCTIVE HEALTH (SEX) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsSexualityAndReproductiveHealthCodes
+Instance: ShiftSlsSEXCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
@@ -107,8 +107,8 @@ Identified as: v3-ActCode#SEX
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsSexualityAndReproductiveHealthCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSexualityAndReproductiveHealthCodes"
+* name = "ShiftSlsSEXCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSEXCodes"
 * title = "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
 * description = """
 SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections
@@ -548,7 +548,7 @@ Identified as: v3-ActCode#SDV
 // combined medication, conditions, and observations; 
 // as it does not matter where these codes show up they would indicate the sensitivity kind SUD
 //------------------------------------------------------------------------------
-Instance: ShiftSlsPsychiatricNotesCodes
+Instance: ShiftSlsPSYTHPNCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
@@ -560,8 +560,8 @@ Identified as: PSYTHPN, BH
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsPsychiatricNotesCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPsychiatricNotesCodes"
+* name = "ShiftSlsPSYTHPNCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPSYTHPNCodes"
 * title = "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
 * description = """
 SHIFT SLS set of codes representing psychiatric notes requiring special privacy protections. 
@@ -713,14 +713,14 @@ Description: "SHIFT SLS set of codes representing kinds of sensitive information
 * ^version = "0.1.0"
 * codes from valueset ShiftSlsHallucinogenCodes
 * codes from valueset ShiftSlsOpioidCodes
-* codes from valueset ShiftSlsBehavioralHealthCodes
-* codes from valueset ShiftSlsSexualityAndReproductiveHealthCodes
+* codes from valueset ShiftSlsBHCodes
+* codes from valueset ShiftSlsSEXCodes
 * codes from valueset ShiftSlsAbortionCodes
 * codes from valueset ShiftSlsSTDCodes
 * codes from valueset ShiftSlsHIVCodes
 * codes from valueset ShiftSlsGDISCodes
 * codes from valueset ShiftSlsSDVCodes
-* codes from valueset ShiftSlsPsychiatricNotesCodes
+* codes from valueset ShiftSlsPSYTHPNCodes
 
 
 
@@ -734,10 +734,10 @@ Description: "SHIFT SLS Bundle containing ValueSets representing kinds of sensit
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHallucinogenCodes"
 * entry[+].resource = ShiftSlsOpioidCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsOpioidCodes"
-* entry[+].resource = ShiftSlsBehavioralHealthCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBehavioralHealthCodes"
-* entry[+].resource = ShiftSlsSexualityAndReproductiveHealthCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSexualityAndReproductiveHealthCodes"
+* entry[+].resource = ShiftSlsBHCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBHCodes"
+* entry[+].resource = ShiftSlsSEXCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSEXCodes"
 * entry[+].resource = ShiftSlsAbortionCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsAbortionCodes"
 * entry[+].resource = ShiftSlsSTDCodes
@@ -748,8 +748,8 @@ Description: "SHIFT SLS Bundle containing ValueSets representing kinds of sensit
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsGDISCodes"
 * entry[+].resource = ShiftSlsSDVCodes
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSDVCodes"
-* entry[+].resource = ShiftSlsPsychiatricNotesCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPsychiatricNotesCodes"
+* entry[+].resource = ShiftSlsPSYTHPNCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPSYTHPNCodes"
 //* entry[+].resource = ShiftSlsSensitiveCodes
 //* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSensitiveCodes"
 
