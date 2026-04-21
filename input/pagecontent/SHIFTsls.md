@@ -14,12 +14,12 @@ The following are working drafts of the ValueSets. They are minimal ValueSets to
 - [Sexuality and Reproductive Health Codes (SEX)](ValueSet-ShiftSlsSEXCodes.html)
 - [Opioid Abuse Codes (SUD+opiod)](ValueSet-ShiftSlsOpioidCodes.html)
 - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-ShiftSlsHallucinogenCodes.html)
-- [HIV Codes](ValueSet-ShiftSlsHIVCodes.html)
-- [STD Codes](ValueSet-ShiftSlsSTDcodes.html)
-- [SDV Codes](ValueSet-ShiftSlsSDVCodes.html)
-- [GDIS Codes](ValueSet-ShiftSlsGDISCodes.html)
+- [Human Immunodeficiency Virus (HIV) Codes](ValueSet-ShiftSlsHIVCodes.html)
+- [Sexually Transmitted Disease (STD) Codes](ValueSet-ShiftSlsSTDcodes.html)
+- [Sexual Assault / Domestic Violence (SDV) Codes](ValueSet-ShiftSlsSDVCodes.html)
+- [Genetic Disease Information (GDIS) Codes](ValueSet-ShiftSlsGDISCodes.html)
 - [Abortion Codes](ValueSet-ShiftSlsAbortionCodes.html)
 - [Bundle of SHIFT SLS Sensitive Kind Codes](Bundle-ShiftSlsBundledSensitiveKindCodes.html)
 
-Note that "Normal" data are those that are none of these sensitive categories, otherwise known as "Medical" data.
+Note that "Normal" data are those medical data associated with a patient that are not any of these sensitive categories.
 

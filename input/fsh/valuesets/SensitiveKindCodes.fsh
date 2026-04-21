@@ -1,4 +1,6 @@
 // Initially created from the LEAP SLS codes, but have evolved along with the SHIFT data for use with the SHIFT SLS RI.
+// Be sure to update the expansion timestamp, and hand expand inline. This is important to feed the SLS-RI and to indicate tagging-policy changes to users of the ValueSet.
+
 
 CodeSystem: ExtraSensitiveCodes
 Title: "Extra Sensitive Codes"
@@ -66,7 +68,8 @@ Identified as: v3-ActCode#BH
 * compose.include[=].concept[+].code = #F60.5  // "Obsessive-compulsive personality disorder"
 //* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 
-* expansion.timestamp = "2025-05-08T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #372767007
 * expansion.contains[+].system =  "http://snomed.info/sct"
@@ -166,7 +169,7 @@ Identified as: v3-ActCode#SEX
 * compose.include[=].concept[+].code = #248991006 // "Number of live deliveries (observable entity)"
 * compose.include[=].concept[+].code = #21840007 // "Date of last menstrual period (observable entity)"
 
-* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Sexual orientation
 * expansion.contains[+].system = "http://loinc.org"
@@ -290,7 +293,7 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel"
 
-* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Abortion conditions
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -366,7 +369,7 @@ Identified as: v3-ActCode#STD
 * compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * compose.include[=].concept[+].code = #330623 // "azithromycin 500 MG"
 
-* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // STD conditions
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -423,7 +426,7 @@ Identified as: v3-ActCode#HIV
 * compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * compose.include[=].concept[+].code = #1747692 // "Descovy (tenofovir alafenamide / emtricitabine) - PrEP"
 
-* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // HIV diagnostic tests
 * expansion.contains[+].system = "http://loinc.org"
@@ -468,7 +471,7 @@ Identified as: v3-ActCode#GDIS
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel - Serum or Plasma"
 
-* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Genetic / chromosomal screening panels
 * expansion.contains[+].system = "http://loinc.org"
@@ -518,7 +521,7 @@ Identified as: v3-ActCode#SDV
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #713834002 // "Victim of child sexual exploitation (finding)"
 
-* expansion.timestamp = "2026-04-20T00:00:00-05:00"
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Intimate partner violence
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -578,7 +581,7 @@ Identified as: PSYTHPN, BH
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
 
-* expansion.timestamp = "2025-05-10T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #444175001  // "Cognitive behavioral therapy record"
 
@@ -632,7 +635,8 @@ Identified as: v3-ActCode#OPIOIDUD
 * compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 * compose.include[=].concept[+].code = #F11.1 // "Opioid abuse" //10/23/2025 - in leap-sls code for OUD
 
-* expansion.timestamp = "2025-05-08T08:00:00-05:00" // last time leap-sls codes were edited
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #425741009  // "Buprenorphine/naloxone"
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -699,7 +703,8 @@ Identified as: SUD
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" 
 
-* expansion.timestamp = "2025-03-31T08:00:00-05:00" // last time leap-sls codes were edited
+* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.20 // "Hallucinogen dependence, uncomplicated" 
 * expansion.contains[+].system = "http://snomed.info/sct"

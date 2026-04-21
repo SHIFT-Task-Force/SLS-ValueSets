@@ -23,7 +23,8 @@ The data are tagged purely due to their data content, and not due to any other f
 
 The [SHIFT SLS ValueSets](SHIFTsls.html) are a set of ValueSets that are being developed in support of the SHIFT demo use-cases and the SHIFT SLS Reference Implementation. They are based on the codes that are being used in the SHIFT demo data, and are intended to be used as configuration files for the SLS-RI. They are not intended to be comprehensive, but rather to support the specific use-cases that SHIFT is working on.
 
-[SHIFT SLS Reference Implementation](SHIFTsls.html)
+SHIFT [SLS Reference Implementation GitHub Repository](https://github.com/SHIFT-Task-Force/sls-ri), and [SLS RI API Definition](https://build.fhir.org/ig/SHIFT-Task-Force/sls-ri-ig/branches/main/index.html).
+
 
 ### Leap SLS implicit valueSets
 
