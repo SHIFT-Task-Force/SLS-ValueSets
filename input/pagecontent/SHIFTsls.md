@@ -15,7 +15,7 @@ The following are working drafts of the ValueSets. They are minimal ValueSets to
 - [Opioid Abuse Codes (SUD+opiod)](ValueSet-ShiftSlsOpioidCodes.html)
 - [Hallucinogen Codes (SUD+hallucinogen)](ValueSet-ShiftSlsHallucinogenCodes.html)
 - [Human Immunodeficiency Virus (HIV) Codes](ValueSet-ShiftSlsHIVCodes.html)
-- [Sexually Transmitted Disease (STD) Codes](ValueSet-ShiftSlsSTDcodes.html)
+- [Sexually Transmitted Disease (STD) Codes](ValueSet-ShiftSlsSTDCodes.html)
 - [Sexual Assault / Domestic Violence (SDV) Codes](ValueSet-ShiftSlsSDVCodes.html)
 - [Genetic Disease Information (GDIS) Codes](ValueSet-ShiftSlsGDISCodes.html)
 - [Abortion Codes](ValueSet-ShiftSlsAbortionCodes.html)
