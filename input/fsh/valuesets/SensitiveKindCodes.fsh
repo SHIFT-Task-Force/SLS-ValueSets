@@ -304,11 +304,6 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * compose.include[=].concept[+].code = #330381 // "mifepristone 200 MG"
 * compose.include[=].concept[+].code = #317128 // "misoprostol 0.2 MG Oral Tablet"
 
-// Abortion-related pregnancy lab tests
-* compose.include[+].system = "http://loinc.org"
-* compose.include[=].concept[+].code = #2106-3 // "Choriogonadotropin [Presence] in Urine (POC hCG)"
-* compose.include[=].concept[+].code = #19080-1 // "Choriogonadotropin [Units/volume] in Serum or Plasma (hCG serum quantitative)"
-
 * expansion.timestamp = "2026-05-01T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Abortion conditions
@@ -335,13 +330,7 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * expansion.contains[=].code = #317128
 * expansion.contains[=].display = "misoprostol 0.2 MG Oral Tablet"
 
-// Abortion-related pregnancy lab tests
-* expansion.contains[+].system = "http://loinc.org"
-* expansion.contains[=].code = #2106-3
-* expansion.contains[=].display = "Choriogonadotropin [Presence] in Urine"
-* expansion.contains[+].system = "http://loinc.org"
-* expansion.contains[=].code = #19080-1
-* expansion.contains[=].display = "Choriogonadotropin [Units/volume] in Serum or Plasma"
+
 
 //------------------------------------------------------------------------------
 // SEXUALLY TRANSMITTED DISEASE (STD) CODES
