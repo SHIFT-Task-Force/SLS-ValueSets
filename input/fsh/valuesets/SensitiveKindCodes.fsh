@@ -103,7 +103,9 @@ InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
 Description: """
-SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections
+SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections.
+
+WARNING: This ValueSet includes a wide range of codes related to sexuality and reproductive health, including sexual orientation, contraception, abortion, pregnancy, and obstetric history. Some of these codes may be considered sensitive for some patients, but not for others. It is important to use this ValueSet with caution and to consider the individual patient's preferences and needs when determining which codes to include in the SLS-RI.
 
 Identified as: v3-ActCode#SEX
 """
@@ -171,7 +173,7 @@ Identified as: v3-ActCode#SEX
 * compose.include[=].concept[+].code = #364324000 // "Measure of pregnancy (observable entity)"
 * compose.include[=].concept[+].code = #440425000 // "Number of births at term (observable entity)"
 * compose.include[=].concept[+].code = #440013005 // "Number of preterm births (observable entity)"
-* compose.include[=].concept[+].code = #252113007 // "Number of abortions (observable entity)"
+* compose.include[=].concept[+].code = #252113007 // "Number of abortions (observable entity)" -- should indicate abortion if the valueInteger is greater than zero.
 * compose.include[=].concept[+].code = #248991006 // "Number of live deliveries (observable entity)"
 * compose.include[=].concept[+].code = #21840007 // "Date of last menstrual period (observable entity)"
 
