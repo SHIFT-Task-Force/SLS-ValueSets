@@ -304,12 +304,6 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * compose.include[=].concept[+].code = #330381 // "mifepristone 200 MG"
 * compose.include[=].concept[+].code = #317128 // "misoprostol 0.2 MG Oral Tablet"
 
-// Abortion-related imaging and screening
-* compose.include[+].system = "http://www.ama-assn.org/go/cpt"
-* compose.include[=].concept[+].code = #76801 // "Ultrasound, pregnant uterus, first trimester"
-* compose.include[+].system = "http://loinc.org"
-* compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel"
-
 // Abortion-related pregnancy lab tests
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #2106-3 // "Choriogonadotropin [Presence] in Urine (POC hCG)"
@@ -340,14 +334,6 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * expansion.contains[=].code = #317128
 * expansion.contains[=].display = "misoprostol 0.2 MG Oral Tablet"
-
-// Abortion-related imaging and screening
-* expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
-* expansion.contains[=].code = #76801
-* expansion.contains[=].display = "Ultrasound, pregnant uterus, first trimester"
-* expansion.contains[+].system = "http://loinc.org"
-* expansion.contains[=].code = #48800-7
-* expansion.contains[=].display = "Second trimester quad maternal screen panel - Serum or Plasma"
 
 // Abortion-related pregnancy lab tests
 * expansion.contains[+].system = "http://loinc.org"
