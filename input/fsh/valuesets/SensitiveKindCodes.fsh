@@ -148,6 +148,7 @@ Identified as: v3-ActCode#SEX
 // Contraception
 * compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * compose.include[=].concept[+].code = #1358781 // "Loestrin 1/20 21 Day Pack"
+* compose.include[=].concept[+].code = #1359031 // "LOESTRIN 1.5/30 21 Day Pack"
 
 // Abortion medications
 * compose.include[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
@@ -160,6 +161,11 @@ Identified as: v3-ActCode#SEX
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel"
 
+// Pregnancy lab tests
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #2106-3 // "Choriogonadotropin [Presence] in Urine (POC hCG)"
+* compose.include[=].concept[+].code = #19080-1 // "Choriogonadotropin [Units/volume] in Serum or Plasma (hCG serum quantitative)"
+
 // Obstetric history and pregnancy observations
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #364324000 // "Measure of pregnancy (observable entity)"
@@ -169,7 +175,7 @@ Identified as: v3-ActCode#SEX
 * compose.include[=].concept[+].code = #248991006 // "Number of live deliveries (observable entity)"
 * compose.include[=].concept[+].code = #21840007 // "Date of last menstrual period (observable entity)"
 
-* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.timestamp = "2026-05-01T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Sexual orientation
 * expansion.contains[+].system = "http://loinc.org"
@@ -205,6 +211,9 @@ Identified as: v3-ActCode#SEX
 * expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * expansion.contains[=].code = #1358781
 * expansion.contains[=].display = "Loestrin 1/20 21 Day Pack"
+* expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
+* expansion.contains[=].code = #1359031
+* expansion.contains[=].display = "LOESTRIN 1.5/30 21 Day Pack"
 
 // Abortion medications
 * expansion.contains[+].system = "http://www.nlm.nih.gov/research/umls/rxnorm"
@@ -221,6 +230,14 @@ Identified as: v3-ActCode#SEX
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #48800-7
 * expansion.contains[=].display = "Second trimester quad maternal screen panel - Serum or Plasma"
+
+// Pregnancy lab tests
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #2106-3
+* expansion.contains[=].display = "Choriogonadotropin [Presence] in Urine"
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #19080-1
+* expansion.contains[=].display = "Choriogonadotropin [Units/volume] in Serum or Plasma"
 
 // Obstetric history and pregnancy observations
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -293,7 +310,12 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel"
 
-* expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+// Abortion-related pregnancy lab tests
+* compose.include[+].system = "http://loinc.org"
+* compose.include[=].concept[+].code = #2106-3 // "Choriogonadotropin [Presence] in Urine (POC hCG)"
+* compose.include[=].concept[+].code = #19080-1 // "Choriogonadotropin [Units/volume] in Serum or Plasma (hCG serum quantitative)"
+
+* expansion.timestamp = "2026-05-01T08:00:00-05:00" // last time SHIFT SLS codes were edited
 
 // Abortion conditions
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -326,6 +348,14 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #48800-7
 * expansion.contains[=].display = "Second trimester quad maternal screen panel - Serum or Plasma"
+
+// Abortion-related pregnancy lab tests
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #2106-3
+* expansion.contains[=].display = "Choriogonadotropin [Presence] in Urine"
+* expansion.contains[+].system = "http://loinc.org"
+* expansion.contains[=].code = #19080-1
+* expansion.contains[=].display = "Choriogonadotropin [Units/volume] in Serum or Plasma"
 
 //------------------------------------------------------------------------------
 // SEXUALLY TRANSMITTED DISEASE (STD) CODES
