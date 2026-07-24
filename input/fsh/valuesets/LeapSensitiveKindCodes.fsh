@@ -60,6 +60,7 @@ Identified as: v3-ActCode#BH
 //* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 
 * expansion.timestamp = "2025-05-08T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.identifier = "urn:uuid:2602f11a-e5e0-4eef-8743-26027326e8d9"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #372767007
 * expansion.contains[+].system =  "http://snomed.info/sct"
@@ -118,6 +119,7 @@ Identified as: v3-ActCode#SEX
 * compose.include[=].concept[+].code = #72892002 // "Normal pregnancy (finding)"
 
 * expansion.timestamp = "2025-05-10T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.identifier = "urn:uuid:eb9e5383-affc-47d6-b35b-1a08ab0e56e1"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #72892002 // "Normal pregnancy (finding)"
 
@@ -157,6 +159,7 @@ Identified as: PSYTHPN, BH
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
 
 * expansion.timestamp = "2025-05-10T20:42:00-05:00" // last time leap-sls codes were edited
+* expansion.identifier = "urn:uuid:6803dcf5-fb00-4336-8d63-c72d7ea6b6b9"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #444175001  // "Cognitive behavioral therapy record"
 
@@ -211,6 +214,7 @@ Identified as: v3-ActCode#OPIOIDUD
 * compose.include[=].concept[+].code = #F11.1 // "Opioid abuse" //10/23/2025 - in leap-sls code for OUD
 
 * expansion.timestamp = "2025-05-08T08:00:00-05:00" // last time leap-sls codes were edited
+* expansion.identifier = "urn:uuid:363fb480-1d54-47e8-882e-ebfac7845aa8"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #425741009  // "Buprenorphine/naloxone"
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -278,6 +282,7 @@ Identified as: SUD
 * compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" 
 
 * expansion.timestamp = "2025-03-31T08:00:00-05:00" // last time leap-sls codes were edited
+* expansion.identifier = "urn:uuid:a26592e2-ca84-4ec6-89a7-e90d79457c47"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.20 // "Hallucinogen dependence, uncomplicated" 
 * expansion.contains[+].system = "http://snomed.info/sct"

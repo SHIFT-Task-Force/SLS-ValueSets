@@ -12,7 +12,7 @@ Description: "Sensitivity codes that are not defined in HL7"
 //------------------------------------------------------------------------------
 // BEHAVIORAL HEALTH (BH) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsBHCodes
+Instance: ShiftMinBHCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Behavioral Health Codes"
@@ -24,8 +24,8 @@ Identified as: v3-ActCode#BH
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsBHCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBHCodes"
+* name = "ShiftMinBHCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinBHCodes"
 * title = "ValueSet - SHIFT SLS Behavioral Health Codes"
 * description = """
 SHIFT SLS set of codes representing behavioral health conditions requiring special privacy protections
@@ -69,6 +69,7 @@ Identified as: v3-ActCode#BH
 //* compose.include[=].concept[+].code = #F11.11  // "Opioid abuse, in remission"
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:59073857-e5b8-4e45-9fc8-6e4647925a19"
 
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #372767007
@@ -98,7 +99,7 @@ Identified as: v3-ActCode#BH
 //------------------------------------------------------------------------------
 // SEXUALITY & REPRODUCTIVE HEALTH (SEX) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsSEXCodes
+Instance: ShiftMinSEXCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
@@ -112,8 +113,8 @@ Identified as: v3-ActCode#SEX
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsSEXCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSEXCodes"
+* name = "ShiftMinSEXCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSEXCodes"
 * title = "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
 * description = """
 SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections
@@ -178,6 +179,7 @@ Identified as: v3-ActCode#SEX
 * compose.include[=].concept[+].code = #21840007 // "Date of last menstrual period (observable entity)"
 
 * expansion.timestamp = "2026-05-01T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:8ae3abaa-b725-4f4e-a2ba-695b3569a494"
 
 // Sexual orientation
 * expansion.contains[+].system = "http://loinc.org"
@@ -264,7 +266,7 @@ Identified as: v3-ActCode#SEX
 //------------------------------------------------------------------------------
 // ABORTION CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsAbortionCodes
+Instance: ShiftMinAbortionCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Abortion Codes"
@@ -276,8 +278,8 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsAbortionCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsAbortionCodes"
+* name = "ShiftMinAbortionCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinAbortionCodes"
 * title = "ValueSet - SHIFT SLS Abortion Codes"
 * description = """
 SHIFT SLS set of codes representing abortion-related conditions, procedures, diagnostics, and medications requiring special privacy protections
@@ -285,7 +287,7 @@ SHIFT SLS set of codes representing abortion-related conditions, procedures, dia
 Identified as: ExtraSensitiveCodes#ABORTION
 """
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/extraSensitivityCodes#ABORTION
+* useContext[=].valueCodeableConcept = ExtraSensitiveCodes#ABORTION
 
 * compose.inactive = true
 
@@ -307,6 +309,7 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * compose.include[=].concept[+].code = #317128 // "misoprostol 0.2 MG Oral Tablet"
 
 * expansion.timestamp = "2026-05-01T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:1403a733-45c2-4cfb-9c4e-217d793c7fd8"
 
 // Abortion conditions
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -337,7 +340,7 @@ Identified as: ExtraSensitiveCodes#ABORTION
 //------------------------------------------------------------------------------
 // SEXUALLY TRANSMITTED DISEASE (STD) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsSTDCodes
+Instance: ShiftMinSTDCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Sexually Transmitted Disease Codes"
@@ -349,8 +352,8 @@ Identified as: v3-ActCode#STD
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsSTDCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSTDCodes"
+* name = "ShiftMinSTDCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSTDCodes"
 * title = "ValueSet - SHIFT SLS Sexually Transmitted Disease Codes"
 * description = """
 SHIFT SLS set of codes representing sexually transmitted diseases requiring special privacy protections
@@ -377,6 +380,7 @@ Identified as: v3-ActCode#STD
 * compose.include[=].concept[+].code = #330623 // "azithromycin 500 MG"
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:e24fe3b1-7c79-47bb-8b4a-fa2ab9342eca"
 
 // STD conditions
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -400,7 +404,7 @@ Identified as: v3-ActCode#STD
 //------------------------------------------------------------------------------
 // HIV CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsHIVCodes
+Instance: ShiftMinHIVCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS HIV Codes"
@@ -412,8 +416,8 @@ Identified as: v3-ActCode#HIV
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsHIVCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHIVCodes"
+* name = "ShiftMinHIVCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinHIVCodes"
 * title = "ValueSet - SHIFT SLS HIV Codes"
 * description = """
 SHIFT SLS set of codes representing HIV-related conditions and treatments requiring special privacy protections
@@ -434,6 +438,7 @@ Identified as: v3-ActCode#HIV
 * compose.include[=].concept[+].code = #1747692 // "Descovy (tenofovir alafenamide / emtricitabine) - PrEP"
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:b2f19056-9f99-4c44-b926-c015c6e59f80"
 
 // HIV diagnostic tests
 * expansion.contains[+].system = "http://loinc.org"
@@ -449,7 +454,7 @@ Identified as: v3-ActCode#HIV
 //------------------------------------------------------------------------------
 // GENETIC DISEASE INFORMATION (GDIS) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsGDISCodes
+Instance: ShiftMinGDISCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Genetic Disease Information Codes"
@@ -461,8 +466,8 @@ Identified as: v3-ActCode#GDIS
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsGDISCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsGDISCodes"
+* name = "ShiftMinGDISCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinGDISCodes"
 * title = "ValueSet - SHIFT SLS Genetic Disease Information Codes"
 * description = """
 SHIFT SLS set of codes representing genetic disease information requiring special privacy protections
@@ -479,6 +484,7 @@ Identified as: v3-ActCode#GDIS
 * compose.include[=].concept[+].code = #48800-7 // "Second trimester quad maternal screen panel - Serum or Plasma"
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:cc77bf9c-53fe-47ba-b1eb-834bdbdab158"
 
 // Genetic / chromosomal screening panels
 * expansion.contains[+].system = "http://loinc.org"
@@ -489,7 +495,7 @@ Identified as: v3-ActCode#GDIS
 //------------------------------------------------------------------------------
 // SEXUAL ASSAULT / DOMESTIC VIOLENCE (SDV) CODES
 //------------------------------------------------------------------------------
-Instance: ShiftSlsSDVCodes
+Instance: ShiftMinSDVCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Sexual Assault / Domestic Violence Codes"
@@ -501,8 +507,8 @@ Identified as: v3-ActCode#SDV
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsSDVCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSDVCodes"
+* name = "ShiftMinSDVCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSDVCodes"
 * title = "ValueSet - SHIFT SLS Sexual Assault / Domestic Violence Codes"
 * description = """
 SHIFT SLS set of codes representing sexual assault and domestic violence requiring special privacy protections
@@ -529,6 +535,7 @@ Identified as: v3-ActCode#SDV
 * compose.include[=].concept[+].code = #713834002 // "Victim of child sexual exploitation (finding)"
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:2815b1b5-1d55-4875-a172-efa62703d927"
 
 // Intimate partner violence
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -558,7 +565,7 @@ Identified as: v3-ActCode#SDV
 // combined medication, conditions, and observations; 
 // as it does not matter where these codes show up they would indicate the sensitivity kind SUD
 //------------------------------------------------------------------------------
-Instance: ShiftSlsPSYTHPNCodes
+Instance: ShiftMinPSYTHPNCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
@@ -570,8 +577,8 @@ Identified as: PSYTHPN, BH
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsPSYTHPNCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPSYTHPNCodes"
+* name = "ShiftMinPSYTHPNCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinPSYTHPNCodes"
 * title = "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
 * description = """
 SHIFT SLS set of codes representing psychiatric notes requiring special privacy protections. 
@@ -589,11 +596,12 @@ Identified as: PSYTHPN, BH
 * compose.include[=].concept[+].code = #444175001  // "Cognitive behavioral therapy record"
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:c0d8ec5b-2f00-4513-b8a9-517180d4de27"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #444175001  // "Cognitive behavioral therapy record"
 
 
-Instance: ShiftSlsOpioidCodes
+Instance: ShiftMinOpioidCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Opioid Codes"
@@ -605,8 +613,8 @@ Identified as: v3-ActCode#OPIOIDUD
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsOpioidCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsOpioidCodes"
+* name = "ShiftMinOpioidCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinOpioidCodes"
 * title = "ValueSet - SHIFT SLS Opioid Codes"
 * description = """
 SHIFT SLS set of codes representing opioid abuse requiring special privacy protections.
@@ -643,6 +651,7 @@ Identified as: v3-ActCode#OPIOIDUD
 * compose.include[=].concept[+].code = #F11.1 // "Opioid abuse" //10/23/2025 - in leap-sls code for OUD
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:818a3f7a-cf4f-4507-be7f-a97b4d1e4f94"
 
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #425741009  // "Buprenorphine/naloxone"
@@ -677,7 +686,7 @@ Identified as: v3-ActCode#OPIOIDUD
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.1 // "Opioid abuse"
 
-Instance: ShiftSlsHallucinogenCodes
+Instance: ShiftMinHallucinogenCodes
 InstanceOf: ValueSet
 Usage: #definition
 Title: "ValueSet - SHIFT SLS Hallucinogen Codes"
@@ -689,8 +698,8 @@ Identified as: SUD
 * status = #active
 * experimental = false
 * version = "0.1.0"
-* name = "ShiftSlsHallucinogenCodes"
-* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHallucinogenCodes"
+* name = "ShiftMinHallucinogenCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinHallucinogenCodes"
 * title = "ValueSet - SHIFT SLS Hallucinogen Codes"
 * description = """
 SHIFT SLS set of codes representing hallucinogen abuse requiring special privacy protections
@@ -711,6 +720,7 @@ Identified as: SUD
 * compose.include[=].concept[+].code = #724713006  // "Harmful use of ketamine" 
 
 * expansion.timestamp = "2026-04-21T08:00:00-05:00" // last time SHIFT SLS codes were edited
+* expansion.identifier = "urn:uuid:6836dc67-d56e-4b08-a3ac-c8c26c73ff55"
 
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.20 // "Hallucinogen dependence, uncomplicated" 
@@ -718,50 +728,50 @@ Identified as: SUD
 * expansion.contains[=].code = #724713006  // "Harmful use of ketamine" 
 
 
-ValueSet: ShiftSlsSensitiveCodes
+ValueSet: ShiftMinSensitiveCodes
 Title: "ValueSet - SHIFT SLS Sensitive Kind Codes"
 Description: "SHIFT SLS set of codes representing kinds of sensitive information requiring special privacy protections"
 * ^experimental = false
 * ^version = "0.1.0"
-* codes from valueset ShiftSlsHallucinogenCodes
-* codes from valueset ShiftSlsOpioidCodes
-* codes from valueset ShiftSlsBHCodes
-* codes from valueset ShiftSlsSEXCodes
-* codes from valueset ShiftSlsAbortionCodes
-* codes from valueset ShiftSlsSTDCodes
-* codes from valueset ShiftSlsHIVCodes
-* codes from valueset ShiftSlsGDISCodes
-* codes from valueset ShiftSlsSDVCodes
-* codes from valueset ShiftSlsPSYTHPNCodes
+* codes from valueset ShiftMinHallucinogenCodes
+* codes from valueset ShiftMinOpioidCodes
+* codes from valueset ShiftMinBHCodes
+* codes from valueset ShiftMinSEXCodes
+* codes from valueset ShiftMinAbortionCodes
+* codes from valueset ShiftMinSTDCodes
+* codes from valueset ShiftMinHIVCodes
+* codes from valueset ShiftMinGDISCodes
+* codes from valueset ShiftMinSDVCodes
+* codes from valueset ShiftMinPSYTHPNCodes
 
 
 
-Instance: ShiftSlsBundledSensitiveKindCodes
+Instance: ShiftMinBundledSensitiveKindCodes
 InstanceOf: Bundle
 Usage: #example
 Title: "Bundle - SHIFT SLS Sensitive Kind Codes"
 Description: "SHIFT SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
 * type = #collection
-* entry[+].resource = ShiftSlsHallucinogenCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHallucinogenCodes"
-* entry[+].resource = ShiftSlsOpioidCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsOpioidCodes"
-* entry[+].resource = ShiftSlsBHCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsBHCodes"
-* entry[+].resource = ShiftSlsSEXCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSEXCodes"
-* entry[+].resource = ShiftSlsAbortionCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsAbortionCodes"
-* entry[+].resource = ShiftSlsSTDCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSTDCodes"
-* entry[+].resource = ShiftSlsHIVCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsHIVCodes"
-* entry[+].resource = ShiftSlsGDISCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsGDISCodes"
-* entry[+].resource = ShiftSlsSDVCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSDVCodes"
-* entry[+].resource = ShiftSlsPSYTHPNCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsPSYTHPNCodes"
-//* entry[+].resource = ShiftSlsSensitiveCodes
-//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftSlsSensitiveCodes"
+* entry[+].resource = ShiftMinHallucinogenCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinHallucinogenCodes"
+* entry[+].resource = ShiftMinOpioidCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinOpioidCodes"
+* entry[+].resource = ShiftMinBHCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinBHCodes"
+* entry[+].resource = ShiftMinSEXCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSEXCodes"
+* entry[+].resource = ShiftMinAbortionCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinAbortionCodes"
+* entry[+].resource = ShiftMinSTDCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSTDCodes"
+* entry[+].resource = ShiftMinHIVCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinHIVCodes"
+* entry[+].resource = ShiftMinGDISCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinGDISCodes"
+* entry[+].resource = ShiftMinSDVCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSDVCodes"
+* entry[+].resource = ShiftMinPSYTHPNCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinPSYTHPNCodes"
+//* entry[+].resource = ShiftMinSensitiveCodes
+//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftMinSensitiveCodes"
 
