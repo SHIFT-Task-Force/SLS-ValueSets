@@ -3,26 +3,37 @@
 
 CodeSystem: ShiftCustomActContextCodes
 Title: "SHIFT Custom Context Codes"
-Description: "Local useContext codes not present in v3-ActCode"
+Description: "Local useContext codes not present in v3-InformationSensitivityPolicy"
 * ^experimental = false
 * ^caseSensitive = true
-* #AMPH "Local SHIFT context code AMPH"
-* #CBD "Local SHIFT context code CBD"
-* #COC "Local SHIFT context code COC"
-* #ETOH "Local SHIFT context code ETOH"
-* #HAL "Local SHIFT context code HAL"
-* #INH "Local SHIFT context code INH"
-* #OPD "Local SHIFT context code OPD"
-* #OTH "Local SHIFT context code OTH"
-* #POLY "Local SHIFT context code POLY"
-* #SED "Local SHIFT context code SED"
-* #TOB "Local SHIFT context code TOB"
+* #BHAGG "BH AGG" "Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint."
+* #BHCORE "BH CORE" "Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders."
+* #BHDEV "BH DEV" "Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD)."
+* #BHEAT "BH EAT" "Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record — including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding — that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal."
+* #BHNCD "BH NCD" "Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia."
+* #BHPERS "BH PERS" "Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits."
+* #BHSOM "BH SOM" "Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category."
+* #SUDAMPH "SUD AMPH" "Term related to amphetamine misuse or amphetamine use disorders (including methamphetamine)."
+* #SUDCBD "SUD CBD" "Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone)."
+* #SUDCOC "SUD COC" "Term related to cocaine misuse or cocaine use disorders."
+* #SUDETOH "SUD ETOH" "Term related to alcohol misuse or alcohol use disorder."
+* #SUDHAL "SUD HAL" "Term related to hallucinogen misuse or hallucinogen use disorders (LSD, psilocybin, mescaline, DMT, PCP/phencyclidine, ketamine, MDMA-as-hallucinogen)."
+* #SUDINH "SUD INH" "Term related to inhalant misuse or inhalant use disorders (toluene, glue, solvents, nitrous oxide, alkyl nitrites/poppers)."
+* #SUDOPD "SUD OPD" "Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.)."
+* #SUDOTH "SUD OTH" "Term related to other addictive disorders (gambling, sun/sunbed addiction, laxative abuse, caffeine, dextromethorphan)."
+* #SUDPOLY "SUD POLY" "Term related to polysubstance, mixed substance, or combined substance use (involves multiple substances simultaneously)."
+* #SUDSED "SUD SED" "Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics)."
+* #SUDTOB "SUD TOB" "Term related to tobacco/nicotine misuse or tobacco use disorders."
 
 Instance: ShiftBHSHIFTBHAGG
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH AGG"
-Description: "ValueSet for SHIFT BH AGG"
+Description: """
+Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint.
+
+Identified as: ShiftCustomActContextCodes#BHAGG
+"""
 * name = "ShiftBHSHIFTBHAGG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGG"
 * status = #active
@@ -30,7 +41,7 @@ Description: "ValueSet for SHIFT BH AGG"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#AGG
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F43.24
@@ -202,8 +213,8 @@ Description: "ValueSet for SHIFT BH AGG"
 * compose.include[=].concept[+].code = #J1630
 * compose.include[=].concept[+].code = #J2060
 * compose.include[=].concept[+].code = #J3486
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:d3f1e192-f416-4d2c-aa52-7cdf96dc8e93"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:e49b72f0-e7ef-43f8-92da-775f961bf393"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.24
 * expansion.contains[=].display = "Adjustment Disorder with Disturbance of Conduct"
@@ -520,7 +531,11 @@ Instance: ShiftBHSHIFTBHAGGSHIFTBHCORE
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH CORE"
-Description: "ValueSet for SHIFT BH AGG | SHIFT BH CORE"
+Description: """
+SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint.; SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.
+
+Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHCORE
+"""
 * name = "ShiftBHSHIFTBHAGGSHIFTBHCORE"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHCORE"
 * status = #active
@@ -528,9 +543,9 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH CORE"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#AGG
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #28241-8
@@ -593,8 +608,8 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH CORE"
 * compose.include[=].concept[+].code = #1365663003
 * compose.include[=].concept[+].code = #1365674007
 * compose.include[=].concept[+].code = #1365678005
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:625f0d59-f069-4d1f-865d-5942a0323184"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:2c11203a-428b-4494-963b-d1779b30083e"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #28241-8
 * expansion.contains[+].system = "http://loinc.org"
@@ -719,7 +734,11 @@ Instance: ShiftBHSHIFTBHAGGSHIFTBHDEV
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH DEV"
-Description: "ValueSet for SHIFT BH AGG | SHIFT BH DEV"
+Description: """
+SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
+
+Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHDEV
+"""
 * name = "ShiftBHSHIFTBHAGGSHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHDEV"
 * status = #active
@@ -727,14 +746,14 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH DEV"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#AGG
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #46745001
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:fa49689d-59ea-42d3-a94b-e351045e8ccd"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:df222451-6e0c-4772-82e4-ec2563714e9d"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #46745001
 
@@ -743,7 +762,11 @@ Instance: ShiftBHSHIFTBHAGGSHIFTBHNCD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH NCD"
-Description: "ValueSet for SHIFT BH AGG | SHIFT BH NCD"
+Description: """
+SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint.; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
+
+Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHNCD
+"""
 * name = "ShiftBHSHIFTBHAGGSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHNCD"
 * status = #active
@@ -751,14 +774,14 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH NCD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#AGG
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#NCD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #99580-3
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:e38ca714-9f6f-4895-a950-9a63fa7bb195"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:080b39c5-48d7-41d7-9d53-2ff814d6ae23"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #99580-3
 
@@ -767,7 +790,11 @@ Instance: ShiftBHSHIFTBHAGGSHIFTBHPERS
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH PERS"
-Description: "ValueSet for SHIFT BH AGG | SHIFT BH PERS"
+Description: """
+SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint.; SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.
+
+Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHPERS
+"""
 * name = "ShiftBHSHIFTBHAGGSHIFTBHPERS"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHPERS"
 * status = #active
@@ -775,9 +802,9 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH PERS"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#AGG
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PERS
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F60.2
@@ -789,8 +816,8 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH PERS"
 * compose.include[=].concept[+].code = #26665006
 * compose.include[=].concept[+].code = #40987004
 * compose.include[=].concept[+].code = #698699000
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:b7574473-a5af-4898-8cd6-af24d77b1a5e"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:8bcd79c6-365d-45a5-ac4e-548c5620bf12"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.2
 * expansion.contains[=].display = "Antisocial Personality Disorder"
@@ -809,7 +836,11 @@ Instance: ShiftBHSHIFTBHAGGSHIFTBHSEX
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH SEX"
-Description: "ValueSet for SHIFT BH AGG | SHIFT BH SEX"
+Description: """
+SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms — IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only — they are maintenance, not chemical restraint.; SHIFT BH SEX: Term is related to sexual dysfunction or paraphilic disorders. Includes disorders of sexual arousal and treatments for those issues.
+
+Identified as: ShiftCustomActContextCodes#BHAGG, v3-ActCode#SEX
+"""
 * name = "ShiftBHSHIFTBHAGGSHIFTBHSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHSEX"
 * status = #active
@@ -817,15 +848,16 @@ Description: "ValueSet for SHIFT BH AGG | SHIFT BH SEX"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#AGG
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * compose.include[=].concept[+].code = #H2028
 * compose.include[=].concept[+].code = #H2029
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:387c4f89-015b-461b-996e-09b9dd28b1e5"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:30f60eff-f021-44dc-98b9-635a1366a0c5"
 * expansion.contains[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * expansion.contains[=].code = #H2028
 * expansion.contains[+].system = "urn:oid:2.16.840.1.113883.6.285"
@@ -836,7 +868,11 @@ Instance: ShiftBHSHIFTBHCORE
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH CORE"
-Description: "ValueSet for SHIFT BH CORE"
+Description: """
+Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.
+
+Identified as: ShiftCustomActContextCodes#BHCORE
+"""
 * name = "ShiftBHSHIFTBHCORE"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORE"
 * status = #active
@@ -844,7 +880,7 @@ Description: "ValueSet for SHIFT BH CORE"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F20.1
@@ -2844,8 +2880,8 @@ Description: "ValueSet for SHIFT BH CORE"
 * compose.include[=].concept[+].code = #S9484
 * compose.include[=].concept[+].code = #S9485
 * compose.include[=].concept[+].code = #T1027
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:aa26b184-fa00-4d65-8282-f138745c302d"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:51b12d13-c5b3-44cc-a1e7-3eec51359017"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.1
 * expansion.contains[=].display = "Disorganized schizophrenia"
@@ -6461,7 +6497,11 @@ Instance: ShiftBHSHIFTBHCORESHIFTBHDEV
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH DEV"
-Description: "ValueSet for SHIFT BH CORE | SHIFT BH DEV"
+Description: """
+SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
+
+Identified as: ShiftCustomActContextCodes#BHCORE, ShiftCustomActContextCodes#BHDEV
+"""
 * name = "ShiftBHSHIFTBHCORESHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHDEV"
 * status = #active
@@ -6469,14 +6509,14 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH DEV"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #230334008
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:9054e42e-42f8-407e-b205-7db14e4ffe8c"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:a6173353-12fc-4a67-a1e7-1d9234bfabca"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #230334008
 
@@ -6485,7 +6525,11 @@ Instance: ShiftBHSHIFTBHCORESHIFTBHDEVSHIFTBHNCD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH DEV | SHIFT BH NCD"
-Description: "ValueSet for SHIFT BH CORE | SHIFT BH DEV | SHIFT BH NCD"
+Description: """
+SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
+
+Identified as: ShiftCustomActContextCodes#BHCORE, ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHNCD
+"""
 * name = "ShiftBHSHIFTBHCORESHIFTBHDEVSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHDEVSHIFTBHNCD"
 * status = #active
@@ -6493,11 +6537,11 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH DEV | SHIFT BH NCD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#NCD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #96130
@@ -6507,8 +6551,8 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH DEV | SHIFT BH NCD"
 * compose.include[=].concept[+].code = #96138
 * compose.include[=].concept[+].code = #96139
 * compose.include[=].concept[+].code = #96146
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:87e343c4-90fa-437a-a070-b9059a8253b4"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:12f664ae-d89b-4426-919f-f02af8ef967a"
 * expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
 * expansion.contains[=].code = #96130
 * expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
@@ -6529,7 +6573,11 @@ Instance: ShiftBHSHIFTBHCORESHIFTBHEAT
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH EAT"
-Description: "ValueSet for SHIFT BH CORE | SHIFT BH EAT"
+Description: """
+SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH EAT: Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record — including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding — that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal.
+
+Identified as: ShiftCustomActContextCodes#BHCORE, ShiftCustomActContextCodes#BHEAT
+"""
 * name = "ShiftBHSHIFTBHCORESHIFTBHEAT"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHEAT"
 * status = #active
@@ -6537,14 +6585,14 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH EAT"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#EAT
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #27051000119102
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:cb265054-23b1-46f9-a1c5-1ac652730fe7"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:abcfbcf0-2592-4458-bea5-b089159921f4"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #27051000119102
 
@@ -6553,7 +6601,11 @@ Instance: ShiftBHSHIFTBHCORESHIFTBHPERS
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH PERS"
-Description: "ValueSet for SHIFT BH CORE | SHIFT BH PERS"
+Description: """
+SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.
+
+Identified as: ShiftCustomActContextCodes#BHCORE, ShiftCustomActContextCodes#BHPERS
+"""
 * name = "ShiftBHSHIFTBHCORESHIFTBHPERS"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHPERS"
 * status = #active
@@ -6561,14 +6613,14 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH PERS"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PERS
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #31611000
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:0800860c-02de-4cd9-b9b3-362d8b2612c7"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:469cfa76-ddb8-468c-904a-e2004ff5043d"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #31611000
 
@@ -6577,7 +6629,11 @@ Instance: ShiftBHSHIFTBHCORESHIFTBHSOM
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH SOM"
-Description: "ValueSet for SHIFT BH CORE | SHIFT BH SOM"
+Description: """
+SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
+
+Identified as: ShiftCustomActContextCodes#BHCORE, ShiftCustomActContextCodes#BHSOM
+"""
 * name = "ShiftBHSHIFTBHCORESHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHSOM"
 * status = #active
@@ -6585,9 +6641,9 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH SOM"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#CORE
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHCORE
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SOM
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #35827000
@@ -6600,8 +6656,8 @@ Description: "ValueSet for SHIFT BH CORE | SHIFT BH SOM"
 * compose.include[=].concept[+].code = #403593004
 * compose.include[=].concept[+].code = #425832009
 * compose.include[=].concept[+].code = #441711008
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:9463b607-dbb1-4567-890b-f226f85b3498"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:d5b3013d-5b4c-4fd3-8f12-3b768d28376a"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #35827000
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -6628,7 +6684,11 @@ Instance: ShiftBHSHIFTBHDEV
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH DEV"
-Description: "ValueSet for SHIFT BH DEV"
+Description: """
+Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
+
+Identified as: ShiftCustomActContextCodes#BHDEV
+"""
 * name = "ShiftBHSHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEV"
 * status = #active
@@ -6636,7 +6696,7 @@ Description: "ValueSet for SHIFT BH DEV"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F90.0
@@ -6848,8 +6908,8 @@ Description: "ValueSet for SHIFT BH DEV"
 * compose.include[=].concept[+].code = #0373T
 * compose.include[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * compose.include[=].concept[+].code = #H2037
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:191e8fe6-5ada-49d5-824d-8561a7644253"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:f46adf12-26b6-4756-bd7e-052a4b064c23"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F90.0
 * expansion.contains[=].display = "Attention-deficit hyperactivity disorder, predominantly inattentive type"
@@ -7217,7 +7277,11 @@ Instance: ShiftBHSHIFTBHDEVSHIFTBHNCD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH DEV | SHIFT BH NCD"
-Description: "ValueSet for SHIFT BH DEV | SHIFT BH NCD"
+Description: """
+SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
+
+Identified as: ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHNCD
+"""
 * name = "ShiftBHSHIFTBHDEVSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEVSHIFTBHNCD"
 * status = #active
@@ -7225,17 +7289,17 @@ Description: "ValueSet for SHIFT BH DEV | SHIFT BH NCD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#NCD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #96116
 * compose.include[=].concept[+].code = #96121
 * compose.include[=].concept[+].code = #96132
 * compose.include[=].concept[+].code = #96133
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:9b666018-c82c-474a-a151-b6c3d8727d78"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:843a27c3-69ac-48b7-b4be-59235b03af46"
 * expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
 * expansion.contains[=].code = #96116
 * expansion.contains[+].system = "http://www.ama-assn.org/go/cpt"
@@ -7250,7 +7314,11 @@ Instance: ShiftBHSHIFTBHDEVSHIFTBHSOM
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH DEV | SHIFT BH SOM"
-Description: "ValueSet for SHIFT BH DEV | SHIFT BH SOM"
+Description: """
+SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
+
+Identified as: ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHSOM
+"""
 * name = "ShiftBHSHIFTBHDEVSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEVSHIFTBHSOM"
 * status = #active
@@ -7258,14 +7326,14 @@ Description: "ValueSet for SHIFT BH DEV | SHIFT BH SOM"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SOM
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #1259070005
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:30263409-d253-4fae-a2a1-f1bec6a08212"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:5002b142-a98f-47b4-8e26-8e97142b1aea"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #1259070005
 
@@ -7274,7 +7342,11 @@ Instance: ShiftBHSHIFTBHEAT
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH EAT"
-Description: "ValueSet for SHIFT BH EAT"
+Description: """
+Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record — including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding — that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal.
+
+Identified as: ShiftCustomActContextCodes#BHEAT
+"""
 * name = "ShiftBHSHIFTBHEAT"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHEAT"
 * status = #active
@@ -7282,7 +7354,7 @@ Description: "ValueSet for SHIFT BH EAT"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#EAT
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F50.01
@@ -7404,8 +7476,8 @@ Description: "ValueSet for SHIFT BH EAT"
 * compose.include[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * compose.include[=].concept[+].code = #G0447
 * compose.include[=].concept[+].code = #G0473
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:039c61c9-fad4-4259-92d0-9e74f45e8f47"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:ca20165b-7e53-4297-8a9c-5e6c36eb2dfa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.01
 * expansion.contains[=].display = "Anorexia Nervosa"
@@ -7629,7 +7701,11 @@ Instance: ShiftBHSHIFTBHEATSHIFTBHSOM
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH EAT | SHIFT BH SOM"
-Description: "ValueSet for SHIFT BH EAT | SHIFT BH SOM"
+Description: """
+SHIFT BH EAT: Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record — including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding — that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal.; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
+
+Identified as: ShiftCustomActContextCodes#BHEAT, ShiftCustomActContextCodes#BHSOM
+"""
 * name = "ShiftBHSHIFTBHEATSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHEATSHIFTBHSOM"
 * status = #active
@@ -7637,14 +7713,14 @@ Description: "ValueSet for SHIFT BH EAT | SHIFT BH SOM"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#EAT
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SOM
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #192630004
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:b799eb49-8695-4a88-9211-6a39a9a17f70"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:ed7a4cfc-a16d-4d23-b337-cf273f3bc302"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #192630004
 
@@ -7653,7 +7729,11 @@ Instance: ShiftBHSHIFTBHNCD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH NCD"
-Description: "ValueSet for SHIFT BH NCD"
+Description: """
+Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
+
+Identified as: ShiftCustomActContextCodes#BHNCD
+"""
 * name = "ShiftBHSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHNCD"
 * status = #active
@@ -7661,7 +7741,7 @@ Description: "ValueSet for SHIFT BH NCD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#NCD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F10.121
@@ -8049,8 +8129,8 @@ Description: "ValueSet for SHIFT BH NCD"
 * compose.include[=].concept[+].code = #232534061000119102
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #99483
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:b7c26e3d-0b3a-4721-a4a7-e708c08f868a"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:0dc2f6b5-2f4e-4abe-a86b-579dc9fd779f"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.121
 * expansion.contains[=].display = "Alcohol intoxication delirium"
@@ -8766,7 +8846,11 @@ Instance: ShiftBHSHIFTBHNCDSHIFTBHDEV
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH NCD | SHIFT BH DEV"
-Description: "ValueSet for SHIFT BH NCD | SHIFT BH DEV"
+Description: """
+SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
+
+Identified as: ShiftCustomActContextCodes#BHNCD, ShiftCustomActContextCodes#BHDEV
+"""
 * name = "ShiftBHSHIFTBHNCDSHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHNCDSHIFTBHDEV"
 * status = #active
@@ -8774,14 +8858,14 @@ Description: "ValueSet for SHIFT BH NCD | SHIFT BH DEV"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#NCD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#DEV
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * compose.include[=].concept[+].code = #H0045
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:04e7db76-7492-4891-9c18-8b448d4f8c9d"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:deb0f76a-8b3c-4799-b29f-2cdb52e95697"
 * expansion.contains[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * expansion.contains[=].code = #H0045
 
@@ -8790,7 +8874,11 @@ Instance: ShiftBHSHIFTBHPERS
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH PERS"
-Description: "ValueSet for SHIFT BH PERS"
+Description: """
+Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.
+
+Identified as: ShiftCustomActContextCodes#BHPERS
+"""
 * name = "ShiftBHSHIFTBHPERS"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHPERS"
 * status = #active
@@ -8798,7 +8886,7 @@ Description: "ValueSet for SHIFT BH PERS"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PERS
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F60.0
@@ -8898,8 +8986,8 @@ Description: "ValueSet for SHIFT BH PERS"
 * compose.include[=].concept[+].code = #473457009
 * compose.include[=].concept[+].code = #698690001
 * compose.include[=].concept[+].code = #698700004
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:603e111b-d8b3-47f6-b2af-a1e1746117d5"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:aee017c0-0b50-4a62-8b34-d26299b07d51"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.0
 * expansion.contains[=].display = "Paranoid Personality Disorder"
@@ -9070,7 +9158,11 @@ Instance: ShiftBHSHIFTBHPERSSHIFTBHSEX
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH PERS | SHIFT BH SEX"
-Description: "ValueSet for SHIFT BH PERS | SHIFT BH SEX"
+Description: """
+SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.; SHIFT BH SEX: Term is related to sexual dysfunction or paraphilic disorders. Includes disorders of sexual arousal and treatments for those issues.
+
+Identified as: ShiftCustomActContextCodes#BHPERS, v3-ActCode#SEX
+"""
 * name = "ShiftBHSHIFTBHPERSSHIFTBHSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHPERSSHIFTBHSEX"
 * status = #active
@@ -9078,14 +9170,15 @@ Description: "ValueSet for SHIFT BH PERS | SHIFT BH SEX"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#PERS
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #191774007
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:421b88f3-9799-4e26-895f-60a6809b3e41"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:2d622e1a-d2bd-4be6-925d-f4478932a60e"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #191774007
 
@@ -9094,7 +9187,11 @@ Instance: ShiftBHSHIFTBHSEX
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH SEX"
-Description: "ValueSet for SHIFT BH SEX"
+Description: """
+Term is related to sexual dysfunction or paraphilic disorders. Includes disorders of sexual arousal and treatments for those issues.
+
+Identified as: v3-ActCode#SEX
+"""
 * name = "ShiftBHSHIFTBHSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSEX"
 * status = #active
@@ -9102,6 +9199,7 @@ Description: "ValueSet for SHIFT BH SEX"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -9318,8 +9416,8 @@ Description: "ValueSet for SHIFT BH SEX"
 * compose.include[=].concept[+].code = #153151000119100
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #54250
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:8f519a47-e93d-4460-a35b-73d4d00847cd"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:0a53c4c1-c72e-494b-8e5b-ac83ebcf5d19"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.4
 * expansion.contains[=].display = "Pedophilic disorder"
@@ -9688,7 +9786,11 @@ Instance: ShiftBHSHIFTBHSOM
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT BH SOM"
-Description: "ValueSet for SHIFT BH SOM"
+Description: """
+Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
+
+Identified as: ShiftCustomActContextCodes#BHSOM
+"""
 * name = "ShiftBHSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSOM"
 * status = #active
@@ -9696,7 +9798,7 @@ Description: "ValueSet for SHIFT BH SOM"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SOM
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F54
@@ -9828,8 +9930,8 @@ Description: "ValueSet for SHIFT BH SOM"
 * compose.include[=].concept[+].code = #1197717008
 * compose.include[=].concept[+].code = #381000119107
 * compose.include[=].concept[+].code = #16265701000119107
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:818d158a-6664-4b74-85d2-57d3462e5e7a"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:733ee1e8-d88a-4377-8bd2-a294b8643cc4"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F54
 * expansion.contains[=].display = "Psychological Factors Affecting Other Medical Conditions"
@@ -10069,7 +10171,11 @@ Instance: ShiftBHSHIFTSUD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD"
-Description: "ValueSet for SHIFT SUD"
+Description: """
+Term is generic or relates to substance use disorders in general (e.g., "harmful pattern of substance use", "drug-induced X", "other psychoactive substance"). Used when no specific drug class applies.
+
+Identified as: v3-ActCode#SUD
+"""
 * name = "ShiftBHSHIFTSUD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUD"
 * status = #active
@@ -10077,6 +10183,7 @@ Description: "ValueSet for SHIFT SUD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+// useContext mapping: SHIFT SUD -> v3-ActCode#SUD
 * useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
@@ -10357,8 +10464,8 @@ Description: "ValueSet for SHIFT SUD"
 * compose.include[=].concept[+].code = #T1007
 * compose.include[=].concept[+].code = #T1010
 * compose.include[=].concept[+].code = #T1012
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:60767ae5-bb33-4d71-ace2-3d84ef08fbbf"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:48db74c6-f516-45a1-9083-4b4cc016de69"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.231
 * expansion.contains[=].display = "Other (or unknown) substance withdrawal delirium"
@@ -10868,7 +10975,11 @@ Instance: ShiftBHSHIFTSUDAMPH
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD AMPH"
-Description: "ValueSet for SHIFT SUD AMPH"
+Description: """
+Term related to amphetamine misuse or amphetamine use disorders (including methamphetamine).
+
+Identified as: ShiftCustomActContextCodes#SUDAMPH
+"""
 * name = "ShiftBHSHIFTSUDAMPH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDAMPH"
 * status = #active
@@ -10876,7 +10987,7 @@ Description: "ValueSet for SHIFT SUD AMPH"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#AMPH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDAMPH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F15.23
@@ -11313,8 +11424,8 @@ Description: "ValueSet for SHIFT SUD AMPH"
 * compose.include[=].concept[+].code = #80359
 * compose.include[=].concept[+].code = #80360
 * compose.include[=].concept[+].code = #80371
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:7cd598f4-1192-4a11-a2d5-cba9c34b87b8"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:759642bd-1619-4d31-85b9-707aff0fc9e8"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.23
 * expansion.contains[=].display = "Amphetamine or other stimulant withdrawal"
@@ -12149,7 +12260,11 @@ Instance: ShiftBHSHIFTSUDAMPHSHIFTSUDCOC
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD AMPH | SHIFT SUD COC"
-Description: "ValueSet for SHIFT SUD AMPH | SHIFT SUD COC"
+Description: """
+SHIFT SUD AMPH: Term related to amphetamine misuse or amphetamine use disorders (including methamphetamine).; SHIFT SUD COC: Term related to cocaine misuse or cocaine use disorders.
+
+Identified as: ShiftCustomActContextCodes#SUDAMPH, ShiftCustomActContextCodes#SUDCOC
+"""
 * name = "ShiftBHSHIFTSUDAMPHSHIFTSUDCOC"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDAMPHSHIFTSUDCOC"
 * status = #active
@@ -12157,14 +12272,14 @@ Description: "ValueSet for SHIFT SUD AMPH | SHIFT SUD COC"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#AMPH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDAMPH
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#COC
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCOC
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #442406005
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:0228c579-7c28-425b-9966-536c91a6ae00"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:f4b6aa2d-aeae-4f27-9d44-628553610029"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #442406005
 
@@ -12173,7 +12288,11 @@ Instance: ShiftBHSHIFTSUDCBD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD CBD"
-Description: "ValueSet for SHIFT SUD CBD"
+Description: """
+Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone).
+
+Identified as: ShiftCustomActContextCodes#SUDCBD
+"""
 * name = "ShiftBHSHIFTSUDCBD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDCBD"
 * status = #active
@@ -12181,7 +12300,7 @@ Description: "ValueSet for SHIFT SUD CBD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CBD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCBD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F12.23
@@ -12494,8 +12613,8 @@ Description: "ValueSet for SHIFT SUD CBD"
 * compose.include[=].concept[+].code = #80350
 * compose.include[=].concept[+].code = #80351
 * compose.include[=].concept[+].code = #80352
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:0461bc1c-d97c-42de-90f1-900c71dc33d3"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:fc26e0ce-b3a5-4e41-a231-d5503b1f92f4"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.23
 * expansion.contains[=].display = "Cannabis withdrawal"
@@ -13084,7 +13203,11 @@ Instance: ShiftBHSHIFTSUDCBDSHIFTSUDHAL
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD CBD | SHIFT SUD HAL"
-Description: "ValueSet for SHIFT SUD CBD | SHIFT SUD HAL"
+Description: """
+SHIFT SUD CBD: Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone).; SHIFT SUD HAL: Term related to hallucinogen misuse or hallucinogen use disorders (LSD, psilocybin, mescaline, DMT, PCP/phencyclidine, ketamine, MDMA-as-hallucinogen).
+
+Identified as: ShiftCustomActContextCodes#SUDCBD, ShiftCustomActContextCodes#SUDHAL
+"""
 * name = "ShiftBHSHIFTSUDCBDSHIFTSUDHAL"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDCBDSHIFTSUDHAL"
 * status = #active
@@ -13092,15 +13215,15 @@ Description: "ValueSet for SHIFT SUD CBD | SHIFT SUD HAL"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CBD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCBD
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#HAL
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDHAL
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #23527004
 * compose.include[=].concept[+].code = #38247002
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:2fe7a2cc-69a9-40e6-8cb3-04016a810cf2"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:41564ad1-887c-4471-82e4-a12ec2797c86"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #23527004
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -13111,7 +13234,11 @@ Instance: ShiftBHSHIFTSUDCOC
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD COC"
-Description: "ValueSet for SHIFT SUD COC"
+Description: """
+Term related to cocaine misuse or cocaine use disorders.
+
+Identified as: ShiftCustomActContextCodes#SUDCOC
+"""
 * name = "ShiftBHSHIFTSUDCOC"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDCOC"
 * status = #active
@@ -13119,7 +13246,7 @@ Description: "ValueSet for SHIFT SUD COC"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#COC
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCOC
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F14.23
@@ -13400,8 +13527,8 @@ Description: "ValueSet for SHIFT SUD COC"
 * compose.include[=].concept[+].code = #288791000119106
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #80353
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:4e040eb3-17c1-41dc-976a-4757ea179457"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:45478fff-5e1c-464c-bde1-587e3b71ae63"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.23
 * expansion.contains[=].display = "Cocaine withdrawal"
@@ -13917,7 +14044,11 @@ Instance: ShiftBHSHIFTSUDCOCSHIFTSUDAMPH
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD COC | SHIFT SUD AMPH"
-Description: "ValueSet for SHIFT SUD COC | SHIFT SUD AMPH"
+Description: """
+SHIFT SUD COC: Term related to cocaine misuse or cocaine use disorders.; SHIFT SUD AMPH: Term related to amphetamine misuse or amphetamine use disorders (including methamphetamine).
+
+Identified as: ShiftCustomActContextCodes#SUDCOC, ShiftCustomActContextCodes#SUDAMPH
+"""
 * name = "ShiftBHSHIFTSUDCOCSHIFTSUDAMPH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDCOCSHIFTSUDAMPH"
 * status = #active
@@ -13925,9 +14056,9 @@ Description: "ValueSet for SHIFT SUD COC | SHIFT SUD AMPH"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#COC
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCOC
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#AMPH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDAMPH
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #95431-3
@@ -13940,8 +14071,8 @@ Description: "ValueSet for SHIFT SUD COC | SHIFT SUD AMPH"
 * compose.include[=].concept[+].code = #96857-8
 * compose.include[=].concept[+].code = #96858-6
 * compose.include[=].concept[+].code = #96859-4
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:bc238f37-db8a-473a-ad1d-5aaff39d54ed"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:5b689da2-ad96-41b9-9d01-a5d0a430bedb"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #95431-3
 * expansion.contains[+].system = "http://loinc.org"
@@ -13968,7 +14099,11 @@ Instance: ShiftBHSHIFTSUDETOH
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD ETOH"
-Description: "ValueSet for SHIFT SUD ETOH"
+Description: """
+Term related to alcohol misuse or alcohol use disorder.
+
+Identified as: ShiftCustomActContextCodes#SUDETOH
+"""
 * name = "ShiftBHSHIFTSUDETOH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDETOH"
 * status = #active
@@ -13976,7 +14111,7 @@ Description: "ValueSet for SHIFT SUD ETOH"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ETOH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F10.231
@@ -14415,8 +14550,8 @@ Description: "ValueSet for SHIFT SUD ETOH"
 * compose.include[=].concept[+].code = #H0027
 * compose.include[=].concept[+].code = #H0029
 * compose.include[=].concept[+].code = #T1009
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:62eba368-0654-4772-9970-74bd7290448c"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:97f4c4a2-c74b-4d5a-84ae-4b9224e36adc"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.231
 * expansion.contains[=].display = "Alcohol withdrawal delirium"
@@ -15242,7 +15377,11 @@ Instance: ShiftBHSHIFTSUDETOHSHIFTSUDOPD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD ETOH | SHIFT SUD OPD"
-Description: "ValueSet for SHIFT SUD ETOH | SHIFT SUD OPD"
+Description: """
+SHIFT SUD ETOH: Term related to alcohol misuse or alcohol use disorder.; SHIFT SUD OPD: Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).
+
+Identified as: ShiftCustomActContextCodes#SUDETOH, ShiftCustomActContextCodes#SUDOPD
+"""
 * name = "ShiftBHSHIFTSUDETOHSHIFTSUDOPD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDETOHSHIFTSUDOPD"
 * status = #active
@@ -15250,14 +15389,14 @@ Description: "ValueSet for SHIFT SUD ETOH | SHIFT SUD OPD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ETOH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#OPD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
 * compose.inactive = true
 * compose.include[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * compose.include[=].concept[+].code = #J2315
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:bc086f8e-4bc0-45c9-aaf6-3d4e8b696c07"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:391f9994-ff57-4deb-a246-48abe84e3fe0"
 * expansion.contains[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * expansion.contains[=].code = #J2315
 
@@ -15266,7 +15405,11 @@ Instance: ShiftBHSHIFTSUDETOHSHIFTSUDSED
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD ETOH | SHIFT SUD SED"
-Description: "ValueSet for SHIFT SUD ETOH | SHIFT SUD SED"
+Description: """
+SHIFT SUD ETOH: Term related to alcohol misuse or alcohol use disorder.; SHIFT SUD SED: Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics).
+
+Identified as: ShiftCustomActContextCodes#SUDETOH, ShiftCustomActContextCodes#SUDSED
+"""
 * name = "ShiftBHSHIFTSUDETOHSHIFTSUDSED"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDETOHSHIFTSUDSED"
 * status = #active
@@ -15274,14 +15417,14 @@ Description: "ValueSet for SHIFT SUD ETOH | SHIFT SUD SED"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ETOH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SED
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #45912004
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:773b2a01-0c21-4181-ad1a-86337eac222b"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:0516b175-e89f-449c-bff7-65a8272015a2"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #45912004
 
@@ -15290,7 +15433,11 @@ Instance: ShiftBHSHIFTSUDHAL
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD HAL"
-Description: "ValueSet for SHIFT SUD HAL"
+Description: """
+Term related to hallucinogen misuse or hallucinogen use disorders (LSD, psilocybin, mescaline, DMT, PCP/phencyclidine, ketamine, MDMA-as-hallucinogen).
+
+Identified as: ShiftCustomActContextCodes#SUDHAL
+"""
 * name = "ShiftBHSHIFTSUDHAL"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDHAL"
 * status = #active
@@ -15298,7 +15445,7 @@ Description: "ValueSet for SHIFT SUD HAL"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#HAL
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDHAL
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F16.121
@@ -15570,8 +15717,8 @@ Description: "ValueSet for SHIFT SUD HAL"
 * compose.include[=].concept[+].code = #288801000119107
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #80357
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:faec77a1-926a-4386-acd6-59f726cf3158"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:a79a3a70-de04-4261-be80-db9461de1980"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.121
 * expansion.contains[=].display = "Phencyclidine intoxication delirium"
@@ -16081,7 +16228,11 @@ Instance: ShiftBHSHIFTSUDHALSHIFTSUDSED
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD HAL | SHIFT SUD SED"
-Description: "ValueSet for SHIFT SUD HAL | SHIFT SUD SED"
+Description: """
+SHIFT SUD HAL: Term related to hallucinogen misuse or hallucinogen use disorders (LSD, psilocybin, mescaline, DMT, PCP/phencyclidine, ketamine, MDMA-as-hallucinogen).; SHIFT SUD SED: Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics).
+
+Identified as: ShiftCustomActContextCodes#SUDHAL, ShiftCustomActContextCodes#SUDSED
+"""
 * name = "ShiftBHSHIFTSUDHALSHIFTSUDSED"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDHALSHIFTSUDSED"
 * status = #active
@@ -16089,15 +16240,15 @@ Description: "ValueSet for SHIFT SUD HAL | SHIFT SUD SED"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#HAL
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDHAL
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SED
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #5510009
 * compose.include[=].concept[+].code = #74851005
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:8ee272d9-2ccb-446b-ad0b-3dfcb0e9ad76"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:0c1be00b-69b9-4826-8865-ce22c24f4202"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #5510009
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -16108,7 +16259,11 @@ Instance: ShiftBHSHIFTSUDINH
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD INH"
-Description: "ValueSet for SHIFT SUD INH"
+Description: """
+Term related to inhalant misuse or inhalant use disorders (toluene, glue, solvents, nitrous oxide, alkyl nitrites/poppers).
+
+Identified as: ShiftCustomActContextCodes#SUDINH
+"""
 * name = "ShiftBHSHIFTSUDINH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDINH"
 * status = #active
@@ -16116,7 +16271,7 @@ Description: "ValueSet for SHIFT SUD INH"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#INH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDINH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F18.121
@@ -16210,8 +16365,8 @@ Description: "ValueSet for SHIFT SUD INH"
 * compose.include[=].concept[+].code = #86391000119101
 * compose.include[=].concept[+].code = #86401000119104
 * compose.include[=].concept[+].code = #288461000119105
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:84dd2f49-be52-4a03-95c5-2450c2d71ea4"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:5889c862-ca91-473f-9b1a-97968738e3d4"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.121
 * expansion.contains[=].display = "Inhalant intoxication delirium"
@@ -16365,7 +16520,11 @@ Instance: ShiftBHSHIFTSUDOPD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD OPD"
-Description: "ValueSet for SHIFT SUD OPD"
+Description: """
+Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).
+
+Identified as: ShiftCustomActContextCodes#SUDOPD
+"""
 * name = "ShiftBHSHIFTSUDOPD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOPD"
 * status = #active
@@ -16373,7 +16532,7 @@ Description: "ValueSet for SHIFT SUD OPD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#OPD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F11.23
@@ -17397,8 +17556,8 @@ Description: "ValueSet for SHIFT SUD OPD"
 * compose.include[=].concept[+].code = #Q9991
 * compose.include[=].concept[+].code = #Q9992
 * compose.include[=].concept[+].code = #S0109
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:62cbc3fb-46fa-4085-ad2b-3859f6a6426e"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:20c5d47b-4f74-4be2-8bf4-960aa136807e"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.23
 * expansion.contains[=].display = "Opioid withdrawal delirium"
@@ -19404,7 +19563,11 @@ Instance: ShiftBHSHIFTSUDOPDSHIFTSUDETOH
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD OPD | SHIFT SUD ETOH"
-Description: "ValueSet for SHIFT SUD OPD | SHIFT SUD ETOH"
+Description: """
+SHIFT SUD OPD: Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).; SHIFT SUD ETOH: Term related to alcohol misuse or alcohol use disorder.
+
+Identified as: ShiftCustomActContextCodes#SUDOPD, ShiftCustomActContextCodes#SUDETOH
+"""
 * name = "ShiftBHSHIFTSUDOPDSHIFTSUDETOH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOPDSHIFTSUDETOH"
 * status = #active
@@ -19412,9 +19575,9 @@ Description: "ValueSet for SHIFT SUD OPD | SHIFT SUD ETOH"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#OPD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ETOH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #10994-2
@@ -19429,8 +19592,8 @@ Description: "ValueSet for SHIFT SUD OPD | SHIFT SUD ETOH"
 * compose.include[=].concept[+].code = #87822-3
 * compose.include[=].concept[+].code = #87823-1
 * compose.include[=].concept[+].code = #96366-0
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:f76d0bc7-60a6-4da3-8af1-8b3d4b0bc9b7"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:611779a3-40f2-494d-8450-6072d2216227"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #10994-2
 * expansion.contains[+].system = "http://loinc.org"
@@ -19461,7 +19624,11 @@ Instance: ShiftBHSHIFTSUDOPDSHIFTSUDSED
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD OPD | SHIFT SUD SED"
-Description: "ValueSet for SHIFT SUD OPD | SHIFT SUD SED"
+Description: """
+SHIFT SUD OPD: Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).; SHIFT SUD SED: Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics).
+
+Identified as: ShiftCustomActContextCodes#SUDOPD, ShiftCustomActContextCodes#SUDSED
+"""
 * name = "ShiftBHSHIFTSUDOPDSHIFTSUDSED"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOPDSHIFTSUDSED"
 * status = #active
@@ -19469,15 +19636,15 @@ Description: "ValueSet for SHIFT SUD OPD | SHIFT SUD SED"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#OPD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SED
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #226034001
 * compose.include[=].concept[+].code = #228388006
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:c3a48e51-07f3-4531-88f2-a9f74b2cc94a"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:97b5d1fd-04f6-4194-ae5e-9efc5df55493"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #226034001
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -19488,7 +19655,11 @@ Instance: ShiftBHSHIFTSUDOTH
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD OTH"
-Description: "ValueSet for SHIFT SUD OTH"
+Description: """
+Term related to other addictive disorders (gambling, sun/sunbed addiction, laxative abuse, caffeine, dextromethorphan).
+
+Identified as: ShiftCustomActContextCodes#SUDOTH
+"""
 * name = "ShiftBHSHIFTSUDOTH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOTH"
 * status = #active
@@ -19496,7 +19667,7 @@ Description: "ValueSet for SHIFT SUD OTH"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#OTH
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOTH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F15.93
@@ -19558,8 +19729,8 @@ Description: "ValueSet for SHIFT SUD OTH"
 * compose.include[=].concept[+].code = #735550008
 * compose.include[=].concept[+].code = #1336234008
 * compose.include[=].concept[+].code = #27051000119102
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:52822bd6-686c-4030-a931-ca3d32f1f8d6"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:5488f180-9b41-4329-b1d8-be58e8bca371"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.93
 * expansion.contains[=].display = "Caffeine withdrawal"
@@ -19664,7 +19835,11 @@ Instance: ShiftBHSHIFTSUDPOLY
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD POLY"
-Description: "ValueSet for SHIFT SUD POLY"
+Description: """
+Term related to polysubstance, mixed substance, or combined substance use (involves multiple substances simultaneously).
+
+Identified as: ShiftCustomActContextCodes#SUDPOLY
+"""
 * name = "ShiftBHSHIFTSUDPOLY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDPOLY"
 * status = #active
@@ -19672,7 +19847,7 @@ Description: "ValueSet for SHIFT SUD POLY"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#POLY
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDPOLY
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #51339003
@@ -19694,8 +19869,8 @@ Description: "ValueSet for SHIFT SUD POLY"
 * compose.include[=].concept[+].code = #1348216002
 * compose.include[=].concept[+].code = #1348217006
 * compose.include[=].concept[+].code = #1348218001
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:4a833af3-3251-4817-be66-41a010237b7a"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:be63c457-bfd9-4d2d-bd13-146f103e862a"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #51339003
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -19740,7 +19915,11 @@ Instance: ShiftBHSHIFTSUDSED
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD SED"
-Description: "ValueSet for SHIFT SUD SED"
+Description: """
+Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics).
+
+Identified as: ShiftCustomActContextCodes#SUDSED
+"""
 * name = "ShiftBHSHIFTSUDSED"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDSED"
 * status = #active
@@ -19748,7 +19927,7 @@ Description: "ValueSet for SHIFT SUD SED"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SED
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F13.231
@@ -20561,8 +20740,8 @@ Description: "ValueSet for SHIFT SUD SED"
 * compose.include[=].concept[+].code = #80347
 * compose.include[=].concept[+].code = #80368
 * compose.include[=].concept[+].code = #80369
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:e75c1a4d-3f8f-48aa-bb26-c08e076ba419"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:33a33bf9-1fc5-4d1a-a228-a554e4caeead"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.231
 * expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic withdrawal delirium"
@@ -22142,7 +22321,11 @@ Instance: ShiftBHSHIFTSUDTOB
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD TOB"
-Description: "ValueSet for SHIFT SUD TOB"
+Description: """
+Term related to tobacco/nicotine misuse or tobacco use disorders.
+
+Identified as: ShiftCustomActContextCodes#SUDTOB
+"""
 * name = "ShiftBHSHIFTSUDTOB"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDTOB"
 * status = #active
@@ -22150,7 +22333,7 @@ Description: "ValueSet for SHIFT SUD TOB"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#TOB
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDTOB
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F17.203
@@ -22404,8 +22587,8 @@ Description: "ValueSet for SHIFT SUD TOB"
 * compose.include[=].concept[+].code = #S4991
 * compose.include[=].concept[+].code = #S4995
 * compose.include[=].concept[+].code = #S9453
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:3ee69d03-c40a-45cb-9940-fddfd87b008a"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:0ca7167d-2aad-47d5-a66a-a6a116e6bb3d"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F17.203
 * expansion.contains[=].display = "Tobacco withdrawal"
@@ -22895,7 +23078,11 @@ Instance: ShiftBHSHIFTSUDTOBSHIFTSUDCBD
 InstanceOf: ValueSet
 Usage: #definition
 Title: "SHIFT SUD TOB | SHIFT SUD CBD"
-Description: "ValueSet for SHIFT SUD TOB | SHIFT SUD CBD"
+Description: """
+SHIFT SUD TOB: Term related to tobacco/nicotine misuse or tobacco use disorders.; SHIFT SUD CBD: Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone).
+
+Identified as: ShiftCustomActContextCodes#SUDTOB, ShiftCustomActContextCodes#SUDCBD
+"""
 * name = "ShiftBHSHIFTSUDTOBSHIFTSUDCBD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDTOBSHIFTSUDCBD"
 * status = #active
@@ -22903,14 +23090,14 @@ Description: "ValueSet for SHIFT SUD TOB | SHIFT SUD CBD"
 * version = "0.1.0"
 * date = "2026-05-20"
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#TOB
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDTOB
 * useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CBD
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCBD
 * compose.inactive = true
 * compose.include[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * compose.include[=].concept[+].code = #G9642
-* expansion.timestamp = "2026-07-23T19:20:38-05:00"
-* expansion.identifier = "urn:uuid:2ee68553-1d02-42a6-b7d4-293f06827e4b"
+* expansion.timestamp = "2026-07-24T08:06:25-05:00"
+* expansion.identifier = "urn:uuid:fc8c734d-3c5c-46b1-82d0-9410fec5ec4c"
 * expansion.contains[+].system = "urn:oid:2.16.840.1.113883.6.285"
 * expansion.contains[=].code = #G9642
 
