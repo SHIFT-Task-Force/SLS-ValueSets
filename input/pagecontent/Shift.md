@@ -76,3 +76,8 @@ The first set of errors are from the "Bundle", which is simply the collection of
 3. Some of the **information** are about invalid system values. Invalid system values can't be checked. 
 4. The **warning** about "Because the expansion used system XXX without a version..." are not necessarily a problem. do not worry about these.
 
+#### New custom sensitivity codes
+
+The Hannah CSV defined new sensitivity codes. I tried to use [the HL7 sensitivity codes](https://terminology.hl7.org/en/ValueSet-v3-InformationSensitivityPolicy.html) where possible, but some of the codes were not in HL7. I created a new CodeSystem for these codes, and used them in the ValueSets. The new CodeSystem is called `ShiftCustomActContextCodes`, and is defined in the [CodeSystem-ShiftCustomActContextCodes.html](CodeSystem-ShiftCustomActContextCodes.html).
+
+The problem with defining new codes is that no previous policy or consent will be able to affect data tagged with these codes. So these code should be reviewed to assure that we only create new codes when there really is no existing code that can be used.
