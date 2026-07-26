@@ -63,7 +63,7 @@ Bundle:
 
 ### Potential problems
 
-The [QA report](qa.html) Shows some problems that I didn't / couldn't fix.
+The [QA report](../qa.html) Shows some problems that I didn't / couldn't fix.
 
 - errors = 102, 
 - warn = 79, 
