@@ -391,8 +391,6 @@ def process_all_csvs():
                     code_value = code_dict["code"].lstrip("'")
                     output.append(f"* expansion.contains[+].system = \"{system}\"")
                     output.append(f"* expansion.contains[=].code = #{code_value}")
-                    if code_dict["display"] and code_dict["display"] != code_dict["code"]:
-                        output.append(f"* expansion.contains[=].display = \"{code_dict['display']}\"")
 
         output.append("")
         output.append("")

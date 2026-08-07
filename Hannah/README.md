@@ -20,7 +20,7 @@ The script:
 - `compose.include` entries grouped by code system
 - `expansion.timestamp` (generation-time timestamp)
 - `expansion.identifier` (new UUID per ValueSet)
-- `expansion.contains` entries mirroring generated compose codes
+- `expansion.contains` entries mirroring generated compose codes without populating display values
 
 5. Builds markdown `Description` text from definition rows and appends a useContext paragraph:
 - `Identified as: ...`

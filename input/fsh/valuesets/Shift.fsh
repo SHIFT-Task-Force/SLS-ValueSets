@@ -217,64 +217,44 @@ Identified as: ShiftCustomActContextCodes#BHAGG
 * expansion.identifier = "urn:uuid:e49b72f0-e7ef-43f8-92da-775f961bf393"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.24
-* expansion.contains[=].display = "Adjustment Disorder with Disturbance of Conduct"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.25
-* expansion.contains[=].display = "Adjustment Disorder with Mixed Disturbance of Emotions and Conduct"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F91.9
-* expansion.contains[=].display = "Unspecified Disruptive Impulse-Control and Conduct Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F63.2
-* expansion.contains[=].display = "Kleptomania"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F63.1
-* expansion.contains[=].display = "Pyromania"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F63.81
-* expansion.contains[=].display = "Intermittent Explosive Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F91.1
-* expansion.contains[=].display = "Conduct Disorder - Childhood-Onset Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F91.2
-* expansion.contains[=].display = "Conduct Disorder - Adolescent-Onset Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F91.8
-* expansion.contains[=].display = "Other Specified Disruptive Impulse-Control and Conduct Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F91.3
-* expansion.contains[=].display = "Oppositional Defiant Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #309.3
-* expansion.contains[=].display = "Adjustment Disorder with Disturbance of Conduct"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #309.4
-* expansion.contains[=].display = "Adjustment Disorder with Mixed Disturbance of Emotions and Conduct"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.9
-* expansion.contains[=].display = "Unspecified Disruptive Impulse-Control and Conduct Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.32
-* expansion.contains[=].display = "Kleptomania"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.33
-* expansion.contains[=].display = "Pyromania"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.34
-* expansion.contains[=].display = "Intermittent Explosive Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.81
-* expansion.contains[=].display = "Conduct Disorder - Childhood-Onset Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.82
-* expansion.contains[=].display = "Conduct Disorder - Adolescent-Onset Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.89
-* expansion.contains[=].display = "Other Specified Disruptive Impulse-Control and Conduct Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #313.81
-* expansion.contains[=].display = "Oppositional Defiant Disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #45519-6
 * expansion.contains[+].system = "http://loinc.org"
@@ -820,10 +800,8 @@ Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHPE
 * expansion.identifier = "urn:uuid:8bcd79c6-365d-45a5-ac4e-548c5620bf12"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.2
-* expansion.contains[=].display = "Antisocial Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.7
-* expansion.contains[=].display = "Antisocial Personality Disorder"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #26665006
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -2884,1129 +2862,754 @@ Identified as: ShiftCustomActContextCodes#BHCORE
 * expansion.identifier = "urn:uuid:51b12d13-c5b3-44cc-a1e7-3eec51359017"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.1
-* expansion.contains[=].display = "Disorganized schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.2
-* expansion.contains[=].display = "Catatonic schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.3
-* expansion.contains[=].display = "Undifferentiated schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.5
-* expansion.contains[=].display = "Residual schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.81
-* expansion.contains[=].display = "Schizophreniform disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.89
-* expansion.contains[=].display = "Other schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F22
-* expansion.contains[=].display = "Delusional disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F23
-* expansion.contains[=].display = "Brief psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F24
-* expansion.contains[=].display = "Shared psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F25.0
-* expansion.contains[=].display = "Schizoaffective disorder, bipolar type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F25.1
-* expansion.contains[=].display = "Schizoaffective disorder, depressive type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F25.8
-* expansion.contains[=].display = "Other schizoaffective disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F28
-* expansion.contains[=].display = "Other psychotic disorder not due to a substance or known physiological condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.10
-* expansion.contains[=].display = "Manic episode without psychotic symptoms, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.11
-* expansion.contains[=].display = "Manic episode without psychotic symptoms, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.12
-* expansion.contains[=].display = "Manic episode without psychotic symptoms, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.13
-* expansion.contains[=].display = "Manic episode, severe, without psychotic symptoms"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.2
-* expansion.contains[=].display = "Manic episode, severe with psychotic symptoms"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.3
-* expansion.contains[=].display = "Manic episode in partial remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.4
-* expansion.contains[=].display = "Manic episode in full remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.8
-* expansion.contains[=].display = "Other manic episodes"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F30.9
-* expansion.contains[=].display = "Manic episode, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.10
-* expansion.contains[=].display = "Bipolar disorder, current episode manic without psychotic features, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.11
-* expansion.contains[=].display = "Bipolar disorder, current episode manic without psychotic features, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.12
-* expansion.contains[=].display = "Bipolar disorder, current episode manic without psychotic features, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.13
-* expansion.contains[=].display = "Bipolar disorder, current episode manic without psychotic features, severe"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.30
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, mild or moderate severity, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.60
-* expansion.contains[=].display = "Bipolar disorder, current episode mixed, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.61
-* expansion.contains[=].display = "Bipolar disorder, current episode mixed, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.62
-* expansion.contains[=].display = "Bipolar disorder, current episode mixed, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.63
-* expansion.contains[=].display = "Bipolar disorder, current episode mixed, severe, without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.64
-* expansion.contains[=].display = "Bipolar disorder, current episode mixed, severe, with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.70
-* expansion.contains[=].display = "Bipolar disorder, currently in remission, most recent episode unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.71
-* expansion.contains[=].display = "Bipolar disorder, in partial remission, most recent episode hypomanic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.72
-* expansion.contains[=].display = "Bipolar disorder, in full remission, most recent episode hypomanic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.73
-* expansion.contains[=].display = "Bipolar disorder, in partial remission, most recent episode manic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.74
-* expansion.contains[=].display = "Bipolar disorder, in full remission, most recent episode manic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.75
-* expansion.contains[=].display = "Bipolar disorder, in partial remission, most recent episode depressed"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.76
-* expansion.contains[=].display = "Bipolar disorder, in full remission, most recent episode depressed"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.77
-* expansion.contains[=].display = "Bipolar disorder, in partial remission, most recent episode mixed"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.78
-* expansion.contains[=].display = "Bipolar disorder, in full remission, most recent episode mixed"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.89
-* expansion.contains[=].display = "Other bipolar disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.8
-* expansion.contains[=].display = "Other depressive episodes"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.89
-* expansion.contains[=].display = "Other specified depressive episodes"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.A
-* expansion.contains[=].display = "Depression, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.3
-* expansion.contains[=].display = "Major depressive disorder, recurrent, severe with psychotic symptoms"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.40
-* expansion.contains[=].display = "Major depressive disorder, recurrent, in remission, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.8
-* expansion.contains[=].display = "Other recurrent depressive disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F34.8
-* expansion.contains[=].display = "Other persistent mood [affective] disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F34.89
-* expansion.contains[=].display = "Other specified persistent mood disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F34.9
-* expansion.contains[=].display = "Persistent mood [affective] disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F39
-* expansion.contains[=].display = "Unspecified mood [affective] disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.00
-* expansion.contains[=].display = "Agoraphobia, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.10
-* expansion.contains[=].display = "Social phobia, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.11
-* expansion.contains[=].display = "Social phobia, generalized"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.210
-* expansion.contains[=].display = "Arachnophobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.218
-* expansion.contains[=].display = "Other animal type phobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.220
-* expansion.contains[=].display = "Fear of thunderstorms"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.228
-* expansion.contains[=].display = "Other natural environment type phobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.230
-* expansion.contains[=].display = "Fear of blood"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.231
-* expansion.contains[=].display = "Fear of injections and transfusions"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.232
-* expansion.contains[=].display = "Fear of other medical care"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.233
-* expansion.contains[=].display = "Fear of injury"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.240
-* expansion.contains[=].display = "Claustrophobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.241
-* expansion.contains[=].display = "Acrophobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.242
-* expansion.contains[=].display = "Fear of bridges"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.243
-* expansion.contains[=].display = "Fear of flying"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.248
-* expansion.contains[=].display = "Other situational type phobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.290
-* expansion.contains[=].display = "Androphobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.291
-* expansion.contains[=].display = "Gynephobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.298
-* expansion.contains[=].display = "Other specified phobia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.8
-* expansion.contains[=].display = "Other phobic anxiety disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.9
-* expansion.contains[=].display = "Phobic anxiety disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F41.0
-* expansion.contains[=].display = "Panic disorder [episodic paroxysmal anxiety]"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F41.3
-* expansion.contains[=].display = "Other mixed anxiety disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F41.8
-* expansion.contains[=].display = "Other specified anxiety disorders"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F41.9
-* expansion.contains[=].display = "Anxiety disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F42.2
-* expansion.contains[=].display = "Mixed obsessional thoughts and acts"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F42.8
-* expansion.contains[=].display = "Other obsessive-compulsive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F42.9
-* expansion.contains[=].display = "Obsessive-compulsive disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.0
-* expansion.contains[=].display = "Acute stress reaction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.10
-* expansion.contains[=].display = "Post-traumatic stress disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.11
-* expansion.contains[=].display = "Post-traumatic stress disorder, acute"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.12
-* expansion.contains[=].display = "Post-traumatic stress disorder, chronic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.20
-* expansion.contains[=].display = "Adjustment disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.29
-* expansion.contains[=].display = "Adjustment disorder with other symptoms"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.8
-* expansion.contains[=].display = "Other reactions to severe stress"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.81
-* expansion.contains[=].display = "Prolonged grief disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.89
-* expansion.contains[=].display = "Other reactions to severe stress"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.9
-* expansion.contains[=].display = "Reaction to severe stress, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.01
-* expansion.contains[=].display = "Primary insomnia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.02
-* expansion.contains[=].display = "Adjustment insomnia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.03
-* expansion.contains[=].display = "Paradoxical insomnia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.04
-* expansion.contains[=].display = "Psychophysiologic insomnia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.05
-* expansion.contains[=].display = "Insomnia due to other mental disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.09
-* expansion.contains[=].display = "Other insomnia not due to a substance or known physiological condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.11
-* expansion.contains[=].display = "Primary hypersomnia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.12
-* expansion.contains[=].display = "Insufficient sleep syndrome"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.13
-* expansion.contains[=].display = "Hypersomnia due to other mental disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.19
-* expansion.contains[=].display = "Other hypersomnia not due to a substance or known physiological condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.3
-* expansion.contains[=].display = "Sleepwalking [somnambulism]"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.4
-* expansion.contains[=].display = "Sleep terrors [night terrors]"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.8
-* expansion.contains[=].display = "Other sleep disorders not due to a substance or known physiological condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.9
-* expansion.contains[=].display = "Sleep disorder not due to a substance or known physiological condition, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F53.0
-* expansion.contains[=].display = "Postpartum depression"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F53.1
-* expansion.contains[=].display = "Puerperal psychosis"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F93.0
-* expansion.contains[=].display = "Separation anxiety disorder of childhood"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F94.1
-* expansion.contains[=].display = "Reactive Attachment Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F94.2
-* expansion.contains[=].display = "Disinhibited Social Engagement Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.21
-* expansion.contains[=].display = "Adjustment disorder with depressed mood"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.4
-* expansion.contains[=].display = "Narcolepsy"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.419
-* expansion.contains[=].display = "Narcolepsy"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.26
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder. Amnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.96
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder. Amnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.27
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder, Nonamnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.97
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder, Nonamnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.159
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.259
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.959
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.159
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.259
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.959
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.159
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.259
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.959
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.159
-* expansion.contains[=].display = "Cocaine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.259
-* expansion.contains[=].display = "Cocaine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.959
-* expansion.contains[=].display = "Cocaine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.159
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.259
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.959
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.159
-* expansion.contains[=].display = "Phencyclidine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.259
-* expansion.contains[=].display = "Phencyclidine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.959
-* expansion.contains[=].display = "Phencyclidine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.159
-* expansion.contains[=].display = "Inhalant-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.259
-* expansion.contains[=].display = "Inhalant-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.959
-* expansion.contains[=].display = "Inhalant-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.159
-* expansion.contains[=].display = "Other (or unknown) substance-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.259
-* expansion.contains[=].display = "Other (or unknown) substance-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.959
-* expansion.contains[=].display = "Other (or unknown) substance-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.0
-* expansion.contains[=].display = "Paranoid schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F25.9
-* expansion.contains[=].display = "Schizoaffective disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F20.9
-* expansion.contains[=].display = "Schizophrenia, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.9
-* expansion.contains[=].display = "Major depressive disorder, single episode, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.9
-* expansion.contains[=].display = "Major depressive disorder, recurrent, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.0
-* expansion.contains[=].display = "Bipolar disorder, current episode hypomanic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.9
-* expansion.contains[=].display = "Bipolar disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F29
-* expansion.contains[=].display = "Unspecified psychosis not due to a substance or known physiological condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F42.3
-* expansion.contains[=].display = "Hoarding disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F34.1
-* expansion.contains[=].display = "Dysthymic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F48.1
-* expansion.contains[=].display = "Depersonalization/Derealization Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F45.22
-* expansion.contains[=].display = "Body dysmorphic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F64.2
-* expansion.contains[=].display = "Gender Dysphoria in Children"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F64.8
-* expansion.contains[=].display = "Other Specified Gender Dysphoria"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F64.9
-* expansion.contains[=].display = "Unspecified Gender Dysphoria"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.81
-* expansion.contains[=].display = "Premenstrual dysphoric disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F42.4
-* expansion.contains[=].display = "Excoriation (skin-picking) disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.182
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.282
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.982
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.14
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.180
-* expansion.contains[=].display = "Alcohol-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.24
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.280
-* expansion.contains[=].display = "Alcohol-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.288
-* expansion.contains[=].display = "Alcohol-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.94
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.980
-* expansion.contains[=].display = "Alcohol-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.988
-* expansion.contains[=].display = "Alcohol-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.27
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.97
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.17
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.27
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.97
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.17
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.27
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.97
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.14
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.24
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.94
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.14
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.24
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.94
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced bipolar and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.14
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.24
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.94
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.14
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.24
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.94
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced bipolar and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.14
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.24
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.94
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.14
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.24
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.94
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.14
-* expansion.contains[=].display = "Other (or unknown) substance-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.24
-* expansion.contains[=].display = "Other (or unknown) substance-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.94
-* expansion.contains[=].display = "Other (or unknown) substance-induced bipolar and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.182
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.282
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.982
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.188
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.288
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.988
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.182
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.282
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.982
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.182
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.282
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.982
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.182
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.282
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.982
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F17.208
-* expansion.contains[=].display = "Tobacco-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.182
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.282
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.982
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.188
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.288
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.988
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.180
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.280
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.980
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.180
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.280
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.288
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced mild neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.980
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.988
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced mild neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.180
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.188
-* expansion.contains[=].display = "Cocaine-induced obsessive-compulsive and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.280
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.288
-* expansion.contains[=].display = "Cocaine-induced obsessive-compulsive and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.980
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.988
-* expansion.contains[=].display = "Cocaine-induced obsessive-compulsive and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.180
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.188
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.280
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.288
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.980
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.988
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.180
-* expansion.contains[=].display = "Phencyclidine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.280
-* expansion.contains[=].display = "Phencyclidine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.980
-* expansion.contains[=].display = "Phencyclidine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.983
-* expansion.contains[=].display = "Hallucinogen persisting perception disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.180
-* expansion.contains[=].display = "Inhalant-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.188
-* expansion.contains[=].display = "Inhalant-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.280
-* expansion.contains[=].display = "Inhalant-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.288
-* expansion.contains[=].display = "Inhalant-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.980
-* expansion.contains[=].display = "Inhalant-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.988
-* expansion.contains[=].display = "Inhalant-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.180
-* expansion.contains[=].display = "Other (or unknown) substance-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.188
-* expansion.contains[=].display = "Other (or unknown) substance-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.280
-* expansion.contains[=].display = "Other (or unknown) substance-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.288
-* expansion.contains[=].display = "Other (or unknown) substance-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.980
-* expansion.contains[=].display = "Other (or unknown) substance-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.988
-* expansion.contains[=].display = "Other (or unknown) substance-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.0
-* expansion.contains[=].display = "Major depressive disorder, single episode, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.1
-* expansion.contains[=].display = "Major depressive disorder, single episode, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.2
-* expansion.contains[=].display = "Major depressive disorder, single episode, severe without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.3
-* expansion.contains[=].display = "Major depressive disorder, single episode, severe with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.4
-* expansion.contains[=].display = "Major depressive disorder, single episode, in partial remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F32.5
-* expansion.contains[=].display = "Major depressive disorder, single episode, in full remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.0
-* expansion.contains[=].display = "Major depressive disorder, recurrent, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.1
-* expansion.contains[=].display = "Major depressive disorder, recurrent, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.2
-* expansion.contains[=].display = "Major depressive disorder, recurrent severe without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.41
-* expansion.contains[=].display = "Major depressive disorder, recurrent, in partial remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F33.42
-* expansion.contains[=].display = "Major depressive disorder, recurrent, in full remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.2
-* expansion.contains[=].display = "Bipolar disorder, current episode manic severe with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.31
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.32
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.4
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, severe, without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.5
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, severe, with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F31.81
-* expansion.contains[=].display = "Bipolar II disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F34.81
-* expansion.contains[=].display = "Disruptive Mood Dysregulation Disorder (DMDD)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F41.1
-* expansion.contains[=].display = "Generalized anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.0
-* expansion.contains[=].display = "Dissociative Amnesia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.81
-* expansion.contains[=].display = "Dissociative Identity Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.89
-* expansion.contains[=].display = "Other Specified Dissociative Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.9
-* expansion.contains[=].display = "Unspecified Dissociative Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.01
-* expansion.contains[=].display = "Agoraphobia with panic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F40.02
-* expansion.contains[=].display = "Agoraphobia without panic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F34.0
-* expansion.contains[=].display = "Cyclothymic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F64.0
-* expansion.contains[=].display = "Gender Dysphoria in Adolescents and Adults"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F51.5
-* expansion.contains[=].display = "Nightmare disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.22
-* expansion.contains[=].display = "Adjustment disorder with anxiety"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F43.23
-* expansion.contains[=].display = "Adjustment disorder with mixed anxiety and depressed mood"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F63.0
-* expansion.contains[=].display = "Gambling Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F63.3
-* expansion.contains[=].display = "Trichotillomania"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F94.0
-* expansion.contains[=].display = "Selective mutism"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.31
-* expansion.contains[=].display = "Central Sleep Apnea"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.33
-* expansion.contains[=].display = "Obstructive Sleep Apnea Hypopnea"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.34
-* expansion.contains[=].display = "Sleep-Related Hypoventilation"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.21
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Delayed Sleep Phase Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.22
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Advanced Sleep Phase Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.23
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Irregular Sleep-Wake Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.24
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Non-24-Hour Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.26
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Shift Work Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.52
-* expansion.contains[=].display = "REM Sleep Behavior Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G25.81
-* expansion.contains[=].display = "Restless Legs Syndrome"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.411
-* expansion.contains[=].display = "Narcolepsy with Cataplexy"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.00
-* expansion.contains[=].display = "Insomnia Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G47.10
-* expansion.contains[=].display = "Hypersomnolence Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #309
-* expansion.contains[=].display = "Adjustment disorder with depressed mood"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #347
-* expansion.contains[=].display = "Narcolepsy"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.1
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder. Amnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.2
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder, Nonamnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.9
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #295.3
-* expansion.contains[=].display = "Paranoid schizophrenia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #295.7
-* expansion.contains[=].display = "Schizoaffective disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #295.9
-* expansion.contains[=].display = "Schizophrenia, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.2
-* expansion.contains[=].display = "Major depressive disorder, single episode, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.3
-* expansion.contains[=].display = "Major depressive disorder, recurrent, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.4
-* expansion.contains[=].display = "Bipolar disorder, current episode hypomanic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.8
-* expansion.contains[=].display = "Bipolar disorder, unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #298.9
-* expansion.contains[=].display = "Unspecified psychosis not due to a substance or known physiological condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.3
-* expansion.contains[=].display = "Hoarding disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.4
-* expansion.contains[=].display = "Dysthymic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.6
-* expansion.contains[=].display = "Depersonalization/Derealization Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.7
-* expansion.contains[=].display = "Body dysmorphic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.6
-* expansion.contains[=].display = "Gender Dysphoria in Children"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #625.4
-* expansion.contains[=].display = "Premenstrual dysphoric disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #698.4
-* expansion.contains[=].display = "Excoriation (skin-picking) disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.82
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.89
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.82
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.21
-* expansion.contains[=].display = "Major depressive disorder, single episode, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.22
-* expansion.contains[=].display = "Major depressive disorder, single episode, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.23
-* expansion.contains[=].display = "Major depressive disorder, single episode, severe without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.24
-* expansion.contains[=].display = "Major depressive disorder, single episode, severe with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.25
-* expansion.contains[=].display = "Major depressive disorder, single episode, in partial remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.26
-* expansion.contains[=].display = "Major depressive disorder, single episode, in full remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.31
-* expansion.contains[=].display = "Major depressive disorder, recurrent, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.32
-* expansion.contains[=].display = "Major depressive disorder, recurrent, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.33
-* expansion.contains[=].display = "Major depressive disorder, recurrent severe without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.35
-* expansion.contains[=].display = "Major depressive disorder, recurrent, in partial remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.36
-* expansion.contains[=].display = "Major depressive disorder, recurrent, in full remission"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.44
-* expansion.contains[=].display = "Bipolar disorder, current episode manic severe with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.51
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.52
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.53
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, severe, without psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.54
-* expansion.contains[=].display = "Bipolar disorder, current episode depressed, severe, with psychotic features"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.89
-* expansion.contains[=].display = "Bipolar II disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #296.99
-* expansion.contains[=].display = "Disruptive Mood Dysregulation Disorder (DMDD)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.02
-* expansion.contains[=].display = "Generalized anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.12
-* expansion.contains[=].display = "Dissociative Amnesia"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.14
-* expansion.contains[=].display = "Dissociative Identity Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.15
-* expansion.contains[=].display = "Other Specified Dissociative Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.21
-* expansion.contains[=].display = "Agoraphobia with panic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.22
-* expansion.contains[=].display = "Agoraphobia without panic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.13
-* expansion.contains[=].display = "Cyclothymic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.85
-* expansion.contains[=].display = "Gender Dysphoria in Adolescents and Adults"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.42
-* expansion.contains[=].display = "Insomnia disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.46
-* expansion.contains[=].display = "Sleepwalking disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.47
-* expansion.contains[=].display = "Nightmare disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #309.24
-* expansion.contains[=].display = "Adjustment disorder with anxiety"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #309.28
-* expansion.contains[=].display = "Adjustment disorder with mixed anxiety and depressed mood"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.31
-* expansion.contains[=].display = "Gambling Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.39
-* expansion.contains[=].display = "Trichotillomania"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #313.23
-* expansion.contains[=].display = "Selective mutism"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.21
-* expansion.contains[=].display = "Central Sleep Apnea"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.23
-* expansion.contains[=].display = "Obstructive Sleep Apnea Hypopnea"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.24
-* expansion.contains[=].display = "Sleep-Related Hypoventilation"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.31
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Delayed Sleep Phase Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.32
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Advanced Sleep Phase Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.33
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Irregular Sleep-Wake Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.34
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Non-24-Hour Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.36
-* expansion.contains[=].display = "Circadian Rhythm Sleep-Wake Disorder, Shift Work Type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #327.42
-* expansion.contains[=].display = "REM Sleep Behavior Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #333.94
-* expansion.contains[=].display = "Restless Legs Syndrome"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #347.01
-* expansion.contains[=].display = "Narcolepsy with Cataplexy"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #780.52
-* expansion.contains[=].display = "Insomnia Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #780.54
-* expansion.contains[=].display = "Hypersomnolence disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3719-2
 * expansion.contains[+].system = "http://loinc.org"
@@ -6912,145 +6515,98 @@ Identified as: ShiftCustomActContextCodes#BHDEV
 * expansion.identifier = "urn:uuid:f46adf12-26b6-4756-bd7e-052a4b064c23"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F90.0
-* expansion.contains[=].display = "Attention-deficit hyperactivity disorder, predominantly inattentive type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F90.1
-* expansion.contains[=].display = "Attention-deficit hyperactivity disorder, predominantly hyperactive type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F90.2
-* expansion.contains[=].display = "Attention-deficit hyperactivity disorder, combined type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F90.8
-* expansion.contains[=].display = "Attention-deficit hyperactivity disorder, other type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F90.9
-* expansion.contains[=].display = "Attention-deficit hyperactivity disorder, unspecified type"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F84.0
-* expansion.contains[=].display = "Autism Spectrum Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F81.0
-* expansion.contains[=].display = "Specific Learning Disorder, With Impairment in Reading"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F70
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F71
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F79
-* expansion.contains[=].display = "Unspecified Intellectual Disability"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F95.8
-* expansion.contains[=].display = "Other Specified Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F95.9
-* expansion.contains[=].display = "Unspecified Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F98.4
-* expansion.contains[=].display = "Stereotypic Movement Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F80.9
-* expansion.contains[=].display = "Unspecified Communication Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F81.2
-* expansion.contains[=].display = "Specific Learning Disorder, With Impairment in Mathematics"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F81.81
-* expansion.contains[=].display = "Specific Learning Disorder, With Impairment in Written Expression"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F82
-* expansion.contains[=].display = "Developmental Coordination Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F88
-* expansion.contains[=].display = "Global Developmental Delay"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F72
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Severe"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F73
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Profound"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F95.0
-* expansion.contains[=].display = "Provisional Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F95.1
-* expansion.contains[=].display = "Persistent (Chronic) Motor or Vocal Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F95.2
-* expansion.contains[=].display = "Tourette's Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F80.2
-* expansion.contains[=].display = "Language Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F80.81
-* expansion.contains[=].display = "Childhood-Onset Fluency Disorder (Stuttering)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F80.0
-* expansion.contains[=].display = "Speech Sound Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F80.82
-* expansion.contains[=].display = "Social (Pragmatic) Communication Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #299
-* expansion.contains[=].display = "Autism Spectrum Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315
-* expansion.contains[=].display = "Specific Learning Disorder, With Impairment in Reading"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #317
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Mild"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #318
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Moderate"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #319
-* expansion.contains[=].display = "Unspecified Intellectual Disability"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.2
-* expansion.contains[=].display = "Other Specified Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.3
-* expansion.contains[=].display = "Stereotypic Movement Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.9
-* expansion.contains[=].display = "Unspecified Communication Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.1
-* expansion.contains[=].display = "Specific Learning Disorder, With Impairment in Mathematics"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.2
-* expansion.contains[=].display = "Specific Learning Disorder, With Impairment in Written Expression"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.4
-* expansion.contains[=].display = "Developmental Coordination Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.8
-* expansion.contains[=].display = "Global Developmental Delay"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #318.1
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Severe"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #318.2
-* expansion.contains[=].display = "Intellectual Disability (Intellectual Developmental Disorder), Profound"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.21
-* expansion.contains[=].display = "Provisional Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.22
-* expansion.contains[=].display = "Persistent (Chronic) Motor or Vocal Tic Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.23
-* expansion.contains[=].display = "Tourette's Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.32
-* expansion.contains[=].display = "Language Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.35
-* expansion.contains[=].display = "Childhood-Onset Fluency Disorder (Stuttering)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #315.39
-* expansion.contains[=].display = "Speech Sound Disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #65224-8
 * expansion.contains[+].system = "http://loinc.org"
@@ -7480,43 +7036,30 @@ Identified as: ShiftCustomActContextCodes#BHEAT
 * expansion.identifier = "urn:uuid:ca20165b-7e53-4297-8a9c-5e6c36eb2dfa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.01
-* expansion.contains[=].display = "Anorexia Nervosa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.02
-* expansion.contains[=].display = "Anorexia Nervosa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.9
-* expansion.contains[=].display = "Unspecified Feeding or Eating Disorder (UFED)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.2
-* expansion.contains[=].display = "Bulimia Nervosa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.81
-* expansion.contains[=].display = "Binge-Eating Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F98.21
-* expansion.contains[=].display = "Rumination Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.82
-* expansion.contains[=].display = "Avoidant/Restrictive Food Intake Disorder (ARFID)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F50.89
-* expansion.contains[=].display = "Other Specified Feeding or Eating Disorder (OSFED)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.1
-* expansion.contains[=].display = "Anorexia Nervosa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.5
-* expansion.contains[=].display = "Unspecified Feeding or Eating Disorder (UFED)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.51
-* expansion.contains[=].display = "Bulimia Nervosa"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.53
-* expansion.contains[=].display = "Rumination Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #307.59
-* expansion.contains[=].display = "Avoidant/Restrictive Food Intake Disorder (ARFID)"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3141-9
 * expansion.contains[+].system = "http://loinc.org"
@@ -8133,163 +7676,110 @@ Identified as: ShiftCustomActContextCodes#BHNCD
 * expansion.identifier = "urn:uuid:0dc2f6b5-2f4e-4abe-a86b-579dc9fd779f"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.121
-* expansion.contains[=].display = "Alcohol intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.221
-* expansion.contains[=].display = "Alcohol intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.921
-* expansion.contains[=].display = "Alcohol intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.231
-* expansion.contains[=].display = "Alcohol withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.23
-* expansion.contains[=].display = "Opioid withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.231
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.231
-* expansion.contains[=].display = "Other (or unknown) substance withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F05
-* expansion.contains[=].display = "Delirium Due to Another Medical Condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F01.50
-* expansion.contains[=].display = "Major Vascular Neurocognitive Disorder (without behavioral disturbance)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F01.51
-* expansion.contains[=].display = "Major Vascular Neurocognitive Disorder, With Behavioral Disturbance"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F02.80
-* expansion.contains[=].display = "Major Neurocognitive Disorder Due to Alzheimer's Disease (without behavioral disturbance)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.121
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.221
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.921
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.121
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.221
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.921
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.121
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.221
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.921
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.121
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.221
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.921
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.121
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.221
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.921
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.121
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.221
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.921
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.121
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.221
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.921
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F02.81
-* expansion.contains[=].display = "Major Neurocognitive Disorder Due to Alzheimer's Disease, With Behavioral Disturbance"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G31.01
-* expansion.contains[=].display = "Major Frontotemporal Neurocognitive Disorder (Behavioral or Language Variant)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G31.09
-* expansion.contains[=].display = "Mild Frontotemporal Neurocognitive Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G31.83
-* expansion.contains[=].display = "Major Neurocognitive Disorder With Lewy Bodies"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #G31.84
-* expansion.contains[=].display = "Mild Neurocognitive Disorder Due to Alzheimer's Disease"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #R41.0
-* expansion.contains[=].display = "Unspecified Delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F03.90
-* expansion.contains[=].display = "Unspecified Major Neurocognitive Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F03.91
-* expansion.contains[=].display = "Unspecified Major Neurocognitive Disorder, With Behavioral Disturbance"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #R41.9
-* expansion.contains[=].display = "Unspecified Mild Neurocognitive Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291
-* expansion.contains[=].display = "Alcohol withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Opioid withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #293
-* expansion.contains[=].display = "Delirium Due to Another Medical Condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #290.4
-* expansion.contains[=].display = "Major Vascular Neurocognitive Disorder (without behavioral disturbance)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #294.1
-* expansion.contains[=].display = "Major Neurocognitive Disorder Due to Alzheimer's Disease (without behavioral disturbance)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #294.11
-* expansion.contains[=].display = "Major Neurocognitive Disorder Due to Alzheimer's Disease, With Behavioral Disturbance"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #331.19
-* expansion.contains[=].display = "Major Frontotemporal Neurocognitive Disorder (Behavioral or Language Variant)"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #331.82
-* expansion.contains[=].display = "Major Neurocognitive Disorder With Lewy Bodies"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #331.83
-* expansion.contains[=].display = "Mild Neurocognitive Disorder Due to Alzheimer's Disease"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #780.09
-* expansion.contains[=].display = "Delirium Due to Multiple Etiologies"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #799.59
-* expansion.contains[=].display = "Unspecified Major Neurocognitive Disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #2064-4
 * expansion.contains[+].system = "http://loinc.org"
@@ -8990,76 +8480,52 @@ Identified as: ShiftCustomActContextCodes#BHPERS
 * expansion.identifier = "urn:uuid:aee017c0-0b50-4a62-8b34-d26299b07d51"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.0
-* expansion.contains[=].display = "Paranoid Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.1
-* expansion.contains[=].display = "Schizoid Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.5
-* expansion.contains[=].display = "Obsessive-Compulsive Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.4
-* expansion.contains[=].display = "Histrionic Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.7
-* expansion.contains[=].display = "Dependent Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.9
-* expansion.contains[=].display = "Unspecified Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F07.0
-* expansion.contains[=].display = "Personality Change Due to Another Medical Condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F21
-* expansion.contains[=].display = "Schizotypal Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.81
-* expansion.contains[=].display = "Narcissistic Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.6
-* expansion.contains[=].display = "Avoidant Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.3
-* expansion.contains[=].display = "Borderline Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F60.89
-* expansion.contains[=].display = "Other Specified Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301
-* expansion.contains[=].display = "Paranoid Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.2
-* expansion.contains[=].display = "Schizoid Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.4
-* expansion.contains[=].display = "Obsessive-Compulsive Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.5
-* expansion.contains[=].display = "Histrionic Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.6
-* expansion.contains[=].display = "Dependent Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.9
-* expansion.contains[=].display = "Unspecified Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #310.1
-* expansion.contains[=].display = "Personality Change Due to Another Medical Condition"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.22
-* expansion.contains[=].display = "Schizotypal Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.81
-* expansion.contains[=].display = "Narcissistic Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.82
-* expansion.contains[=].display = "Avoidant Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.83
-* expansion.contains[=].display = "Borderline Personality Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #301.89
-* expansion.contains[=].display = "Other Specified Personality Disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #62744-8
 * expansion.contains[+].system = "http://loinc.org"
@@ -9420,172 +8886,116 @@ Identified as: v3-ActCode#SEX
 * expansion.identifier = "urn:uuid:0a53c4c1-c72e-494b-8e5b-ac83ebcf5d19"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.4
-* expansion.contains[=].display = "Pedophilic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.1
-* expansion.contains[=].display = "Transvestic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.2
-* expansion.contains[=].display = "Exhibitionistic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.9
-* expansion.contains[=].display = "Unspecified sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.9
-* expansion.contains[=].display = "Unspecified paraphilic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.181
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.281
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.981
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.181
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.281
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.981
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.181
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.281
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.981
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.181
-* expansion.contains[=].display = "Cocaine-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.281
-* expansion.contains[=].display = "Cocaine-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.981
-* expansion.contains[=].display = "Cocaine-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.181
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.281
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.981
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.181
-* expansion.contains[=].display = "Other (or unknown) substance-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.281
-* expansion.contains[=].display = "Other (or unknown) substance-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.981
-* expansion.contains[=].display = "Other (or unknown) substance-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.0
-* expansion.contains[=].display = "Male hypoactive sexual desire disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.21
-* expansion.contains[=].display = "Erectile disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.22
-* expansion.contains[=].display = "Female sexual interest/arousal disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.31
-* expansion.contains[=].display = "Female orgasmic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.32
-* expansion.contains[=].display = "Delayed ejaculation"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.4
-* expansion.contains[=].display = "Premature (early) ejaculation"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.6
-* expansion.contains[=].display = "Genito-pelvic pain/penetration disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F52.8
-* expansion.contains[=].display = "Other specified sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.0
-* expansion.contains[=].display = "Fetishistic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.3
-* expansion.contains[=].display = "Voyeuristic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.51
-* expansion.contains[=].display = "Sexual masochism disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.52
-* expansion.contains[=].display = "Sexual sadism disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.81
-* expansion.contains[=].display = "Frotteuristic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F65.89
-* expansion.contains[=].display = "Other specified paraphilic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.2
-* expansion.contains[=].display = "Pedophilic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.3
-* expansion.contains[=].display = "Transvestic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.4
-* expansion.contains[=].display = "Exhibitionistic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.7
-* expansion.contains[=].display = "Unspecified sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.9
-* expansion.contains[=].display = "Unspecified paraphilic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.89
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.71
-* expansion.contains[=].display = "Male hypoactive sexual desire disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.72
-* expansion.contains[=].display = "Erectile disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.73
-* expansion.contains[=].display = "Female orgasmic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.74
-* expansion.contains[=].display = "Delayed ejaculation"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.75
-* expansion.contains[=].display = "Premature (early) ejaculation"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.76
-* expansion.contains[=].display = "Genito-pelvic pain/penetration disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.79
-* expansion.contains[=].display = "Other specified sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.81
-* expansion.contains[=].display = "Fetishistic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.82
-* expansion.contains[=].display = "Voyeuristic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.83
-* expansion.contains[=].display = "Sexual masochism disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.84
-* expansion.contains[=].display = "Sexual sadism disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #302.89
-* expansion.contains[=].display = "Frotteuristic disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #62666-3
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -9934,61 +9344,42 @@ Identified as: ShiftCustomActContextCodes#BHSOM
 * expansion.identifier = "urn:uuid:733ee1e8-d88a-4377-8bd2-a294b8643cc4"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F54
-* expansion.contains[=].display = "Psychological Factors Affecting Other Medical Conditions"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F45.21
-* expansion.contains[=].display = "Illness Anxiety Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F45.9
-* expansion.contains[=].display = "Unspecified Somatic Symptom and Related Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.4
-* expansion.contains[=].display = "Functional Neurological Symptom Disorder (Conversion Disorder), With Weakness or Paralysis"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.5
-* expansion.contains[=].display = "Functional Neurological Symptom Disorder, With Attacks or Seizures"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.6
-* expansion.contains[=].display = "Functional Neurological Symptom Disorder, With Anesthesia or Sensory Loss"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.7
-* expansion.contains[=].display = "Functional Neurological Symptom Disorder, With Mixed Symptoms"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F44.9
-* expansion.contains[=].display = "Conversion Disorder, Unspecified"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F68.13
-* expansion.contains[=].display = "Factitious Disorder Imposed on Another"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F68.A
-* expansion.contains[=].display = "Factitious Disorder Imposed on Self"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F45.1
-* expansion.contains[=].display = "Somatic Symptom Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F45.8
-* expansion.contains[=].display = "Other Specified Somatic Symptom and Related Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #316
-* expansion.contains[=].display = "Psychological Factors Affecting Other Medical Conditions"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.7
-* expansion.contains[=].display = "Illness Anxiety Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.9
-* expansion.contains[=].display = "Unspecified Somatic Symptom and Related Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.11
-* expansion.contains[=].display = "Functional Neurological Symptom Disorder (Conversion Disorder), With Weakness or Paralysis"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.19
-* expansion.contains[=].display = "Factitious Disorder Imposed on Another"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.82
-* expansion.contains[=].display = "Somatic Symptom Disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #300.89
-* expansion.contains[=].display = "Other Specified Somatic Symptom and Related Disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #69671-6
 * expansion.contains[+].system = "http://loinc.org"
@@ -10468,127 +9859,86 @@ Identified as: v3-ActCode#SUD
 * expansion.identifier = "urn:uuid:48db74c6-f516-45a1-9083-4b4cc016de69"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.231
-* expansion.contains[=].display = "Other (or unknown) substance withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.239
-* expansion.contains[=].display = "Other (or unknown) substance withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.121
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.221
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.921
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.17
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.27
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.97
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.14
-* expansion.contains[=].display = "Other (or unknown) substance-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.24
-* expansion.contains[=].display = "Other (or unknown) substance-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.94
-* expansion.contains[=].display = "Other (or unknown) substance-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.182
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.282
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.982
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.129
-* expansion.contains[=].display = "Other (or unknown) substance intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.180
-* expansion.contains[=].display = "Other (or unknown) substance-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.181
-* expansion.contains[=].display = "Other (or unknown) substance-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.188
-* expansion.contains[=].display = "Other (or unknown) substance-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.229
-* expansion.contains[=].display = "Other (or unknown) substance intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.280
-* expansion.contains[=].display = "Other (or unknown) substance-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.281
-* expansion.contains[=].display = "Other (or unknown) substance-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.288
-* expansion.contains[=].display = "Other (or unknown) substance-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.929
-* expansion.contains[=].display = "Other (or unknown) substance intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.980
-* expansion.contains[=].display = "Other (or unknown) substance-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.981
-* expansion.contains[=].display = "Other (or unknown) substance-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.988
-* expansion.contains[=].display = "Other (or unknown) substance-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.99
-* expansion.contains[=].display = "Unspecified other (or unknown) substance-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.159
-* expansion.contains[=].display = "Other (or unknown) substance-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.259
-* expansion.contains[=].display = "Other (or unknown) substance-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.959
-* expansion.contains[=].display = "Other (or unknown) substance-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.20
-* expansion.contains[=].display = "Other (or unknown) substance use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F19.10
-* expansion.contains[=].display = "Other (or unknown) substance use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Other (or unknown) substance withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Other (or unknown) substance intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.82
-* expansion.contains[=].display = "Other (or unknown) substance-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Other (or unknown) substance-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Other (or unknown) substance-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Other (or unknown) substance intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified other (or unknown) substance-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.9
-* expansion.contains[=].display = "Other (or unknown) substance use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.9
-* expansion.contains[=].display = "Other (or unknown) substance use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #11342-3
 * expansion.contains[+].system = "http://loinc.org"
@@ -11428,100 +10778,68 @@ Identified as: ShiftCustomActContextCodes#SUDAMPH
 * expansion.identifier = "urn:uuid:759642bd-1619-4d31-85b9-707aff0fc9e8"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.23
-* expansion.contains[=].display = "Amphetamine or other stimulant withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.121
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.221
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.921
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.14
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.24
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.94
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.181
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.188
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.281
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.288
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.981
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.988
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced obsessive-compulsive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.99
-* expansion.contains[=].display = "Unspecified stimulant-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.159
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.259
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.959
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.20
-* expansion.contains[=].display = "Other or unspecified stimulant use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.10
-* expansion.contains[=].display = "Other or unspecified stimulant use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.122
-* expansion.contains[=].display = "Amphetamine or other stimulant intoxication. With perceptual"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.129
-* expansion.contains[=].display = "Amphetamine or other stimulant intoxication. Without perceptual"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.222
-* expansion.contains[=].display = "Amphetamine or other stimulant intoxication. With perceptual"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.229
-* expansion.contains[=].display = "Amphetamine or other stimulant intoxication. Without perceptual"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.922
-* expansion.contains[=].display = "Amphetamine or other stimulant intoxication. With perceptual"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.929
-* expansion.contains[=].display = "Amphetamine or other stimulant intoxication. Without perceptual"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Amphetamine or other stimulant withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Amphetamine (or other stimulant) intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Amphetamine (or other stimulant)-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified stimulant-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.4
-* expansion.contains[=].display = "Other or unspecified stimulant use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.7
-* expansion.contains[=].display = "Other or unspecified stimulant use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3348-0
 * expansion.contains[+].system = "http://loinc.org"
@@ -12617,94 +11935,64 @@ Identified as: ShiftCustomActContextCodes#SUDCBD
 * expansion.identifier = "urn:uuid:fc26e0ce-b3a5-4e41-a231-d5503b1f92f4"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.23
-* expansion.contains[=].display = "Cannabis withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.93
-* expansion.contains[=].display = "Cannabis withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.121
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.221
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.921
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.188
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.288
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.988
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.180
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.280
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.980
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.99
-* expansion.contains[=].display = "Unspecified cannabis-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.159
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.259
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.959
-* expansion.contains[=].display = "Cannabis-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.20
-* expansion.contains[=].display = "Cannabis use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.10
-* expansion.contains[=].display = "Cannabis use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.122
-* expansion.contains[=].display = "Cannabis intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.129
-* expansion.contains[=].display = "Cannabis intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.222
-* expansion.contains[=].display = "Cannabis intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.229
-* expansion.contains[=].display = "Cannabis intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.922
-* expansion.contains[=].display = "Cannabis intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F12.929
-* expansion.contains[=].display = "Cannabis intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.0
-* expansion.contains[=].display = "Cannabis withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Cannabis intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Cannabis-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Cannabis-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified cannabis-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.3
-* expansion.contains[=].display = "Cannabis use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.2
-* expansion.contains[=].display = "Cannabis use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3425-6
 * expansion.contains[+].system = "http://loinc.org"
@@ -13531,121 +12819,82 @@ Identified as: ShiftCustomActContextCodes#SUDCOC
 * expansion.identifier = "urn:uuid:45478fff-5e1c-464c-bde1-587e3b71ae63"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.23
-* expansion.contains[=].display = "Cocaine withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.121
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.221
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.921
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.14
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.24
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.94
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.182
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.282
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.982
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.180
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.181
-* expansion.contains[=].display = "Cocaine-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.188
-* expansion.contains[=].display = "Cocaine-induced obsessive-compulsive and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.280
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.281
-* expansion.contains[=].display = "Cocaine-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.288
-* expansion.contains[=].display = "Cocaine-induced obsessive-compulsive and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.980
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.981
-* expansion.contains[=].display = "Cocaine-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.988
-* expansion.contains[=].display = "Cocaine-induced obsessive-compulsive and related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.99
-* expansion.contains[=].display = "Unspecified stimulant-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.159
-* expansion.contains[=].display = "Cocaine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.259
-* expansion.contains[=].display = "Cocaine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.959
-* expansion.contains[=].display = "Cocaine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.20
-* expansion.contains[=].display = "Cocaine use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.10
-* expansion.contains[=].display = "Cocaine use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.122
-* expansion.contains[=].display = "Cocaine intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.129
-* expansion.contains[=].display = "Cocaine intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.222
-* expansion.contains[=].display = "Cocaine intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.229
-* expansion.contains[=].display = "Cocaine intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.922
-* expansion.contains[=].display = "Cocaine intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F14.929
-* expansion.contains[=].display = "Cocaine intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Cocaine withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Cocaine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Cocaine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Cocaine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Cocaine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified stimulant-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.2
-* expansion.contains[=].display = "Cocaine use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.6
-* expansion.contains[=].display = "Cocaine use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3391-0
 * expansion.contains[+].system = "http://loinc.org"
@@ -14554,133 +13803,90 @@ Identified as: ShiftCustomActContextCodes#SUDETOH
 * expansion.identifier = "urn:uuid:97f4c4a2-c74b-4d5a-84ae-4b9224e36adc"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.231
-* expansion.contains[=].display = "Alcohol withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.26
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder. Amnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.96
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder. Amnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.27
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder, Nonamnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.97
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder, Nonamnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.232
-* expansion.contains[=].display = "Alcohol withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.239
-* expansion.contains[=].display = "Alcohol withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.182
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.282
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.982
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.14
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.24
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.94
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.180
-* expansion.contains[=].display = "Alcohol-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.181
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.280
-* expansion.contains[=].display = "Alcohol-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.281
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.288
-* expansion.contains[=].display = "Alcohol-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.980
-* expansion.contains[=].display = "Alcohol-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.981
-* expansion.contains[=].display = "Alcohol-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.988
-* expansion.contains[=].display = "Alcohol-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.99
-* expansion.contains[=].display = "Unspecified alcohol-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.159
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.259
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.959
-* expansion.contains[=].display = "Alcohol-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.129
-* expansion.contains[=].display = "Alcohol intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.229
-* expansion.contains[=].display = "Alcohol intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.929
-* expansion.contains[=].display = "Alcohol intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.20
-* expansion.contains[=].display = "Alcohol use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.10
-* expansion.contains[=].display = "Alcohol use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.121
-* expansion.contains[=].display = "Alcohol intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.221
-* expansion.contains[=].display = "Alcohol intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F10.921
-* expansion.contains[=].display = "Alcohol intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291
-* expansion.contains[=].display = "Alcohol withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.1
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder. Amnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.2
-* expansion.contains[=].display = "Alcohol-induced major neurocognitive disorder, Nonamnestic"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.81
-* expansion.contains[=].display = "Alcohol withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.82
-* expansion.contains[=].display = "Alcohol-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.89
-* expansion.contains[=].display = "Alcohol-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #291.9
-* expansion.contains[=].display = "Unspecified alcohol-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #303
-* expansion.contains[=].display = "Alcohol intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #303.9
-* expansion.contains[=].display = "Alcohol use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305
-* expansion.contains[=].display = "Alcohol use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3577-4
 * expansion.contains[+].system = "http://loinc.org"
@@ -15721,85 +14927,58 @@ Identified as: ShiftCustomActContextCodes#SUDHAL
 * expansion.identifier = "urn:uuid:a79a3a70-de04-4261-be80-db9461de1980"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.121
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.221
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.921
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.14
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.24
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.94
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.129
-* expansion.contains[=].display = "Phencyclidine intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.180
-* expansion.contains[=].display = "Phencyclidine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.229
-* expansion.contains[=].display = "Phencyclidine intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.280
-* expansion.contains[=].display = "Phencyclidine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.929
-* expansion.contains[=].display = "Phencyclidine intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.980
-* expansion.contains[=].display = "Phencyclidine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.983
-* expansion.contains[=].display = "Hallucinogen persisting perception disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.99
-* expansion.contains[=].display = "Unspecified phencyclidine-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.159
-* expansion.contains[=].display = "Phencyclidine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.259
-* expansion.contains[=].display = "Phencyclidine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.959
-* expansion.contains[=].display = "Phencyclidine-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.20
-* expansion.contains[=].display = "Other hallucinogen use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F16.10
-* expansion.contains[=].display = "Other hallucinogen use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Phencyclidine intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Phencyclidine-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Phencyclidine intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified phencyclidine-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.5
-* expansion.contains[=].display = "Other hallucinogen use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.6
-* expansion.contains[=].display = "Phencyclidine use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.3
-* expansion.contains[=].display = "Other hallucinogen use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.9
-* expansion.contains[=].display = "Phencyclidine use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3567-5
 * expansion.contains[+].system = "http://loinc.org"
@@ -16369,97 +15548,66 @@ Identified as: ShiftCustomActContextCodes#SUDINH
 * expansion.identifier = "urn:uuid:5889c862-ca91-473f-9b1a-97968738e3d4"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.121
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.221
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.921
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.17
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.27
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.97
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.14
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.24
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.94
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.129
-* expansion.contains[=].display = "Inhalant intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.180
-* expansion.contains[=].display = "Inhalant-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.188
-* expansion.contains[=].display = "Inhalant-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.229
-* expansion.contains[=].display = "Inhalant intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.280
-* expansion.contains[=].display = "Inhalant-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.288
-* expansion.contains[=].display = "Inhalant-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.929
-* expansion.contains[=].display = "Inhalant intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.980
-* expansion.contains[=].display = "Inhalant-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.988
-* expansion.contains[=].display = "Inhalant-induced mild neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.99
-* expansion.contains[=].display = "Unspecified inhalant-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.159
-* expansion.contains[=].display = "Inhalant-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.259
-* expansion.contains[=].display = "Inhalant-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.959
-* expansion.contains[=].display = "Inhalant-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.20
-* expansion.contains[=].display = "Inhalant use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F18.10
-* expansion.contains[=].display = "Inhalant use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Inhalant intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.82
-* expansion.contains[=].display = "Inhalant-induced major neurocognitive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Inhalant-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Inhalant intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified inhalant-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.6
-* expansion.contains[=].display = "Inhalant use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.9
-* expansion.contains[=].display = "Inhalant use disorder"
 * expansion.contains[+].system = "http://snomed.info/sct"
 * expansion.contains[=].code = #5002000
 * expansion.contains[+].system = "http://snomed.info/sct"
@@ -17560,103 +16708,70 @@ Identified as: ShiftCustomActContextCodes#SUDOPD
 * expansion.identifier = "urn:uuid:20c5d47b-4f74-4be2-8bf4-960aa136807e"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.23
-* expansion.contains[=].display = "Opioid withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.121
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.221
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.921
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.14
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.24
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.94
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.182
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.282
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.982
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.181
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.188
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.281
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.288
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.981
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.988
-* expansion.contains[=].display = "Opioid-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.99
-* expansion.contains[=].display = "Unspecified opioid-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.20
-* expansion.contains[=].display = "Opioid use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.10
-* expansion.contains[=].display = "Opioid use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.122
-* expansion.contains[=].display = "Opioid intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.129
-* expansion.contains[=].display = "Opioid intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.222
-* expansion.contains[=].display = "Opioid intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.229
-* expansion.contains[=].display = "Opioid intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.922
-* expansion.contains[=].display = "Opioid intoxication. With perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F11.929
-* expansion.contains[=].display = "Opioid intoxication. Without perceptual disturbances"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Opioid withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.81
-* expansion.contains[=].display = "Opioid intoxication delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Opioid-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Opioid-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Opioid-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified opioid-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304
-* expansion.contains[=].display = "Opioid use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.5
-* expansion.contains[=].display = "Opioid use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3307-6
 * expansion.contains[+].system = "http://loinc.org"
@@ -19733,46 +18848,32 @@ Identified as: ShiftCustomActContextCodes#SUDOTH
 * expansion.identifier = "urn:uuid:5488f180-9b41-4329-b1d8-be58e8bca371"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.93
-* expansion.contains[=].display = "Caffeine withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.182
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.282
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.982
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.180
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.280
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.980
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F15.929
-* expansion.contains[=].display = "Caffeine intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F63.0
-* expansion.contains[=].display = "Gambling disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Caffeine withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Caffeine-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Caffeine-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.9
-* expansion.contains[=].display = "Caffeine intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #312.31
-* expansion.contains[=].display = "Gambling disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3422-3
 * expansion.contains[+].system = "http://loinc.org"
@@ -20744,121 +19845,82 @@ Identified as: ShiftCustomActContextCodes#SUDSED
 * expansion.identifier = "urn:uuid:33a33bf9-1fc5-4d1a-a228-a554e4caeead"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.231
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.232
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.239
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.27
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.97
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.14
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.24
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.94
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.182
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.282
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.982
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.121
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.129
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.180
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.181
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.221
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.229
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.280
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.281
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.288
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced mild neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.921
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.929
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.980
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced anxiety disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.981
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sexual dysfunction"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.988
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced mild neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.99
-* expansion.contains[=].display = "Unspecified sedative-, hypnotic-, or anxiolytic-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.159
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.259
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.959
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced psychotic disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.20
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F13.10
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic withdrawal delirium"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.82
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced major neurocognitive"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.84
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced depressive disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Sedative-, hypnotic-, or anxiolytic-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.89
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic intoxication"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified sedative-, hypnotic-, or anxiolytic-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #304.1
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.4
-* expansion.contains[=].display = "Sedative, hypnotic, or anxiolytic use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3312-6
 * expansion.contains[+].system = "http://loinc.org"
@@ -22591,31 +21653,22 @@ Identified as: ShiftCustomActContextCodes#SUDTOB
 * expansion.identifier = "urn:uuid:0ca7167d-2aad-47d5-a66a-a6a116e6bb3d"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F17.203
-* expansion.contains[=].display = "Tobacco withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F17.208
-* expansion.contains[=].display = "Tobacco-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F17.209
-* expansion.contains[=].display = "Unspecified tobacco-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #F17.200
-* expansion.contains[=].display = "Tobacco use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * expansion.contains[=].code = #Z72.0
-* expansion.contains[=].display = "Tobacco use disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292
-* expansion.contains[=].display = "Tobacco withdrawal"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.85
-* expansion.contains[=].display = "Tobacco-induced sleep disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #292.9
-* expansion.contains[=].display = "Unspecified tobacco-related disorder"
 * expansion.contains[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * expansion.contains[=].code = #305.1
-* expansion.contains[=].display = "Tobacco use disorder"
 * expansion.contains[+].system = "http://loinc.org"
 * expansion.contains[=].code = #3853-9
 * expansion.contains[+].system = "http://loinc.org"
