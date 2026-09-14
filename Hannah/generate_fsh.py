@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate FSH ValueSet definitions from ALL ShiftBH and ShiftSUD CSV files.
+Generate FSH ValueSet definitions from all ShiftBH, ShiftSUD, and ShiftRepro CSV files.
 Creates ONE combined ValueSet for each unique "Shift Value Set" value,
 combining data from all CSV files.
 """
@@ -34,13 +34,15 @@ LOCAL_CONTEXT_CODESYSTEM_URL = (
 
 # List of all CSV files to process (relative to repository root)
 csv_patterns = [
-    "ShiftBHValueSetsMay2026/*may2026.csv",
-    "ShiftSUDValueSetsMay2026/*may2026.csv",
+    "ShiftBHValueSetsAug2026/*aug2026.csv",
+    "ShiftSUDValueSetsAug2026/*aug2026.csv",
+    "ShiftReproValueSetsAug2026/*aug2026.csv",
 ]
 
 definitions_csv_files = [
-    "ShiftBHValueSetsMay2026/ShiftBHvaluesetdefinitionsmay2026.csv",
-    "ShiftSUDValueSetsMay2026/ShiftSUDvaluesetdefinitionsmay2026.csv",
+    "ShiftBHValueSetsAug2026/ShiftBHvaluesetdefinitionsaug2026.csv",
+    "ShiftSUDValueSetsAug2026/ShiftSUDvaluesetdefinitionsaug2026.csv",
+    "ShiftReproValueSetsAug2026/ShiftReprovaluesetdefinitionsaug2026.csv",
 ]
 
 
@@ -271,8 +273,8 @@ def process_all_csvs():
         return False
 
     output = []
-    output.append("// Generated from all ShiftBH and ShiftSUD CSV files")
-    output.append("// Combined ValueSets for SHIFT BH and SHIFT SUD\n")
+    output.append("// Generated from all ShiftBH, ShiftSUD, and ShiftRepro CSV files")
+    output.append("// Combined ValueSets for SHIFT BH, SHIFT SUD, and SHIFT Repro\n")
 
     generated_codesystems = []
     generated_valuesets = []
@@ -357,7 +359,7 @@ def process_all_csvs():
         output.append("* status = #active")
         output.append("* experimental = false")
         output.append("* version = \"0.1.0\"")
-        output.append("* date = \"2026-05-20\"")
+        output.append("* date = \"2026-08-01\"")
 
         for context_item in context_codes:
             output.append("* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus")
