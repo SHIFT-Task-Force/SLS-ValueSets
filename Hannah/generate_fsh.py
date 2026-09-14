@@ -317,7 +317,7 @@ def process_all_csvs():
                 ("ICD-9", "http://hl7.org/fhir/sid/icd-9-cm"),
                 ("ICD-10", "http://hl7.org/fhir/sid/icd-10-cm"),
                 ("CPT Code", "http://www.ama-assn.org/go/cpt"),
-                ("HCPCS Code", "urn:oid:2.16.840.1.113883.6.285"),
+                ("HCPCS Code", "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"),
                 ("LOINC Code", "http://loinc.org"),
                 ("RXNORM Code", "http://www.nlm.nih.gov/research/umls/rxnorm"),
                 ("SNOMED Code", "http://snomed.info/sct"),
@@ -412,8 +412,9 @@ def process_all_csvs():
     repo_root = Path(__file__).resolve().parent.parent
     output_file = repo_root / "input" / "fsh" / "valuesets" / "Shift.fsh"
     output_file.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(output))
+    output_text = "\n".join(output).lstrip("\ufeff\r\n")
+    # Write UTF-8 explicitly without a BOM; Sushi does not handle BOM-prefixed .fsh files.
+    output_file.write_text(output_text, encoding="utf-8", newline="")
 
     print(f"\nGenerated {output_file.resolve()}")
     print(f"Created {len(generated_valuesets)} ValueSets combining all CSV data")
