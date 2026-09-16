@@ -31,6 +31,11 @@ LOCAL_CONTEXT_CODESYSTEM_URL = (
     "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/"
     f"{LOCAL_CONTEXT_CODESYSTEM_ID}"
 )
+ALL_CONTEXT_VALUESET_ID = "ShiftAllContextCodes"
+ALL_CONTEXT_VALUESET_URL = (
+    "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/"
+    f"{ALL_CONTEXT_VALUESET_ID}"
+)
 
 # List of all CSV files to process (relative to repository root)
 csv_patterns = [
@@ -107,6 +112,8 @@ def parse_context_part(part):
 def hl7_policy_code_for_context(context_item):
     """Return HL7 InformationSensitivityPolicy code if this context maps to one."""
     candidate = context_item["base"].replace(" ", "")
+    if candidate == "BHCORE":
+        return "BH"
     if candidate in INFORMATION_SENSITIVITY_POLICY_CODES:
         return candidate
     return None
@@ -296,6 +303,7 @@ def process_all_csvs():
         output.append(f"CodeSystem: {LOCAL_CONTEXT_CODESYSTEM_ID}")
         output.append('Title: "SHIFT Custom Context Codes"')
         output.append('Description: "Local useContext codes not present in v3-InformationSensitivityPolicy"')
+        output.append('* version = "0.1.0"')
         output.append("* ^experimental = false")
         output.append("* ^caseSensitive = true")
         for code in custom_context_codes:
@@ -305,6 +313,37 @@ def process_all_csvs():
         output.append("")
         generated_codesystems.append((LOCAL_CONTEXT_CODESYSTEM_ID, LOCAL_CONTEXT_CODESYSTEM_URL))
 
+    standard_context_codes = sorted(
+        {
+            hl7_policy_code_for_context(context_item)
+            for context_item in all_context_items.values()
+            if hl7_policy_code_for_context(context_item)
+        }
+    )
+
+    output.append(f"Instance: {ALL_CONTEXT_VALUESET_ID}")
+    output.append("InstanceOf: ValueSet")
+    output.append("Usage: #definition")
+    output.append('Title: "SHIFT All Context Codes"')
+    output.append('Description: "All custom SHIFT context codes and standards-based context codes used by the generated SHIFT ValueSets."')
+    output.append(f'* name = "{ALL_CONTEXT_VALUESET_ID}"')
+    output.append(f'* url = "{ALL_CONTEXT_VALUESET_URL}"')
+    output.append("* status = #active")
+    output.append("* experimental = false")
+    output.append('* version = "0.1.0"')
+    output.append('* date = "2026-08-01"')
+    output.append("* compose.inactive = true")
+    if custom_context_codes:
+        output.append(f'* compose.include[+].system = "{LOCAL_CONTEXT_CODESYSTEM_URL}"')
+        for code in custom_context_codes:
+            output.append(f"* compose.include[=].concept[+].code = #{code}")
+    if standard_context_codes:
+        output.append('* compose.include[+].system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"')
+        for code in standard_context_codes:
+            output.append(f"* compose.include[=].concept[+].code = #{code}")
+    output.append("")
+    generated_valuesets.append((ALL_CONTEXT_VALUESET_ID, ALL_CONTEXT_VALUESET_URL))
+
     generation_timestamp = datetime.now().astimezone().isoformat(timespec="seconds")
 
     for vs_name in sorted(valuesets.keys()):
@@ -312,7 +351,26 @@ def process_all_csvs():
 
         codes_by_system = defaultdict(list)
 
+        def add_code(code, system_uri, display):
+            if not code:
+                return
+            normalized = code.strip().lstrip("'")
+            if not normalized:
+                return
+            if normalized not in [c["code"] for c in codes_by_system[system_uri]]:
+                codes_by_system[system_uri].append({"code": normalized, "display": display})
+
         for row in rows:
+            # Support both newer CSVs (e.g. ICD Code + Code System) and older column names.
+            code_system = (row.get("Code System") or "").strip()
+
+            if row.get("ICD Code"):
+                icd_code = row.get("ICD Code", "").strip().lstrip("'")
+                if code_system.startswith("ICD-9"):
+                    add_code(icd_code, "http://hl7.org/fhir/sid/icd-9-cm", row.get("ICD Description", row.get("DSM Disorder Description", row.get("Description", icd_code))).strip())
+                elif code_system.startswith("ICD-10"):
+                    add_code(icd_code, "http://hl7.org/fhir/sid/icd-10-cm", row.get("ICD Description", row.get("DSM Disorder Description", row.get("Description", icd_code))).strip())
+
             for col_name, system_uri in [
                 ("ICD-9", "http://hl7.org/fhir/sid/icd-9-cm"),
                 ("ICD-10", "http://hl7.org/fhir/sid/icd-10-cm"),
@@ -323,9 +381,9 @@ def process_all_csvs():
                 ("SNOMED Code", "http://snomed.info/sct"),
             ]:
                 code = row.get(col_name, "").strip()
-                if code and code not in [c["code"] for c in codes_by_system[system_uri]]:
+                if code:
                     display = row.get("DSM Disorder Description", row.get("Description", code)).strip()
-                    codes_by_system[system_uri].append({"code": code, "display": display})
+                    add_code(code, system_uri, display)
 
         # Skip creating ValueSets that have no codes across all systems.
         if not any(codes_by_system.values()):
@@ -383,7 +441,7 @@ def process_all_csvs():
                     code_value = code_dict["code"].lstrip("'")
                     output.append(f"* compose.include[=].concept[+].code = #{code_value}")
                     if code_dict["display"] and code_dict["display"] != code_dict["code"]:
-                        output.append(f"* compose.include[=].concept[=].display = \"{code_dict['display']}\"")
+                        output.append('* compose.include[=].concept[=].display = "' + fsh_escape(code_dict['display']) + '"')
 
         output.append(f"* expansion.timestamp = \"{generation_timestamp}\"")
         output.append(f"* expansion.identifier = \"urn:uuid:{uuid.uuid4()}\"")
