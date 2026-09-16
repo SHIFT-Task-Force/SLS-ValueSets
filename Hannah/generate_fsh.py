@@ -420,15 +420,15 @@ def process_all_csvs():
         output.append("* date = \"2026-08-01\"")
 
         for context_item in context_codes:
-            output.append("* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus")
+            output.append("* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus")
             hl7_code = hl7_policy_code_for_context(context_item)
             if hl7_code:
                 if context_item["source_label"] != hl7_code:
                     output.append(f"// useContext mapping: {context_item['source_label']} -> v3-ActCode#{hl7_code}")
-                output.append(f"* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#{hl7_code}")
+                output.append(f"* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#{hl7_code}")
             else:
                 output.append(
-                    f"* useContext[SLS-tag][=].valueCodeableConcept = "
+                    f"* useContext[=].valueCodeableConcept = "
                     f"{LOCAL_CONTEXT_CODESYSTEM_URL}#{context_item['code']}"
                 )
 

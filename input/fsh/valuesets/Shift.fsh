@@ -1,3 +1,28 @@
+// Would like to use the SLS-RI-IG, but it causes Sushi to timeout
+
+Alias: ShiftSlsValueSet = ValueSet
+
+/*
+Profile: ShiftSlsValueSet
+Parent: SlsValueSet
+Title: "SHIFT SLS ValueSet Profile"
+Description: """
+Profile of ValueSet with specific requirement for SHIFT. This should be derived off of the SLS RI IG, but is not as that is not formally published yet.
+"""
+* useContext[SLS-tag].valueCodeableConcept from ShiftAllSensitivityCodes (extensible)
+*/
+
+/*
+change 
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept =
+to
+* useContext[SLS-tag][+].valueCodeableConcept =
+
+*/
+
+
+
 // Generated from all ShiftBH, ShiftSUD, and ShiftRepro CSV files
 // Combined ValueSets for SHIFT BH, SHIFT SUD, and SHIFT Repro
 
@@ -100,14 +125,6 @@ Description: "Maps the SHIFT BH CORE, SHIFT SEX, and SHIFT SUD labels to their H
 * group[=].element[=].target[+].code = #SUD
 * group[=].element[=].target[=].equivalence = #equivalent
 
-Profile: ShiftSlsValueSet
-Parent: SlsValueSet
-Title: "SHIFT SLS ValueSet Profile"
-Description: """
-Profile of ValueSet with specific requirement for SHIFT. This should be derived off of the SLS RI IG, but is not as that is not formally published yet.
-"""
-* useContext[SLS-tag].valueCodeableConcept from ShiftAllSensitivityCodes (required)
-
 Instance: ShiftBHSHIFTABORTION
 InstanceOf: ShiftSlsValueSet
 Usage: #definition
@@ -123,8 +140,8 @@ Identified as: ShiftCustomActSensitivityCodes#ABORTION
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #O04
@@ -1462,10 +1479,10 @@ Identified as: ShiftCustomActSensitivityCodes#ABORTION, ShiftCustomActSensitivit
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #O31.3
@@ -1626,10 +1643,10 @@ Identified as: ShiftCustomActSensitivityCodes#ABORTION, ShiftCustomActSensitivit
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #58120
@@ -1655,8 +1672,8 @@ Identified as: ShiftCustomActSensitivityCodes#BHAGG
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F63.81
@@ -2110,10 +2127,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHAGG, v3-ActCode#BH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F63.81
@@ -2341,10 +2358,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHAGG, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #788861009
@@ -2370,10 +2387,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHAGG, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #40987004
@@ -2399,11 +2416,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHAGG, v3-ActCode#SEX
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #H2028
@@ -2431,8 +2447,8 @@ Identified as: v3-ActCode#BH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F20.1
@@ -14040,10 +14056,10 @@ Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHDEV
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #129602009
@@ -14077,12 +14093,12 @@ Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHDEV, ShiftCustomA
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #96130
@@ -14125,10 +14141,10 @@ Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHEAT
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #278508007
@@ -14158,10 +14174,10 @@ Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHPERS
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #31611000
@@ -14187,10 +14203,10 @@ Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHSOM
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #35827000
@@ -14252,8 +14268,8 @@ Identified as: ShiftCustomActSensitivityCodes#BHDEV
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F90.0
@@ -15139,10 +15155,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHDEV, v3-ActCode#BH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #314.2
@@ -15173,10 +15189,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHDEV, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #96105
@@ -15218,10 +15234,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHDEV, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #1259070005
@@ -15247,8 +15263,8 @@ Identified as: ShiftCustomActSensitivityCodes#BHEAT
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F50.01
@@ -15963,10 +15979,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHEAT, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #307.53
@@ -16001,8 +16017,8 @@ Identified as: ShiftCustomActSensitivityCodes#BHNCD
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F10.121
@@ -17902,10 +17918,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHNCD, v3-ActCode#BH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F06
@@ -18056,10 +18072,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHNCD, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #H0045
@@ -18084,8 +18100,8 @@ Identified as: ShiftCustomActSensitivityCodes#BHPERS
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F60.0
@@ -18453,10 +18469,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHPERS, ShiftCustomActSensitivityC
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F07
@@ -18523,11 +18539,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHPERS, v3-ActCode#SEX
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #191774007
@@ -18553,10 +18568,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHPERS, ShiftCustomActSensitivityC
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #301.51
@@ -18582,9 +18597,8 @@ Identified as: v3-ActCode#SEX
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F65.4
@@ -19344,11 +19358,10 @@ Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#BHSOM
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #625
@@ -19382,8 +19395,8 @@ Identified as: ShiftCustomActSensitivityCodes#BHSOM
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F54
@@ -19911,10 +19924,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHSOM, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F68.A
@@ -19940,10 +19953,10 @@ Identified as: ShiftCustomActSensitivityCodes#BHSOM, ShiftCustomActSensitivityCo
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F45.22
@@ -19969,8 +19982,8 @@ Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #T83.3
@@ -22310,10 +22323,10 @@ Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION, ShiftCustomActSensi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #A9293
@@ -22338,10 +22351,10 @@ Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION, ShiftCustomActSensi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #102955006
@@ -22399,11 +22412,10 @@ Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION, v3-ActCode#SEX
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #169447004
@@ -22429,8 +22441,8 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #N46
@@ -24953,10 +24965,10 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #Z31.61
@@ -24995,12 +25007,12 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #2238-4
@@ -25262,10 +25274,10 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #O09.81
@@ -25312,10 +25324,10 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #1668-3
@@ -26658,11 +26670,10 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY, v3-ActCode#SEX
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #89300
@@ -26688,10 +26699,10 @@ Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivi
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #189312004
@@ -26717,8 +26728,8 @@ Identified as: ShiftCustomActSensitivityCodes#GAC
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F64
@@ -27074,10 +27085,10 @@ Identified as: ShiftCustomActSensitivityCodes#GAC, ShiftCustomActSensitivityCode
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #32559005
@@ -27180,8 +27191,8 @@ Identified as: ShiftCustomActSensitivityCodes#PREG
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #A34
@@ -68490,10 +68501,10 @@ Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCod
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #637.00
@@ -68678,10 +68689,10 @@ Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCod
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #10231000132102
@@ -68707,10 +68718,10 @@ Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCod
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #C58
@@ -68814,10 +68825,10 @@ Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCod
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #A50
@@ -69627,8 +69638,8 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #Z80.41
@@ -82551,10 +82562,10 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitiv
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #58700
@@ -82580,10 +82591,10 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitiv
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #E28
@@ -83748,12 +83759,12 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitiv
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #1638-6
@@ -84071,10 +84082,10 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitiv
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #54125
@@ -84181,10 +84192,10 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitiv
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #57700
@@ -84210,10 +84221,10 @@ Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitiv
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #N34
@@ -84903,9 +84914,8 @@ Identified as: v3-ActCode#SEX
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F52
@@ -85962,11 +85972,10 @@ Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#FERTILITY
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F52.4
@@ -86315,11 +86324,10 @@ Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#REPROOTHER
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #54110
@@ -86437,11 +86445,10 @@ Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#STI
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #Z72.5
@@ -86484,8 +86491,8 @@ Identified as: ShiftCustomActSensitivityCodes#STI
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #A51
@@ -96576,10 +96583,10 @@ Identified as: ShiftCustomActSensitivityCodes#STI, ShiftCustomActSensitivityCode
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #6510-2
@@ -97382,9 +97389,8 @@ Identified as: v3-ActCode#SUD
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-// useContext mapping: SHIFT SUD -> v3-ActCode#SUD
-* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F19.231
@@ -99176,8 +99182,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDAMPH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDAMPH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDAMPH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F15.23
@@ -100300,8 +100306,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDCBD
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCBD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCBD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F12.23
@@ -101006,8 +101012,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDCOC
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCOC
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCOC
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F14.23
@@ -101659,8 +101665,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDETOH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F10.231
@@ -103666,10 +103672,10 @@ Identified as: ShiftCustomActSensitivityCodes#SUDETOH, ShiftCustomActSensitivity
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #J2315
@@ -103694,10 +103700,10 @@ Identified as: ShiftCustomActSensitivityCodes#SUDETOH, ShiftCustomActSensitivity
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDSED
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #45912004
@@ -103723,8 +103729,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDHAL
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDHAL
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDHAL
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F16.121
@@ -104616,8 +104622,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDINH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDINH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDINH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F18.121
@@ -106157,8 +106163,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDOPD
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F11.23
@@ -108089,10 +108095,10 @@ Identified as: ShiftCustomActSensitivityCodes#SUDOPD, ShiftCustomActSensitivityC
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDPOLY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDPOLY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #304.70
@@ -108118,8 +108124,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDOTH
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOTH
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOTH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F15.93
@@ -108438,8 +108444,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDPOLY
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDPOLY
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDPOLY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #304.8
@@ -108534,8 +108540,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDSED
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDSED
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F13.231
@@ -109924,8 +109930,8 @@ Identified as: ShiftCustomActSensitivityCodes#SUDTOB
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDTOB
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDTOB
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F17.203
@@ -111054,10 +111060,10 @@ Identified as: ShiftCustomActSensitivityCodes#SUDTOB, ShiftCustomActSensitivityC
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDTOB
-* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCBD
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDTOB
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCBD
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #G9642
