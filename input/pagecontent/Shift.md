@@ -8,22 +8,12 @@ The [SHIFT GitHub](https://github.com/SHIFT-Task-Force) has:
 
 The publication is generated from the August 2026 SHIFT BH, SHIFT SUD, and SHIFT Repro source CSV files and published for implementation and testing.
 
-- [SHIFT Custom Context Codes (CodeSystem)](CodeSystem-ShiftCustomActContextCodes.html)
-- [SHIFT All Context Codes (ValueSet)](ValueSet-ShiftAllContextCodes.html)
-
 Current generated categories include:
 
-Behavioral Health and Reproductive Health ValueSets:
-- [SHIFT ABORTION](ValueSet-ShiftBHSHIFTABORTION.html)
-- [SHIFT CONTRACEPTION](ValueSet-ShiftBHSHIFTCONTRACEPTION.html)
-- [SHIFT FERTILITY](ValueSet-ShiftBHSHIFTFERTILITY.html)
-- [SHIFT GAC](ValueSet-ShiftBHSHIFTGAC.html)
-- [SHIFT PREG](ValueSet-ShiftBHSHIFTPREG.html)
-- [SHIFT REPRO OTHER](ValueSet-ShiftBHSHIFTREPROOTHER.html)
-- [SHIFT SEX](ValueSet-ShiftBHSHIFTSEX.html)
-- [SHIFT STI](ValueSet-ShiftBHSHIFTSTI.html)
+Behavioral Health ValueSets:
+
+- [SHIFT BH](ValueSet-ShiftBHSHIFTBHCORE.html)
 - [SHIFT BH AGG](ValueSet-ShiftBHSHIFTBHAGG.html)
-- [SHIFT BH CORE](ValueSet-ShiftBHSHIFTBHCORE.html)
 - [SHIFT BH DEV](ValueSet-ShiftBHSHIFTBHDEV.html)
 - [SHIFT BH EAT](ValueSet-ShiftBHSHIFTBHEAT.html)
 - [SHIFT BH NCD](ValueSet-ShiftBHSHIFTBHNCD.html)
@@ -31,7 +21,19 @@ Behavioral Health and Reproductive Health ValueSets:
 - [SHIFT BH SEX](ValueSet-ShiftBHSHIFTBHSEX.html)
 - [SHIFT BH SOM](ValueSet-ShiftBHSHIFTBHSOM.html)
 
+Reproductive Health ValueSets:
+
+- [SHIFT SEX](ValueSet-ShiftBHSHIFTSEX.html)
+- [SHIFT ABORTION](ValueSet-ShiftBHSHIFTABORTION.html)
+- [SHIFT CONTRACEPTION](ValueSet-ShiftBHSHIFTCONTRACEPTION.html)
+- [SHIFT FERTILITY](ValueSet-ShiftBHSHIFTFERTILITY.html)
+- [SHIFT GAC](ValueSet-ShiftBHSHIFTGAC.html)
+- [SHIFT PREG](ValueSet-ShiftBHSHIFTPREG.html)
+- [SHIFT REPRO OTHER](ValueSet-ShiftBHSHIFTREPROOTHER.html)
+- [SHIFT STI](ValueSet-ShiftBHSHIFTSTI.html)
+
 Substance Use Disorder ValueSets:
+
 - [SHIFT SUD](ValueSet-ShiftBHSHIFTSUD.html)
 - [SHIFT SUD AMPH](ValueSet-ShiftBHSHIFTSUDAMPH.html)
 - [SHIFT SUD CBD](ValueSet-ShiftBHSHIFTSUDCBD.html)
@@ -46,10 +48,11 @@ Substance Use Disorder ValueSets:
 - [SHIFT SUD TOB](ValueSet-ShiftBHSHIFTSUDTOB.html)
 
 Combined ValueSets are also published for intersections such as:
-- [SHIFT ABORTION | SHIFT PREG](ValueSet-ShiftBHSHIFTABORTIONSHIFTPREG.html)
-- [SHIFT BH CORE | SHIFT BH DEV](ValueSet-ShiftBHSHIFTBHCORESHIFTBHDEV.html)
-- [SHIFT SUD ETOH | SHIFT SUD OPD](ValueSet-ShiftBHSHIFTSUDETOHSHIFTSUDOPD.html)
-- [SHIFT REPRO OTHER | SHIFT GAC](ValueSet-ShiftBHSHIFTREPROOTHERSHIFTGAC.html)
+
+- [SHIFT ABORTION and SHIFT PREG](ValueSet-ShiftBHSHIFTABORTIONSHIFTPREG.html)
+- [SHIFT BH CORE and SHIFT BH DEV](ValueSet-ShiftBHSHIFTBHCORESHIFTBHDEV.html)
+- [SHIFT SUD ETOH and SHIFT SUD OPD](ValueSet-ShiftBHSHIFTSUDETOHSHIFTSUDOPD.html)
+- [SHIFT REPRO OTHER and SHIFT GAC](ValueSet-ShiftBHSHIFTREPROOTHERSHIFTGAC.html)
 
 Bundle:
 - [Bundle of SHIFT BH, SUD, and Repro Terminology Resources](Bundle-ShiftBHBundledTerminologyResources.html)
@@ -73,28 +76,29 @@ ValueSet.expansion (l1/c3837805)	warning	The expansion provided is has 10,325 ex
 
 These (an another) are indications of an expansion we did not ask for. The most likely cause is a terminology-server expansion/cache or validator comparison problem, because the default expansion is returning codes belonging to other ValueSets. This should be treated as a QA/tooling anomaly for SHIFT PREG, not fixed by changing the source CSV or adding codes to the PREG expansion.
 
-#### New custom sensitivity codes
+### New custom sensitivity codes
 
-The Hannah CSV defined new sensitivity codes. I tried to use [the HL7 sensitivity codes](https://terminology.hl7.org/en/ValueSet-v3-InformationSensitivityPolicy.html) where possible, but some of the codes were not in HL7. I created a new CodeSystem for these codes, and used them in the ValueSets. The new CodeSystem is called `ShiftCustomActContextCodes`, and is defined in the [CodeSystem-ShiftCustomActContextCodes.html](CodeSystem-ShiftCustomActContextCodes.html).
+The Hannah CSV defined new sensitivity codes. I tried to use [the HL7 sensitivity codes](https://terminology.hl7.org/en/ValueSet-v3-InformationSensitivityPolicy.html) where possible, but some of the codes were not in HL7. I created a new CodeSystem for these codes, and used them in the ValueSets. The new CodeSystem is called `ShiftCustomActSensitivityCodes`, and is defined in the [CodeSystem-ShiftCustomActSensitivityCodes.html](CodeSystem-ShiftCustomActSensitivityCodes.html).
 
-The problem with defining new codes is that no previous policy or consent will be able to affect data tagged with these codes. So these code should be reviewed to assure that we only create new codes when there really is no existing code that can be used.
+The problem with defining new codes is that no previous policy or consent will be able to affect data tagged with these codes. So these code should be reviewed to assure that we only create new codes when there really is no existing code that can be used. Some custom codes are [mapped to existing HL7 sensitivity codes](ConceptMap-ShiftContextCodeMap.html).
 
-All of the sensitivity codes used here are in [ValueSet ShiftAllContextCodes](ValueSet-ShiftAllContextCodes.html)
+All of the sensitivity codes used here are in [ValueSet ShiftAllSensitivityCodes](ValueSet-ShiftAllSensitivityCodes.html)
 
-Potential mappings from custom SHIFT context codes to existing HL7 sensitivity codes:
+Potential mappings from custom SHIFT Sensitivity Codes to existing HL7 sensitivity codes:
 
 | SHIFT custom code | Closest HL7 sensitivity code | Assessment |
 | --- | --- | --- |
-| [BHDEV](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-BHDEV) | [DVD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-DVD) | Strong match: developmental disability |
-| [BHNCD](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-BHNCD) | [COGN](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-COGN) | Related, but broader: cognitive disability versus neurocognitive disorder |
-| [PREG](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-PREG) | [PREGNANT](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-PREGNANT) | Strong match: pregnancy information |
-| [STI](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-STI) | [STD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-STD) | Strong match: sexually transmitted disease |
-| [SUD ETOH](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-SUDETOH) | [ETHUD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-ETHUD) | Strong match: alcohol use disorder |
-| [SUD OPD](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-SUDOPD) | [OPIOIDUD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-OPIOIDUD) | Strong match: opioid use disorder |
-| [GAC](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-GAC) | [GENDER](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-GENDER) | Related, but broader/different: gender information versus gender-affirming care |
-| [BHAGG](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-BHAGG) | [VIO](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-VIO) | Related, but different: aggressive or perpetrator behavior versus violence information |
-| [BHSOM](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-BHSOM) | [MH](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-MH) or [PSY](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-PSY) | Partial match: somatization/functional disorder versus general mental health or psychiatry |
-| [REPRO OTHER](CodeSystem-ShiftCustomActContextCodes.html#ShiftCustomActContextCodes-REPROOTHER) | [SEX](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-SEX) | Partial match only: reproductive health overlaps but is not equivalent to sexuality |
+| [BHDEV](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-BHDEV) | [DVD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-DVD) | Strong match: developmental disability |
+| [BHNCD](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-BHNCD) | [COGN](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-COGN) | Related, but broader: cognitive disability versus neurocognitive disorder |
+| [PREG](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-PREG) | [PREGNANT](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-PREGNANT) | Strong match: pregnancy information |
+| [STI](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-STI) | [STD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-STD) | Strong match: sexually transmitted disease |
+| [SUD ETOH](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-SUDETOH) | [ETHUD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-ETHUD) | Strong match: alcohol use disorder |
+| [SUD OPD](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-SUDOPD) | [OPIOIDUD](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-OPIOIDUD) | Strong match: opioid use disorder |
+| [GAC](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-GAC) | [GENDER](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-GENDER) | Related, but broader/different: gender information versus gender-affirming care |
+| [BHAGG](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-BHAGG) | [VIO](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-VIO) | Related, but different: aggressive or perpetrator behavior versus violence information |
+| [BHSOM](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-BHSOM) | [MH](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-MH) or [PSY](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-PSY) | Partial match: somatization/functional disorder versus general mental health or psychiatry |
+| [REPRO OTHER](CodeSystem-ShiftCustomActSensitivityCodes.html#ShiftCustomActSensitivityCodes-REPROOTHER) | [SEX](https://terminology.hl7.org/en/CodeSystem-v3-ActCode.html#v3-ActCode-SEX) | Partial match only: reproductive health overlaps but is not equivalent to sexuality |
+{: .grid}
 
 ### Note the total codes in codeSystems
 
@@ -109,4 +113,5 @@ Potential mappings from custom SHIFT context codes to existing HL7 sensitivity c
 | RxNorm | ~120k | 0 | No RxNorm codes currently selected |
 | SNOMED CT | 350k–360k | 11,073 | Clinical concepts |
 | **Total** |  | **27,367** | Explicit `compose` concepts; expansion entries are not counted again |
+{: .grid}
 

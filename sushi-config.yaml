@@ -8,7 +8,7 @@ name: ShiftSLSValueSets
 title: SHIFT SLS ValueSets Implementation Guide
 description: An Implementation Guide for Security Labeling Services (SLS) ValueSets developed by the SHIFT Task Force.
 status: active
-version: 0.1.0
+version: 0.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build
@@ -36,18 +36,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   pin-canonicals: pin-multiples
   auto-oid-root: 1.3.6.1.4.1.66281.3.1
 
-## vsac Must use 0.19.0 as higher versions removed the SAMHSA valueSets
-#dependencies:
-#  us.nlm.vsac: 
-#    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-#    version: 0.19.0
-#    version: 0.24.0
 
-#dependencies:
-#  hl7.fhir.us.core: 4.0.0
-#  hl7.fhir.us.core: current
-#  ihe.iti.pcf: 1.1.0
-#  hl7.xprod.uv.gender-harmony: current
+dependencies:
+  shift-task-force.sls-ri: 
+    version: current
+    id: shiftslsri
 
 # ╭────────────────────────────────────────────pages───────────────────────────────────────────────╮
 # │  The pages property corresponds to IG.definition.page.                                         │
@@ -56,15 +49,7 @@ pages:
   index.md:
     title: "SHIFT IG Home"
   Shift.md:
-    title: "SHIFT Hannah SLS ValueSets"
-  SHIFTsls.md:
-    title: "SHIFT Min SLS valueSets"
-  LeapSls.md:
-    title: "Leap SLS valueSets"
-  synthea.md:
-    title: "Synthea Modules Used"
-  ab352.md:
-    title: "California AB352 Use Case"
+    title: "SHIFT SLS ValueSets"
   download.md:
     title: "About and Download"
 

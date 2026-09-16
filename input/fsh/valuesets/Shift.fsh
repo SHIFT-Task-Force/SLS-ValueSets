@@ -1,13 +1,14 @@
 // Generated from all ShiftBH, ShiftSUD, and ShiftRepro CSV files
 // Combined ValueSets for SHIFT BH, SHIFT SUD, and SHIFT Repro
 
-CodeSystem: ShiftCustomActContextCodes
-Title: "SHIFT Custom Context Codes"
-Description: "Local useContext codes not present in v3-InformationSensitivityPolicy"
-* ^version = "0.1.0"
+CodeSystem: ShiftCustomActSensitivityCodes
+Title: "SHIFT Custom Sensitivity Codes"
+Description: "Local useSensitivity Codes not present in v3-InformationSensitivityPolicy"
+* ^version = "0.2.0"
 * ^experimental = false
 * ^caseSensitive = true
 * #ABORTION "ABORTION" "Elective termination of a pregnancy, including medical abortifacients and surgical abortion procedures, plus gynecologic procedures such as dilation and curettage that are also used in abortion. Includes a history of abortion. Miscarriage is NOT here (it is SHIFT PREG)."
+* #BHCORE "BH CORE" "Default SHIFT behavioral health Sensitivity Code. In the generated ValueSets, BH CORE maps to the HL7 v3-ActCode#BH concept."
 * #BHAGG "BH AGG" "Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint."
 * #BHDEV "BH DEV" "Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD)."
 * #BHEAT "BH EAT" "Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record - including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding - that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal. MEDICATIONS - EXCLUDED: weight-loss / anti-obesity drugs themselves do NOT belong in BH EAT (phentermine, phendimetrazine, diethylpropion, phentermine/topiramate (Qsymia), orlistat, naltrexone/bupropion, GLP-1 agonists). A weight-loss prescription indicates treatment of obesity, not an eating disorder, so its EHR presence is not a BH EAT signal. INCLUDED: medications FDA-approved to treat an eating disorder itself - lisdexamfetamine (Vyvanse), the only agent indicated for binge eating disorder - which is tagged 'SHIFT BH DEV | SHIFT BH EAT' since its dominant use remains ADHD. CONTRAST with the Shift SUD value sets: LABORATORY ASSAYS for anorectic weight-loss agents that are drugs of misuse DO carry Cross-Ref = EAT there, because a positive test for a diet drug can reflect the compensatory diet-pill misuse that DSM-5 describes in bulimia nervosa and anorexia nervosa binge-eating/purging type. The test is the eating-disorder signal; the prescription is not."
@@ -19,7 +20,9 @@ Description: "Local useContext codes not present in v3-InformationSensitivityPol
 * #GAC "GAC" "Gender-affirming care: any social, psychological, behavioural or medical (including hormonal treatment or surgery) intervention designed to support and affirm an individual's gender identity. Includes breast reconstruction and hair implants for cis-gendered individuals as well as transgender care, and terms capturing a patient's preferred gender identity, pronouns, and preferred name."
 * #PREG "PREG" "Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION)."
 * #REPROOTHER "REPRO OTHER" "Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc."
+* #SEX "SEX" "Default SHIFT sexual health Sensitivity Code. The CSV label is SHIFT SEX and it maps to the HL7 v3-ActCode#SEX concept."
 * #STI "STI" "All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities."
+* #SUD "SUD" "Default SHIFT substance use disorder Sensitivity Code. The CSV label is SHIFT SUD and it maps to the HL7 v3-ActCode#SUD concept."
 * #SUDAMPH "SUD AMPH" "Term related to amphetamine misuse or amphetamine use disorders (including methamphetamine)."
 * #SUDCBD "SUD CBD" "Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone)."
 * #SUDCOC "SUD COC" "Term related to cocaine misuse or cocaine use disorders."
@@ -31,19 +34,20 @@ Description: "Local useContext codes not present in v3-InformationSensitivityPol
 * #SUDPOLY "SUD POLY" "Term related to polysubstance, mixed substance, or combined substance use (involves multiple substances simultaneously)."
 * #SUDSED "SUD SED" "Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics)."
 * #SUDTOB "SUD TOB" "Term related to tobacco/nicotine misuse or tobacco use disorders."
-* #ShiftOtherBreast "ShiftOtherBreast" "Local SHIFT context code ShiftOtherBreast"
+* #ShiftOtherBreast "ShiftOtherBreast" "Local SHIFT Sensitivity Code ShiftOtherBreast"
 
-Instance: ShiftAllContextCodes
+Instance: ShiftAllSensitivityCodes
 InstanceOf: ValueSet
 Usage: #definition
-Title: "SHIFT All Context Codes"
-Description: "All custom SHIFT context codes and standards-based context codes used by the generated SHIFT ValueSets."
+Title: "SHIFT All Sensitivity Codes"
+Description: "All custom SHIFT Sensitivity Codes and standards-based Sensitivity Codes used by the generated SHIFT ValueSets."
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
+* name = "ShiftAllSensitivityCodes"
 * compose.inactive = true
-* compose.include[+].system = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes"
+* compose.include[+].system = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes"
 * compose.include[=].concept[+].code = #ABORTION
 * compose.include[=].concept[+].code = #BHAGG
 * compose.include[=].concept[+].code = #BHDEV
@@ -74,23 +78,53 @@ Description: "All custom SHIFT context codes and standards-based context codes u
 * compose.include[=].concept[+].code = #SUD
 * compose.include[=].concept[+].code = #BH
 
+Instance: ShiftContextCodeMap
+InstanceOf: ConceptMap
+Usage: #definition
+Title: "SHIFT Sensitivity Code Mapping"
+Description: "Maps the SHIFT BH CORE, SHIFT SEX, and SHIFT SUD labels to their HL7 v3 ActCode equivalents used by the generated ValueSets."
+* status = #active
+* experimental = false
+* version = "0.2.0"
+* date = "2026-08-01"
+* name = "ShiftContextCodeMap"
+* group[+].source = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes"
+* group[=].target = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* group[=].element[+].code = #BHCORE
+* group[=].element[=].target[+].code = #BH
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[+].code = #SEX
+* group[=].element[=].target[+].code = #SEX
+* group[=].element[=].target[=].equivalence = #equivalent
+* group[=].element[+].code = #SUD
+* group[=].element[=].target[+].code = #SUD
+* group[=].element[=].target[=].equivalence = #equivalent
+
+Profile: ShiftSlsValueSet
+Parent: SlsValueSet
+Title: "SHIFT SLS ValueSet Profile"
+Description: """
+Profile of ValueSet with specific requirement for SHIFT. This should be derived off of the SLS RI IG, but is not as that is not formally published yet.
+"""
+* useContext[SLS-tag].valueCodeableConcept from ShiftAllSensitivityCodes (required)
+
 Instance: ShiftBHSHIFTABORTION
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT ABORTION"
 Description: """
 Elective termination of a pregnancy, including medical abortifacients and surgical abortion procedures, plus gynecologic procedures such as dilation and curettage that are also used in abortion. Includes a history of abortion. Miscarriage is NOT here (it is SHIFT PREG).
 
-Identified as: ShiftCustomActContextCodes#ABORTION
+Identified as: ShiftCustomActSensitivityCodes#ABORTION
 """
 * name = "ShiftBHSHIFTABORTION"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTABORTION"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ABORTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #O04
@@ -1414,24 +1448,24 @@ Identified as: ShiftCustomActContextCodes#ABORTION
 
 
 Instance: ShiftBHSHIFTABORTIONSHIFTPREG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT ABORTION | SHIFT PREG"
 Description: """
 SHIFT ABORTION: Elective termination of a pregnancy, including medical abortifacients and surgical abortion procedures, plus gynecologic procedures such as dilation and curettage that are also used in abortion. Includes a history of abortion. Miscarriage is NOT here (it is SHIFT PREG).; SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).
 
-Identified as: ShiftCustomActContextCodes#ABORTION, ShiftCustomActContextCodes#PREG
+Identified as: ShiftCustomActSensitivityCodes#ABORTION, ShiftCustomActSensitivityCodes#PREG
 """
 * name = "ShiftBHSHIFTABORTIONSHIFTPREG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTABORTIONSHIFTPREG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ABORTION
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #O31.3
@@ -1578,24 +1612,24 @@ Identified as: ShiftCustomActContextCodes#ABORTION, ShiftCustomActContextCodes#P
 
 
 Instance: ShiftBHSHIFTABORTIONSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT ABORTION | SHIFT REPRO OTHER"
 Description: """
 SHIFT ABORTION: Elective termination of a pregnancy, including medical abortifacients and surgical abortion procedures, plus gynecologic procedures such as dilation and curettage that are also used in abortion. Includes a history of abortion. Miscarriage is NOT here (it is SHIFT PREG).; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#ABORTION, ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#ABORTION, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTABORTIONSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTABORTIONSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ABORTION
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #58120
@@ -1607,22 +1641,22 @@ Identified as: ShiftCustomActContextCodes#ABORTION, ShiftCustomActContextCodes#R
 
 
 Instance: ShiftBHSHIFTBHAGG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH AGG"
 Description: """
 Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint.
 
-Identified as: ShiftCustomActContextCodes#BHAGG
+Identified as: ShiftCustomActSensitivityCodes#BHAGG
 """
 * name = "ShiftBHSHIFTBHAGG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F63.81
@@ -2062,24 +2096,24 @@ Identified as: ShiftCustomActContextCodes#BHAGG
 
 
 Instance: ShiftBHSHIFTBHAGGSHIFTBHCORE
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH CORE"
 Description: """
 SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint.; SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.
 
-Identified as: ShiftCustomActContextCodes#BHAGG, v3-ActCode#BH
+Identified as: ShiftCustomActSensitivityCodes#BHAGG, v3-ActCode#BH
 """
 * name = "ShiftBHSHIFTBHAGGSHIFTBHCORE"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHCORE"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F63.81
@@ -2293,24 +2327,24 @@ Identified as: ShiftCustomActContextCodes#BHAGG, v3-ActCode#BH
 
 
 Instance: ShiftBHSHIFTBHAGGSHIFTBHNCD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH NCD"
 Description: """
 SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint.; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
 
-Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHNCD
+Identified as: ShiftCustomActSensitivityCodes#BHAGG, ShiftCustomActSensitivityCodes#BHNCD
 """
 * name = "ShiftBHSHIFTBHAGGSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHNCD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #788861009
@@ -2322,24 +2356,24 @@ Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHNC
 
 
 Instance: ShiftBHSHIFTBHAGGSHIFTBHPERS
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH PERS"
 Description: """
 SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint.; SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.
 
-Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHPERS
+Identified as: ShiftCustomActSensitivityCodes#BHAGG, ShiftCustomActSensitivityCodes#BHPERS
 """
 * name = "ShiftBHSHIFTBHAGGSHIFTBHPERS"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHPERS"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #40987004
@@ -2351,25 +2385,25 @@ Identified as: ShiftCustomActContextCodes#BHAGG, ShiftCustomActContextCodes#BHPE
 
 
 Instance: ShiftBHSHIFTBHAGGSHIFTBHSEX
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH AGG | SHIFT BH SEX"
 Description: """
 SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint.; SHIFT BH SEX: Term is related to sexual dysfunction or paraphilic disorders. Includes disorders of sexual arousal and treatments for those issues.
 
-Identified as: ShiftCustomActContextCodes#BHAGG, v3-ActCode#SEX
+Identified as: ShiftCustomActSensitivityCodes#BHAGG, v3-ActCode#SEX
 """
 * name = "ShiftBHSHIFTBHAGGSHIFTBHSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHAGGSHIFTBHSEX"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #H2028
@@ -2383,7 +2417,7 @@ Identified as: ShiftCustomActContextCodes#BHAGG, v3-ActCode#SEX
 
 
 Instance: ShiftBHSHIFTBHCORE
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH CORE"
 Description: """
@@ -2395,10 +2429,10 @@ Identified as: v3-ActCode#BH
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORE"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F20.1
@@ -13992,24 +14026,24 @@ Identified as: v3-ActCode#BH
 
 
 Instance: ShiftBHSHIFTBHCORESHIFTBHDEV
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH DEV"
 Description: """
 SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
 
-Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHDEV
+Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHDEV
 """
 * name = "ShiftBHSHIFTBHCORESHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHDEV"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #129602009
@@ -14029,26 +14063,26 @@ Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHDEV
 
 
 Instance: ShiftBHSHIFTBHCORESHIFTBHDEVSHIFTBHNCD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH DEV | SHIFT BH NCD"
 Description: """
 SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
 
-Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHNCD
+Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHDEV, ShiftCustomActSensitivityCodes#BHNCD
 """
 * name = "ShiftBHSHIFTBHCORESHIFTBHDEVSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHDEVSHIFTBHNCD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #96130
@@ -14077,24 +14111,24 @@ Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHDEV, ShiftCustomActCo
 
 
 Instance: ShiftBHSHIFTBHCORESHIFTBHEAT
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH EAT"
 Description: """
 SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH EAT: Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record - including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding - that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal. MEDICATIONS - EXCLUDED: weight-loss / anti-obesity drugs themselves do NOT belong in BH EAT (phentermine, phendimetrazine, diethylpropion, phentermine/topiramate (Qsymia), orlistat, naltrexone/bupropion, GLP-1 agonists). A weight-loss prescription indicates treatment of obesity, not an eating disorder, so its EHR presence is not a BH EAT signal. INCLUDED: medications FDA-approved to treat an eating disorder itself - lisdexamfetamine (Vyvanse), the only agent indicated for binge eating disorder - which is tagged 'SHIFT BH DEV | SHIFT BH EAT' since its dominant use remains ADHD. CONTRAST with the Shift SUD value sets: LABORATORY ASSAYS for anorectic weight-loss agents that are drugs of misuse DO carry Cross-Ref = EAT there, because a positive test for a diet drug can reflect the compensatory diet-pill misuse that DSM-5 describes in bulimia nervosa and anorexia nervosa binge-eating/purging type. The test is the eating-disorder signal; the prescription is not.
 
-Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHEAT
+Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHEAT
 """
 * name = "ShiftBHSHIFTBHCORESHIFTBHEAT"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHEAT"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #278508007
@@ -14110,24 +14144,24 @@ Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHEAT
 
 
 Instance: ShiftBHSHIFTBHCORESHIFTBHPERS
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH PERS"
 Description: """
 SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.
 
-Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHPERS
+Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHPERS
 """
 * name = "ShiftBHSHIFTBHCORESHIFTBHPERS"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHPERS"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #31611000
@@ -14139,24 +14173,24 @@ Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHPERS
 
 
 Instance: ShiftBHSHIFTBHCORESHIFTBHSOM
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH CORE | SHIFT BH SOM"
 Description: """
 SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
 
-Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHSOM
+Identified as: v3-ActCode#BH, ShiftCustomActSensitivityCodes#BHSOM
 """
 * name = "ShiftBHSHIFTBHCORESHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHCORESHIFTBHSOM"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #35827000
@@ -14204,22 +14238,22 @@ Identified as: v3-ActCode#BH, ShiftCustomActContextCodes#BHSOM
 
 
 Instance: ShiftBHSHIFTBHDEV
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH DEV"
 Description: """
 Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
 
-Identified as: ShiftCustomActContextCodes#BHDEV
+Identified as: ShiftCustomActSensitivityCodes#BHDEV
 """
 * name = "ShiftBHSHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEV"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F90.0
@@ -15091,24 +15125,24 @@ Identified as: ShiftCustomActContextCodes#BHDEV
 
 
 Instance: ShiftBHSHIFTBHDEVSHIFTBHCORE
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH DEV | SHIFT BH CORE"
 Description: """
 SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.
 
-Identified as: ShiftCustomActContextCodes#BHDEV, v3-ActCode#BH
+Identified as: ShiftCustomActSensitivityCodes#BHDEV, v3-ActCode#BH
 """
 * name = "ShiftBHSHIFTBHDEVSHIFTBHCORE"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEVSHIFTBHCORE"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #314.2
@@ -15125,24 +15159,24 @@ Identified as: ShiftCustomActContextCodes#BHDEV, v3-ActCode#BH
 
 
 Instance: ShiftBHSHIFTBHDEVSHIFTBHNCD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH DEV | SHIFT BH NCD"
 Description: """
 SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
 
-Identified as: ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHNCD
+Identified as: ShiftCustomActSensitivityCodes#BHDEV, ShiftCustomActSensitivityCodes#BHNCD
 """
 * name = "ShiftBHSHIFTBHDEVSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEVSHIFTBHNCD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #96105
@@ -15170,24 +15204,24 @@ Identified as: ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHNC
 
 
 Instance: ShiftBHSHIFTBHDEVSHIFTBHSOM
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH DEV | SHIFT BH SOM"
 Description: """
 SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
 
-Identified as: ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHSOM
+Identified as: ShiftCustomActSensitivityCodes#BHDEV, ShiftCustomActSensitivityCodes#BHSOM
 """
 * name = "ShiftBHSHIFTBHDEVSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHDEVSHIFTBHSOM"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #1259070005
@@ -15199,22 +15233,22 @@ Identified as: ShiftCustomActContextCodes#BHDEV, ShiftCustomActContextCodes#BHSO
 
 
 Instance: ShiftBHSHIFTBHEAT
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH EAT"
 Description: """
 Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record - including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding - that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal. MEDICATIONS - EXCLUDED: weight-loss / anti-obesity drugs themselves do NOT belong in BH EAT (phentermine, phendimetrazine, diethylpropion, phentermine/topiramate (Qsymia), orlistat, naltrexone/bupropion, GLP-1 agonists). A weight-loss prescription indicates treatment of obesity, not an eating disorder, so its EHR presence is not a BH EAT signal. INCLUDED: medications FDA-approved to treat an eating disorder itself - lisdexamfetamine (Vyvanse), the only agent indicated for binge eating disorder - which is tagged 'SHIFT BH DEV | SHIFT BH EAT' since its dominant use remains ADHD. CONTRAST with the Shift SUD value sets: LABORATORY ASSAYS for anorectic weight-loss agents that are drugs of misuse DO carry Cross-Ref = EAT there, because a positive test for a diet drug can reflect the compensatory diet-pill misuse that DSM-5 describes in bulimia nervosa and anorexia nervosa binge-eating/purging type. The test is the eating-disorder signal; the prescription is not.
 
-Identified as: ShiftCustomActContextCodes#BHEAT
+Identified as: ShiftCustomActSensitivityCodes#BHEAT
 """
 * name = "ShiftBHSHIFTBHEAT"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHEAT"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F50.01
@@ -15915,24 +15949,24 @@ Identified as: ShiftCustomActContextCodes#BHEAT
 
 
 Instance: ShiftBHSHIFTBHEATSHIFTBHSOM
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH EAT | SHIFT BH SOM"
 Description: """
 SHIFT BH EAT: Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record - including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding - that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal. MEDICATIONS - EXCLUDED: weight-loss / anti-obesity drugs themselves do NOT belong in BH EAT (phentermine, phendimetrazine, diethylpropion, phentermine/topiramate (Qsymia), orlistat, naltrexone/bupropion, GLP-1 agonists). A weight-loss prescription indicates treatment of obesity, not an eating disorder, so its EHR presence is not a BH EAT signal. INCLUDED: medications FDA-approved to treat an eating disorder itself - lisdexamfetamine (Vyvanse), the only agent indicated for binge eating disorder - which is tagged 'SHIFT BH DEV | SHIFT BH EAT' since its dominant use remains ADHD. CONTRAST with the Shift SUD value sets: LABORATORY ASSAYS for anorectic weight-loss agents that are drugs of misuse DO carry Cross-Ref = EAT there, because a positive test for a diet drug can reflect the compensatory diet-pill misuse that DSM-5 describes in bulimia nervosa and anorexia nervosa binge-eating/purging type. The test is the eating-disorder signal; the prescription is not.; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
 
-Identified as: ShiftCustomActContextCodes#BHEAT, ShiftCustomActContextCodes#BHSOM
+Identified as: ShiftCustomActSensitivityCodes#BHEAT, ShiftCustomActSensitivityCodes#BHSOM
 """
 * name = "ShiftBHSHIFTBHEATSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHEATSHIFTBHSOM"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #307.53
@@ -15953,22 +15987,22 @@ Identified as: ShiftCustomActContextCodes#BHEAT, ShiftCustomActContextCodes#BHSO
 
 
 Instance: ShiftBHSHIFTBHNCD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH NCD"
 Description: """
 Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
 
-Identified as: ShiftCustomActContextCodes#BHNCD
+Identified as: ShiftCustomActSensitivityCodes#BHNCD
 """
 * name = "ShiftBHSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHNCD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F10.121
@@ -17854,24 +17888,24 @@ Identified as: ShiftCustomActContextCodes#BHNCD
 
 
 Instance: ShiftBHSHIFTBHNCDSHIFTBHCORE
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH NCD | SHIFT BH CORE"
 Description: """
 SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.; SHIFT BH CORE: Default tag for behavioral health terms that don't fit a more specific category. Includes mood disorders, anxiety disorders, compulsions, trauma- and stressor-related disorders, psychoses, and sleep/wake disorders.
 
-Identified as: ShiftCustomActContextCodes#BHNCD, v3-ActCode#BH
+Identified as: ShiftCustomActSensitivityCodes#BHNCD, v3-ActCode#BH
 """
 * name = "ShiftBHSHIFTBHNCDSHIFTBHCORE"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHNCDSHIFTBHCORE"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#BH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F06
@@ -18008,24 +18042,24 @@ Identified as: ShiftCustomActContextCodes#BHNCD, v3-ActCode#BH
 
 
 Instance: ShiftBHSHIFTBHNCDSHIFTBHDEV
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH NCD | SHIFT BH DEV"
 Description: """
 SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.; SHIFT BH DEV: Term is related to a developmental or intellectual disability, including autism spectrum disorder, motor tics, learning disabilities or delays, speech delay, ADHD, or similar. Excludes dementia, amnesia, and delirium (those are NCD).
 
-Identified as: ShiftCustomActContextCodes#BHNCD, ShiftCustomActContextCodes#BHDEV
+Identified as: ShiftCustomActSensitivityCodes#BHNCD, ShiftCustomActSensitivityCodes#BHDEV
 """
 * name = "ShiftBHSHIFTBHNCDSHIFTBHDEV"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHNCDSHIFTBHDEV"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHDEV
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHDEV
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #H0045
@@ -18036,22 +18070,22 @@ Identified as: ShiftCustomActContextCodes#BHNCD, ShiftCustomActContextCodes#BHDE
 
 
 Instance: ShiftBHSHIFTBHPERS
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH PERS"
 Description: """
 Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.
 
-Identified as: ShiftCustomActContextCodes#BHPERS
+Identified as: ShiftCustomActSensitivityCodes#BHPERS
 """
 * name = "ShiftBHSHIFTBHPERS"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHPERS"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F60.0
@@ -18405,24 +18439,24 @@ Identified as: ShiftCustomActContextCodes#BHPERS
 
 
 Instance: ShiftBHSHIFTBHPERSSHIFTBHNCD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH PERS | SHIFT BH NCD"
 Description: """
 SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.; SHIFT BH NCD: Term is related to a neurocognitive disorder, including dementia, delirium, and amnesia.
 
-Identified as: ShiftCustomActContextCodes#BHPERS, ShiftCustomActContextCodes#BHNCD
+Identified as: ShiftCustomActSensitivityCodes#BHPERS, ShiftCustomActSensitivityCodes#BHNCD
 """
 * name = "ShiftBHSHIFTBHPERSSHIFTBHNCD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHPERSSHIFTBHNCD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHNCD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHNCD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F07
@@ -18475,25 +18509,25 @@ Identified as: ShiftCustomActContextCodes#BHPERS, ShiftCustomActContextCodes#BHN
 
 
 Instance: ShiftBHSHIFTBHPERSSHIFTBHSEX
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH PERS | SHIFT BH SEX"
 Description: """
 SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.; SHIFT BH SEX: Term is related to sexual dysfunction or paraphilic disorders. Includes disorders of sexual arousal and treatments for those issues.
 
-Identified as: ShiftCustomActContextCodes#BHPERS, v3-ActCode#SEX
+Identified as: ShiftCustomActSensitivityCodes#BHPERS, v3-ActCode#SEX
 """
 * name = "ShiftBHSHIFTBHPERSSHIFTBHSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHPERSSHIFTBHSEX"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #191774007
@@ -18505,24 +18539,24 @@ Identified as: ShiftCustomActContextCodes#BHPERS, v3-ActCode#SEX
 
 
 Instance: ShiftBHSHIFTBHPERSSHIFTBHSOM
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH PERS | SHIFT BH SOM"
 Description: """
 SHIFT BH PERS: Term is related to a defined personality disorder. Reserved for clearly defined and diagnosed fixed personality disorders, not personality traits.; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
 
-Identified as: ShiftCustomActContextCodes#BHPERS, ShiftCustomActContextCodes#BHSOM
+Identified as: ShiftCustomActSensitivityCodes#BHPERS, ShiftCustomActSensitivityCodes#BHSOM
 """
 * name = "ShiftBHSHIFTBHPERSSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHPERSSHIFTBHSOM"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHPERS
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHPERS
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #301.51
@@ -18534,7 +18568,7 @@ Identified as: ShiftCustomActContextCodes#BHPERS, ShiftCustomActContextCodes#BHS
 
 
 Instance: ShiftBHSHIFTBHSEX
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH SEX"
 Description: """
@@ -18546,11 +18580,11 @@ Identified as: v3-ActCode#SEX
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSEX"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F65.4
@@ -19296,25 +19330,25 @@ Identified as: v3-ActCode#SEX
 
 
 Instance: ShiftBHSHIFTBHSEXSHIFTBHSOM
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH SEX | SHIFT BH SOM"
 Description: """
 SHIFT BH SEX: Term is related to sexual dysfunction or paraphilic disorders. Includes disorders of sexual arousal and treatments for those issues.; SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
 
-Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#BHSOM
+Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#BHSOM
 """
 * name = "ShiftBHSHIFTBHSEXSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSEXSHIFTBHSOM"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT BH SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #625
@@ -19334,22 +19368,22 @@ Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#BHSOM
 
 
 Instance: ShiftBHSHIFTBHSOM
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH SOM"
 Description: """
 Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.
 
-Identified as: ShiftCustomActContextCodes#BHSOM
+Identified as: ShiftCustomActSensitivityCodes#BHSOM
 """
 * name = "ShiftBHSHIFTBHSOM"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSOM"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F54
@@ -19863,24 +19897,24 @@ Identified as: ShiftCustomActContextCodes#BHSOM
 
 
 Instance: ShiftBHSHIFTBHSOMSHIFTBHAGG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH SOM | SHIFT BH AGG"
 Description: """
 SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.; SHIFT BH AGG: Term is related to aggressive or violent behavior, including medications used as chemical restraint, physical restraint procedures, and screening tools for violent behaviors. Excludes terms indicating the patient was the victim of violence; applies only to terms indicating the patient committed or is likely to commit aggressive or violent acts. Purpose of use: identify EHR terms suggesting the patient may have a history of, or be prone to, aggressive or violent behavior. RxNorm-specific scope: include only chemical-restraint medications/formulations (typically short-acting IM forms - IM haloperidol short-acting, IM ziprasidone, IM olanzapine short-acting, IM aripiprazole short-acting, IM droperidol, IM chlorpromazine, IM lorazepam, IM midazolam, IM diphenhydramine in restraint cocktails, IM ketamine for severe agitation). Cross-tag with SHIFT BH CORE only when the same formulation is also routinely used for daily BH treatment (e.g., IM lorazepam = AGG | CORE). PO forms of these molecules go in BH CORE only. Long-acting depot injectables (haloperidol decanoate, olanzapine pamoate, paliperidone palmitate, aripiprazole long-acting) go in BH CORE only - they are maintenance, not chemical restraint.
 
-Identified as: ShiftCustomActContextCodes#BHSOM, ShiftCustomActContextCodes#BHAGG
+Identified as: ShiftCustomActSensitivityCodes#BHSOM, ShiftCustomActSensitivityCodes#BHAGG
 """
 * name = "ShiftBHSHIFTBHSOMSHIFTBHAGG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSOMSHIFTBHAGG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHAGG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHAGG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F68.A
@@ -19892,24 +19926,24 @@ Identified as: ShiftCustomActContextCodes#BHSOM, ShiftCustomActContextCodes#BHAG
 
 
 Instance: ShiftBHSHIFTBHSOMSHIFTBHEAT
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT BH SOM | SHIFT BH EAT"
 Description: """
 SHIFT BH SOM: Term is related to a somatization or functional disorder. Use ONLY when the term is exclusively characterized as a somatized or functional disorder; do not apply if the term could also be tagged under another category.; SHIFT BH EAT: Term either (1) is the name of an eating disorder, body dysmorphic disorder, or similar body-image issue (diagnostic codes, e.g. anorexia nervosa, bulimia, binge eating disorder, ARFID, orthorexia, rumination, weight fixation, BDD), or (2) is a body-measurement / nutrition / obesity term that would be particularly triggering to a patient with an eating disorder if visible in their record - including diagnoses of obesity / morbid obesity / childhood obesity, behavioral counseling for obesity (HCPCS G0447 / G0473), and clinical measures of weight, BMI, or ideal body weight (BMI findings, body weight observable entities, underweight, abnormal/unintentional weight loss, dosing/dialysis/dry body weight). All body-measurement and obesity-finding rows in scope under (2) carry Etiology/Status = 'Medical' since the underlying etiology is medical/measurement rather than BH. Excludes organic eating disturbances such as pica or decreased appetite from medical causes. Excludes universal screening procedures with no ED-specific signal (nutritional assessment, malnutrition screening / MUST screening tools, generic 'at increased risk for nutritional problem' findings). Excludes developmental motor delays (e.g., developmental delay in feeding - that is DEV, not BH EAT). Excludes specialized non-triggering body-measurement contexts (birth weight, Broselow Luten pediatric resuscitation weight, pre-amputation body weight). Excludes generic quality-reporting BMI documentation codes (HCPCS G8417 / G8418 / G8420) that are universally documented in primary care and carry no meaningful BH signal. MEDICATIONS - EXCLUDED: weight-loss / anti-obesity drugs themselves do NOT belong in BH EAT (phentermine, phendimetrazine, diethylpropion, phentermine/topiramate (Qsymia), orlistat, naltrexone/bupropion, GLP-1 agonists). A weight-loss prescription indicates treatment of obesity, not an eating disorder, so its EHR presence is not a BH EAT signal. INCLUDED: medications FDA-approved to treat an eating disorder itself - lisdexamfetamine (Vyvanse), the only agent indicated for binge eating disorder - which is tagged 'SHIFT BH DEV | SHIFT BH EAT' since its dominant use remains ADHD. CONTRAST with the Shift SUD value sets: LABORATORY ASSAYS for anorectic weight-loss agents that are drugs of misuse DO carry Cross-Ref = EAT there, because a positive test for a diet drug can reflect the compensatory diet-pill misuse that DSM-5 describes in bulimia nervosa and anorexia nervosa binge-eating/purging type. The test is the eating-disorder signal; the prescription is not.
 
-Identified as: ShiftCustomActContextCodes#BHSOM, ShiftCustomActContextCodes#BHEAT
+Identified as: ShiftCustomActSensitivityCodes#BHSOM, ShiftCustomActSensitivityCodes#BHEAT
 """
 * name = "ShiftBHSHIFTBHSOMSHIFTBHEAT"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTBHSOMSHIFTBHEAT"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHSOM
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#BHEAT
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHSOM
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#BHEAT
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F45.22
@@ -19921,22 +19955,22 @@ Identified as: ShiftCustomActContextCodes#BHSOM, ShiftCustomActContextCodes#BHEA
 
 
 Instance: ShiftBHSHIFTCONTRACEPTION
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT CONTRACEPTION"
 Description: """
 Contraception and family planning, including emergency contraception. Excludes abortion and medical abortifacients.
 
-Identified as: ShiftCustomActContextCodes#CONTRACEPTION
+Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION
 """
 * name = "ShiftBHSHIFTCONTRACEPTION"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTCONTRACEPTION"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CONTRACEPTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #T83.3
@@ -22262,24 +22296,24 @@ Identified as: ShiftCustomActContextCodes#CONTRACEPTION
 
 
 Instance: ShiftBHSHIFTCONTRACEPTIONSHIFTFERTILITY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT CONTRACEPTION | SHIFT FERTILITY"
 Description: """
 SHIFT CONTRACEPTION: Contraception and family planning, including emergency contraception. Excludes abortion and medical abortifacients.; SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).
 
-Identified as: ShiftCustomActContextCodes#CONTRACEPTION, ShiftCustomActContextCodes#FERTILITY
+Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION, ShiftCustomActSensitivityCodes#FERTILITY
 """
 * name = "ShiftBHSHIFTCONTRACEPTIONSHIFTFERTILITY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTCONTRACEPTIONSHIFTFERTILITY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CONTRACEPTION
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #A9293
@@ -22290,24 +22324,24 @@ Identified as: ShiftCustomActContextCodes#CONTRACEPTION, ShiftCustomActContextCo
 
 
 Instance: ShiftBHSHIFTCONTRACEPTIONSHIFTPREG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT CONTRACEPTION | SHIFT PREG"
 Description: """
 SHIFT CONTRACEPTION: Contraception and family planning, including emergency contraception. Excludes abortion and medical abortifacients.; SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).
 
-Identified as: ShiftCustomActContextCodes#CONTRACEPTION, ShiftCustomActContextCodes#PREG
+Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION, ShiftCustomActSensitivityCodes#PREG
 """
 * name = "ShiftBHSHIFTCONTRACEPTIONSHIFTPREG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTCONTRACEPTIONSHIFTPREG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CONTRACEPTION
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #102955006
@@ -22351,25 +22385,25 @@ Identified as: ShiftCustomActContextCodes#CONTRACEPTION, ShiftCustomActContextCo
 
 
 Instance: ShiftBHSHIFTCONTRACEPTIONSHIFTSEX
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT CONTRACEPTION | SHIFT SEX"
 Description: """
 SHIFT CONTRACEPTION: Contraception and family planning, including emergency contraception. Excludes abortion and medical abortifacients.; SHIFT SEX: A patient's sexuality and sexual history, including sexual orientation, sexual practices, and sexual partners. Female sexual dysfunction is classified here. Male sexual dysfunction is classified here AND ALSO under SHIFT FERTILITY.
 
-Identified as: ShiftCustomActContextCodes#CONTRACEPTION, v3-ActCode#SEX
+Identified as: ShiftCustomActSensitivityCodes#CONTRACEPTION, v3-ActCode#SEX
 """
 * name = "ShiftBHSHIFTCONTRACEPTIONSHIFTSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTCONTRACEPTIONSHIFTSEX"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CONTRACEPTION
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #169447004
@@ -22381,22 +22415,22 @@ Identified as: ShiftCustomActContextCodes#CONTRACEPTION, v3-ActCode#SEX
 
 
 Instance: ShiftBHSHIFTFERTILITY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY"
 Description: """
 Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).
 
-Identified as: ShiftCustomActContextCodes#FERTILITY
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY
 """
 * name = "ShiftBHSHIFTFERTILITY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #N46
@@ -24905,24 +24939,24 @@ Identified as: ShiftCustomActContextCodes#FERTILITY
 
 
 Instance: ShiftBHSHIFTFERTILITYSHIFTCONTRACEPTION
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY | SHIFT CONTRACEPTION"
 Description: """
 SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT CONTRACEPTION: Contraception and family planning, including emergency contraception. Excludes abortion and medical abortifacients.
 
-Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#CONTRACEPTION
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivityCodes#CONTRACEPTION
 """
 * name = "ShiftBHSHIFTFERTILITYSHIFTCONTRACEPTION"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITYSHIFTCONTRACEPTION"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CONTRACEPTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #Z31.61
@@ -24947,26 +24981,26 @@ Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#
 
 
 Instance: ShiftBHSHIFTFERTILITYSHIFTGACSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY | SHIFT GAC | SHIFT REPRO OTHER"
 Description: """
 SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT GAC: Gender-affirming care: any social, psychological, behavioural or medical (including hormonal treatment or surgery) intervention designed to support and affirm an individual's gender identity. Includes breast reconstruction and hair implants for cis-gendered individuals as well as transgender care, and terms capturing a patient's preferred gender identity, pronouns, and preferred name.; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#GAC, ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivityCodes#GAC, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTFERTILITYSHIFTGACSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITYSHIFTGACSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#GAC
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #2238-4
@@ -25214,24 +25248,24 @@ Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#
 
 
 Instance: ShiftBHSHIFTFERTILITYSHIFTPREG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY | SHIFT PREG"
 Description: """
 SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).
 
-Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#PREG
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivityCodes#PREG
 """
 * name = "ShiftBHSHIFTFERTILITYSHIFTPREG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITYSHIFTPREG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #O09.81
@@ -25264,24 +25298,24 @@ Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#
 
 
 Instance: ShiftBHSHIFTFERTILITYSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY | SHIFT REPRO OTHER"
 Description: """
 SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTFERTILITYSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITYSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #1668-3
@@ -26610,25 +26644,25 @@ Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#
 
 
 Instance: ShiftBHSHIFTFERTILITYSHIFTSEX
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY | SHIFT SEX"
 Description: """
 SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT SEX: A patient's sexuality and sexual history, including sexual orientation, sexual practices, and sexual partners. Female sexual dysfunction is classified here. Male sexual dysfunction is classified here AND ALSO under SHIFT FERTILITY.
 
-Identified as: ShiftCustomActContextCodes#FERTILITY, v3-ActCode#SEX
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY, v3-ActCode#SEX
 """
 * name = "ShiftBHSHIFTFERTILITYSHIFTSEX"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITYSHIFTSEX"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #89300
@@ -26640,24 +26674,24 @@ Identified as: ShiftCustomActContextCodes#FERTILITY, v3-ActCode#SEX
 
 
 Instance: ShiftBHSHIFTFERTILITYSHIFTSTI
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT FERTILITY | SHIFT STI"
 Description: """
 SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT STI: All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities.
 
-Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#STI
+Identified as: ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivityCodes#STI
 """
 * name = "ShiftBHSHIFTFERTILITYSHIFTSTI"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTFERTILITYSHIFTSTI"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#STI
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #189312004
@@ -26669,22 +26703,22 @@ Identified as: ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#
 
 
 Instance: ShiftBHSHIFTGAC
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT GAC"
 Description: """
 Gender-affirming care: any social, psychological, behavioural or medical (including hormonal treatment or surgery) intervention designed to support and affirm an individual's gender identity. Includes breast reconstruction and hair implants for cis-gendered individuals as well as transgender care, and terms capturing a patient's preferred gender identity, pronouns, and preferred name.
 
-Identified as: ShiftCustomActContextCodes#GAC
+Identified as: ShiftCustomActSensitivityCodes#GAC
 """
 * name = "ShiftBHSHIFTGAC"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTGAC"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#GAC
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F64
@@ -27026,24 +27060,24 @@ Identified as: ShiftCustomActContextCodes#GAC
 
 
 Instance: ShiftBHSHIFTGACSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT GAC | SHIFT REPRO OTHER"
 Description: """
 SHIFT GAC: Gender-affirming care: any social, psychological, behavioural or medical (including hormonal treatment or surgery) intervention designed to support and affirm an individual's gender identity. Includes breast reconstruction and hair implants for cis-gendered individuals as well as transgender care, and terms capturing a patient's preferred gender identity, pronouns, and preferred name.; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#GAC, ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#GAC, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTGACSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTGACSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#GAC
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #32559005
@@ -27132,22 +27166,22 @@ Identified as: ShiftCustomActContextCodes#GAC, ShiftCustomActContextCodes#REPROO
 
 
 Instance: ShiftBHSHIFTPREG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT PREG"
 Description: """
 Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).
 
-Identified as: ShiftCustomActContextCodes#PREG
+Identified as: ShiftCustomActSensitivityCodes#PREG
 """
 * name = "ShiftBHSHIFTPREG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTPREG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #A34
@@ -68442,24 +68476,24 @@ Identified as: ShiftCustomActContextCodes#PREG
 
 
 Instance: ShiftBHSHIFTPREGSHIFTABORTION
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT PREG | SHIFT ABORTION"
 Description: """
 SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).; SHIFT ABORTION: Elective termination of a pregnancy, including medical abortifacients and surgical abortion procedures, plus gynecologic procedures such as dilation and curettage that are also used in abortion. Includes a history of abortion. Miscarriage is NOT here (it is SHIFT PREG).
 
-Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#ABORTION
+Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCodes#ABORTION
 """
 * name = "ShiftBHSHIFTPREGSHIFTABORTION"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTPREGSHIFTABORTION"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#ABORTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#ABORTION
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #637.00
@@ -68630,24 +68664,24 @@ Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#ABORT
 
 
 Instance: ShiftBHSHIFTPREGSHIFTFERTILITY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT PREG | SHIFT FERTILITY"
 Description: """
 SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).; SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).
 
-Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#FERTILITY
+Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCodes#FERTILITY
 """
 * name = "ShiftBHSHIFTPREGSHIFTFERTILITY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTPREGSHIFTFERTILITY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #10231000132102
@@ -68659,24 +68693,24 @@ Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#FERTI
 
 
 Instance: ShiftBHSHIFTPREGSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT PREG | SHIFT REPRO OTHER"
 Description: """
 SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTPREGSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTPREGSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #C58
@@ -68766,24 +68800,24 @@ Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#REPRO
 
 
 Instance: ShiftBHSHIFTPREGSHIFTSTI
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT PREG | SHIFT STI"
 Description: """
 SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).; SHIFT STI: All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities.
 
-Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#STI
+Identified as: ShiftCustomActSensitivityCodes#PREG, ShiftCustomActSensitivityCodes#STI
 """
 * name = "ShiftBHSHIFTPREGSHIFTSTI"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTPREGSHIFTSTI"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#STI
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #A50
@@ -69579,22 +69613,22 @@ Identified as: ShiftCustomActContextCodes#PREG, ShiftCustomActContextCodes#STI
 
 
 Instance: ShiftBHSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER"
 Description: """
 Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #Z80.41
@@ -82503,24 +82537,24 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER
 
 
 Instance: ShiftBHSHIFTREPROOTHERSHIFTCONTRACEPTION
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER | SHIFT CONTRACEPTION"
 Description: """
 SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.; SHIFT CONTRACEPTION: Contraception and family planning, including emergency contraception. Excludes abortion and medical abortifacients.
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes#CONTRACEPTION
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitivityCodes#CONTRACEPTION
 """
 * name = "ShiftBHSHIFTREPROOTHERSHIFTCONTRACEPTION"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHERSHIFTCONTRACEPTION"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#CONTRACEPTION
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#CONTRACEPTION
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #58700
@@ -82532,24 +82566,24 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes
 
 
 Instance: ShiftBHSHIFTREPROOTHERSHIFTFERTILITY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER | SHIFT FERTILITY"
 Description: """
 SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.; SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes#FERTILITY
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitivityCodes#FERTILITY
 """
 * name = "ShiftBHSHIFTREPROOTHERSHIFTFERTILITY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHERSHIFTFERTILITY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #E28
@@ -83700,26 +83734,26 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes
 
 
 Instance: ShiftBHSHIFTREPROOTHERSHIFTFERTILITYSHIFTGAC
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER | SHIFT FERTILITY | SHIFT GAC"
 Description: """
 SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.; SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).; SHIFT GAC: Gender-affirming care: any social, psychological, behavioural or medical (including hormonal treatment or surgery) intervention designed to support and affirm an individual's gender identity. Includes breast reconstruction and hair implants for cis-gendered individuals as well as transgender care, and terms capturing a patient's preferred gender identity, pronouns, and preferred name.
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes#FERTILITY, ShiftCustomActContextCodes#GAC
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitivityCodes#FERTILITY, ShiftCustomActSensitivityCodes#GAC
 """
 * name = "ShiftBHSHIFTREPROOTHERSHIFTFERTILITYSHIFTGAC"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHERSHIFTFERTILITYSHIFTGAC"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#GAC
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #1638-6
@@ -84023,24 +84057,24 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes
 
 
 Instance: ShiftBHSHIFTREPROOTHERSHIFTGAC
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER | SHIFT GAC"
 Description: """
 SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.; SHIFT GAC: Gender-affirming care: any social, psychological, behavioural or medical (including hormonal treatment or surgery) intervention designed to support and affirm an individual's gender identity. Includes breast reconstruction and hair implants for cis-gendered individuals as well as transgender care, and terms capturing a patient's preferred gender identity, pronouns, and preferred name.
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes#GAC
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitivityCodes#GAC
 """
 * name = "ShiftBHSHIFTREPROOTHERSHIFTGAC"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHERSHIFTGAC"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#GAC
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#GAC
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #54125
@@ -84133,24 +84167,24 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes
 
 
 Instance: ShiftBHSHIFTREPROOTHERSHIFTPREG
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER | SHIFT PREG"
 Description: """
 SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.; SHIFT PREG: Pregnancy, peripartum, and postpartum data, including comorbidities (e.g., gestational diabetes), breastfeeding, postpartum depression, and pregnancy complications. Includes preconception screening tests and counseling. Miscarriage is classified here (not SHIFT ABORTION).
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes#PREG
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitivityCodes#PREG
 """
 * name = "ShiftBHSHIFTREPROOTHERSHIFTPREG"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHERSHIFTPREG"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#PREG
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#PREG
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #57700
@@ -84162,24 +84196,24 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes
 
 
 Instance: ShiftBHSHIFTREPROOTHERSHIFTSTI
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT REPRO OTHER | SHIFT STI"
 Description: """
 SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.; SHIFT STI: All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities.
 
-Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes#STI
+Identified as: ShiftCustomActSensitivityCodes#REPROOTHER, ShiftCustomActSensitivityCodes#STI
 """
 * name = "ShiftBHSHIFTREPROOTHERSHIFTSTI"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTREPROOTHERSHIFTSTI"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#STI
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #N34
@@ -84855,7 +84889,7 @@ Identified as: ShiftCustomActContextCodes#REPROOTHER, ShiftCustomActContextCodes
 
 
 Instance: ShiftBHSHIFTSEX
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SEX"
 Description: """
@@ -84867,11 +84901,11 @@ Identified as: v3-ActCode#SEX
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSEX"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F52
@@ -85914,25 +85948,25 @@ Identified as: v3-ActCode#SEX
 
 
 Instance: ShiftBHSHIFTSEXSHIFTFERTILITY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SEX | SHIFT FERTILITY"
 Description: """
 SHIFT SEX: A patient's sexuality and sexual history, including sexual orientation, sexual practices, and sexual partners. Female sexual dysfunction is classified here. Male sexual dysfunction is classified here AND ALSO under SHIFT FERTILITY.; SHIFT FERTILITY: Infertility issues and fertility treatments, including assisted reproductive technology (ART) and in vitro fertilization (IVF).
 
-Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#FERTILITY
+Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#FERTILITY
 """
 * name = "ShiftBHSHIFTSEXSHIFTFERTILITY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSEXSHIFTFERTILITY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#FERTILITY
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#FERTILITY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F52.4
@@ -86267,25 +86301,25 @@ Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#FERTILITY
 
 
 Instance: ShiftBHSHIFTSEXSHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SEX | SHIFT REPRO OTHER"
 Description: """
 SHIFT SEX: A patient's sexuality and sexual history, including sexual orientation, sexual practices, and sexual partners. Female sexual dysfunction is classified here. Male sexual dysfunction is classified here AND ALSO under SHIFT FERTILITY.; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#REPROOTHER
+Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTSEXSHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSEXSHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://www.ama-assn.org/go/cpt"
 * compose.include[=].concept[+].code = #54110
@@ -86389,25 +86423,25 @@ Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#REPROOTHER
 
 
 Instance: ShiftBHSHIFTSEXSHIFTSTI
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SEX | SHIFT STI"
 Description: """
 SHIFT SEX: A patient's sexuality and sexual history, including sexual orientation, sexual practices, and sexual partners. Female sexual dysfunction is classified here. Male sexual dysfunction is classified here AND ALSO under SHIFT FERTILITY.; SHIFT STI: All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities.
 
-Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#STI
+Identified as: v3-ActCode#SEX, ShiftCustomActSensitivityCodes#STI
 """
 * name = "ShiftBHSHIFTSEXSHIFTSTI"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSEXSHIFTSTI"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SEX -> v3-ActCode#SEX
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#STI
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SEX
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #Z72.5
@@ -86436,22 +86470,22 @@ Identified as: v3-ActCode#SEX, ShiftCustomActContextCodes#STI
 
 
 Instance: ShiftBHSHIFTSTI
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT STI"
 Description: """
 All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities.
 
-Identified as: ShiftCustomActContextCodes#STI
+Identified as: ShiftCustomActSensitivityCodes#STI
 """
 * name = "ShiftBHSHIFTSTI"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSTI"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#STI
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #A51
@@ -96528,24 +96562,24 @@ Identified as: ShiftCustomActContextCodes#STI
 
 
 Instance: ShiftBHSHIFTSTISHIFTREPROOTHER
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT STI | SHIFT REPRO OTHER"
 Description: """
 SHIFT STI: All sexually transmitted infections, including those also transmissible by other routes (e.g., blood) but frequently transmitted by sexual contact, and including HIV-related terms and comorbidities.; SHIFT REPRO OTHER: Other reproductive-health issues: gynecologic routine care/disease (e.g., endometriosis)/cancer (e.g., ovarian cancer); male reproductive-tract routine care (e.g., prostate cancer screening)/disease/cancer (e.g., epididymitis, testicular torsion, testicular cancer); menopause; low testosterone; menorrhagia; PCOS; etc.
 
-Identified as: ShiftCustomActContextCodes#STI, ShiftCustomActContextCodes#REPROOTHER
+Identified as: ShiftCustomActSensitivityCodes#STI, ShiftCustomActSensitivityCodes#REPROOTHER
 """
 * name = "ShiftBHSHIFTSTISHIFTREPROOTHER"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSTISHIFTREPROOTHER"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#STI
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#REPROOTHER
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#STI
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#REPROOTHER
 * compose.inactive = true
 * compose.include[+].system = "http://loinc.org"
 * compose.include[=].concept[+].code = #6510-2
@@ -97334,7 +97368,7 @@ Identified as: ShiftCustomActContextCodes#STI, ShiftCustomActContextCodes#REPROO
 
 
 Instance: ShiftBHSHIFTSUD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD"
 Description: """
@@ -97346,11 +97380,11 @@ Identified as: v3-ActCode#SUD
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
 // useContext mapping: SHIFT SUD -> v3-ActCode#SUD
-* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
+* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#SUD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F19.231
@@ -99128,22 +99162,22 @@ Identified as: v3-ActCode#SUD
 
 
 Instance: ShiftBHSHIFTSUDAMPH
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD AMPH"
 Description: """
 Term related to amphetamine misuse or amphetamine use disorders (including methamphetamine).
 
-Identified as: ShiftCustomActContextCodes#SUDAMPH
+Identified as: ShiftCustomActSensitivityCodes#SUDAMPH
 """
 * name = "ShiftBHSHIFTSUDAMPH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDAMPH"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDAMPH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDAMPH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F15.23
@@ -100252,22 +100286,22 @@ Identified as: ShiftCustomActContextCodes#SUDAMPH
 
 
 Instance: ShiftBHSHIFTSUDCBD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD CBD"
 Description: """
 Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone).
 
-Identified as: ShiftCustomActContextCodes#SUDCBD
+Identified as: ShiftCustomActSensitivityCodes#SUDCBD
 """
 * name = "ShiftBHSHIFTSUDCBD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDCBD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCBD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCBD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F12.23
@@ -100958,22 +100992,22 @@ Identified as: ShiftCustomActContextCodes#SUDCBD
 
 
 Instance: ShiftBHSHIFTSUDCOC
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD COC"
 Description: """
 Term related to cocaine misuse or cocaine use disorders.
 
-Identified as: ShiftCustomActContextCodes#SUDCOC
+Identified as: ShiftCustomActSensitivityCodes#SUDCOC
 """
 * name = "ShiftBHSHIFTSUDCOC"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDCOC"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCOC
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCOC
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F14.23
@@ -101611,22 +101645,22 @@ Identified as: ShiftCustomActContextCodes#SUDCOC
 
 
 Instance: ShiftBHSHIFTSUDETOH
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD ETOH"
 Description: """
 Term related to alcohol misuse or alcohol use disorder.
 
-Identified as: ShiftCustomActContextCodes#SUDETOH
+Identified as: ShiftCustomActSensitivityCodes#SUDETOH
 """
 * name = "ShiftBHSHIFTSUDETOH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDETOH"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F10.231
@@ -103618,24 +103652,24 @@ Identified as: ShiftCustomActContextCodes#SUDETOH
 
 
 Instance: ShiftBHSHIFTSUDETOHSHIFTSUDOPD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD ETOH | SHIFT SUD OPD"
 Description: """
 SHIFT SUD ETOH: Term related to alcohol misuse or alcohol use disorder.; SHIFT SUD OPD: Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).
 
-Identified as: ShiftCustomActContextCodes#SUDETOH, ShiftCustomActContextCodes#SUDOPD
+Identified as: ShiftCustomActSensitivityCodes#SUDETOH, ShiftCustomActSensitivityCodes#SUDOPD
 """
 * name = "ShiftBHSHIFTSUDETOHSHIFTSUDOPD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDETOHSHIFTSUDOPD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #J2315
@@ -103646,24 +103680,24 @@ Identified as: ShiftCustomActContextCodes#SUDETOH, ShiftCustomActContextCodes#SU
 
 
 Instance: ShiftBHSHIFTSUDETOHSHIFTSUDSED
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD ETOH | SHIFT SUD SED"
 Description: """
 SHIFT SUD ETOH: Term related to alcohol misuse or alcohol use disorder.; SHIFT SUD SED: Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics).
 
-Identified as: ShiftCustomActContextCodes#SUDETOH, ShiftCustomActContextCodes#SUDSED
+Identified as: ShiftCustomActSensitivityCodes#SUDETOH, ShiftCustomActSensitivityCodes#SUDSED
 """
 * name = "ShiftBHSHIFTSUDETOHSHIFTSUDSED"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDETOHSHIFTSUDSED"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDETOH
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDSED
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDETOH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://snomed.info/sct"
 * compose.include[=].concept[+].code = #45912004
@@ -103675,22 +103709,22 @@ Identified as: ShiftCustomActContextCodes#SUDETOH, ShiftCustomActContextCodes#SU
 
 
 Instance: ShiftBHSHIFTSUDHAL
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD HAL"
 Description: """
 Term related to hallucinogen misuse or hallucinogen use disorders (LSD, psilocybin, mescaline, DMT, PCP/phencyclidine, ketamine, MDMA-as-hallucinogen).
 
-Identified as: ShiftCustomActContextCodes#SUDHAL
+Identified as: ShiftCustomActSensitivityCodes#SUDHAL
 """
 * name = "ShiftBHSHIFTSUDHAL"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDHAL"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDHAL
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDHAL
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F16.121
@@ -104568,22 +104602,22 @@ Identified as: ShiftCustomActContextCodes#SUDHAL
 
 
 Instance: ShiftBHSHIFTSUDINH
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD INH"
 Description: """
 Term related to inhalant misuse or inhalant use disorders (toluene, glue, solvents, nitrous oxide, alkyl nitrites/poppers).
 
-Identified as: ShiftCustomActContextCodes#SUDINH
+Identified as: ShiftCustomActSensitivityCodes#SUDINH
 """
 * name = "ShiftBHSHIFTSUDINH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDINH"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDINH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDINH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F18.121
@@ -106109,22 +106143,22 @@ Identified as: ShiftCustomActContextCodes#SUDINH
 
 
 Instance: ShiftBHSHIFTSUDOPD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD OPD"
 Description: """
 Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).
 
-Identified as: ShiftCustomActContextCodes#SUDOPD
+Identified as: ShiftCustomActSensitivityCodes#SUDOPD
 """
 * name = "ShiftBHSHIFTSUDOPD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOPD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F11.23
@@ -108041,24 +108075,24 @@ Identified as: ShiftCustomActContextCodes#SUDOPD
 
 
 Instance: ShiftBHSHIFTSUDOPDSHIFTSUDPOLY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD OPD | SHIFT SUD POLY"
 Description: """
 SHIFT SUD OPD: Term related to opioid misuse or opioid use disorders (heroin, morphine, codeine, oxycodone, hydrocodone, fentanyl, methadone, buprenorphine, tramadol, etc.).; SHIFT SUD POLY: Term related to polysubstance, mixed substance, or combined substance use (involves multiple substances simultaneously).
 
-Identified as: ShiftCustomActContextCodes#SUDOPD, ShiftCustomActContextCodes#SUDPOLY
+Identified as: ShiftCustomActSensitivityCodes#SUDOPD, ShiftCustomActSensitivityCodes#SUDPOLY
 """
 * name = "ShiftBHSHIFTSUDOPDSHIFTSUDPOLY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOPDSHIFTSUDPOLY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOPD
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDPOLY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOPD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDPOLY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #304.70
@@ -108070,22 +108104,22 @@ Identified as: ShiftCustomActContextCodes#SUDOPD, ShiftCustomActContextCodes#SUD
 
 
 Instance: ShiftBHSHIFTSUDOTH
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD OTH"
 Description: """
 Term related to other addictive disorders (gambling, sun/sunbed addiction, laxative abuse, caffeine, dextromethorphan).
 
-Identified as: ShiftCustomActContextCodes#SUDOTH
+Identified as: ShiftCustomActSensitivityCodes#SUDOTH
 """
 * name = "ShiftBHSHIFTSUDOTH"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDOTH"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDOTH
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDOTH
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F15.93
@@ -108390,22 +108424,22 @@ Identified as: ShiftCustomActContextCodes#SUDOTH
 
 
 Instance: ShiftBHSHIFTSUDPOLY
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD POLY"
 Description: """
 Term related to polysubstance, mixed substance, or combined substance use (involves multiple substances simultaneously).
 
-Identified as: ShiftCustomActContextCodes#SUDPOLY
+Identified as: ShiftCustomActSensitivityCodes#SUDPOLY
 """
 * name = "ShiftBHSHIFTSUDPOLY"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDPOLY"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDPOLY
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDPOLY
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-9-cm"
 * compose.include[=].concept[+].code = #304.8
@@ -108486,22 +108520,22 @@ Identified as: ShiftCustomActContextCodes#SUDPOLY
 
 
 Instance: ShiftBHSHIFTSUDSED
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD SED"
 Description: """
 Term related to sedative, hypnotic, or anxiolytic misuse or use disorders (benzodiazepines, barbiturates, Z-drugs, antiepileptics).
 
-Identified as: ShiftCustomActContextCodes#SUDSED
+Identified as: ShiftCustomActSensitivityCodes#SUDSED
 """
 * name = "ShiftBHSHIFTSUDSED"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDSED"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDSED
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDSED
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F13.231
@@ -109876,22 +109910,22 @@ Identified as: ShiftCustomActContextCodes#SUDSED
 
 
 Instance: ShiftBHSHIFTSUDTOB
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD TOB"
 Description: """
 Term related to tobacco/nicotine misuse or tobacco use disorders.
 
-Identified as: ShiftCustomActContextCodes#SUDTOB
+Identified as: ShiftCustomActSensitivityCodes#SUDTOB
 """
 * name = "ShiftBHSHIFTSUDTOB"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDTOB"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDTOB
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDTOB
 * compose.inactive = true
 * compose.include[+].system = "http://hl7.org/fhir/sid/icd-10-cm"
 * compose.include[=].concept[+].code = #F17.203
@@ -111006,24 +111040,24 @@ Identified as: ShiftCustomActContextCodes#SUDTOB
 
 
 Instance: ShiftBHSHIFTSUDTOBSHIFTSUDCBD
-InstanceOf: ValueSet
+InstanceOf: ShiftSlsValueSet
 Usage: #definition
 Title: "SHIFT SUD TOB | SHIFT SUD CBD"
 Description: """
 SHIFT SUD TOB: Term related to tobacco/nicotine misuse or tobacco use disorders.; SHIFT SUD CBD: Term related to cannabis misuse or cannabis use disorders (including synthetic cannabinoids and nabilone).
 
-Identified as: ShiftCustomActContextCodes#SUDTOB, ShiftCustomActContextCodes#SUDCBD
+Identified as: ShiftCustomActSensitivityCodes#SUDTOB, ShiftCustomActSensitivityCodes#SUDCBD
 """
 * name = "ShiftBHSHIFTSUDTOBSHIFTSUDCBD"
 * url = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTSUDTOBSHIFTSUDCBD"
 * status = #active
 * experimental = false
-* version = "0.1.0"
+* version = "0.2.0"
 * date = "2026-08-01"
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDTOB
-* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
-* useContext[=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes#SUDCBD
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDTOB
+* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus
+* useContext[SLS-tag][=].valueCodeableConcept = http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes#SUDCBD
 * compose.inactive = true
 * compose.include[+].system = "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 * compose.include[=].concept[+].code = #G9642
@@ -111039,10 +111073,10 @@ Usage: #example
 Title: "Bundle - SHIFT Generated Terminology Resources"
 Description: "Bundle containing generated SHIFT CodeSystems and ValueSets"
 * type = #collection
-* entry[+].resource = ShiftCustomActContextCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActContextCodes"
-* entry[+].resource = ShiftAllContextCodes
-* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftAllContextCodes"
+* entry[+].resource = ShiftCustomActSensitivityCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes"
+* entry[+].resource = ShiftAllSensitivityCodes
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftAllSensitivityCodes"
 * entry[+].resource = ShiftBHSHIFTABORTION
 * entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/ShiftBHSHIFTABORTION"
 * entry[+].resource = ShiftBHSHIFTABORTIONSHIFTPREG

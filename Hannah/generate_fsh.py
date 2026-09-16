@@ -26,12 +26,12 @@ INFORMATION_SENSITIVITY_POLICY_CODES = {
     "TBOO", "VIO", "VIP",
 }
 
-LOCAL_CONTEXT_CODESYSTEM_ID = "ShiftCustomActContextCodes"
+LOCAL_CONTEXT_CODESYSTEM_ID = "ShiftCustomActSensitivityCodes"
 LOCAL_CONTEXT_CODESYSTEM_URL = (
     "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/"
     f"{LOCAL_CONTEXT_CODESYSTEM_ID}"
 )
-ALL_CONTEXT_VALUESET_ID = "ShiftAllContextCodes"
+ALL_CONTEXT_VALUESET_ID = "ShiftAllSensitivityCodes"
 ALL_CONTEXT_VALUESET_URL = (
     "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/"
     f"{ALL_CONTEXT_VALUESET_ID}"
@@ -169,7 +169,7 @@ def load_all_definitions():
 
 
 def context_code_definition(context_item, definitions):
-    """Resolve a context code's definition from the definitions tables."""
+    """Resolve a Sensitivity Code's definition from the definitions tables."""
     base = context_item["base"]
     source_label = context_item["source_label"]
     domain = context_item["domain"]
@@ -191,7 +191,7 @@ def context_code_definition(context_item, definitions):
         definition = definitions.get(candidate)
         if definition:
             return definition
-    return f"Local SHIFT context code {context_item['code']}"
+    return f"Local SHIFT Sensitivity Code {context_item['code']}"
 
 
 def valueset_description(vs_name, definitions):
@@ -301,9 +301,9 @@ def process_all_csvs():
     )
     if custom_context_codes:
         output.append(f"CodeSystem: {LOCAL_CONTEXT_CODESYSTEM_ID}")
-        output.append('Title: "SHIFT Custom Context Codes"')
-        output.append('Description: "Local useContext codes not present in v3-InformationSensitivityPolicy"')
-        output.append('* version = "0.1.0"')
+        output.append('Title: "SHIFT Custom Sensitivity Codes"')
+        output.append('Description: "Local useSensitivity Codes not present in v3-InformationSensitivityPolicy"')
+        output.append('* version = "0.2.0"')
         output.append("* ^experimental = false")
         output.append("* ^caseSensitive = true")
         for code in custom_context_codes:
@@ -322,15 +322,15 @@ def process_all_csvs():
     )
 
     output.append(f"Instance: {ALL_CONTEXT_VALUESET_ID}")
-    output.append("InstanceOf: ValueSet")
+    output.append("InstanceOf: ShiftSlsValueSet")
     output.append("Usage: #definition")
-    output.append('Title: "SHIFT All Context Codes"')
-    output.append('Description: "All custom SHIFT context codes and standards-based context codes used by the generated SHIFT ValueSets."')
+    output.append('Title: "SHIFT All Sensitivity Codes"')
+    output.append('Description: "All custom SHIFT Sensitivity Codes and standards-based Sensitivity Codes used by the generated SHIFT ValueSets."')
     output.append(f'* name = "{ALL_CONTEXT_VALUESET_ID}"')
     output.append(f'* url = "{ALL_CONTEXT_VALUESET_URL}"')
     output.append("* status = #active")
     output.append("* experimental = false")
-    output.append('* version = "0.1.0"')
+    output.append('* version = "0.2.0"')
     output.append('* date = "2026-08-01"')
     output.append("* compose.inactive = true")
     if custom_context_codes:
@@ -402,7 +402,7 @@ def process_all_csvs():
         url = f"http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/{fsh_name}"
 
         output.append(f"Instance: {fsh_name}")
-        output.append("InstanceOf: ValueSet")
+        output.append("InstanceOf: ShiftSlsValueSet")
         output.append("Usage: #definition")
         output.append(f"Title: \"{fsh_escape(vs_name)}\"")
         full_description = valueset_description_with_use_context(
@@ -416,19 +416,19 @@ def process_all_csvs():
         output.append(f"* url = \"{url}\"")
         output.append("* status = #active")
         output.append("* experimental = false")
-        output.append("* version = \"0.1.0\"")
+        output.append("* version = \"0.2.0\"")
         output.append("* date = \"2026-08-01\"")
 
         for context_item in context_codes:
-            output.append("* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus")
+            output.append("* useContext[SLS-tag][+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus")
             hl7_code = hl7_policy_code_for_context(context_item)
             if hl7_code:
                 if context_item["source_label"] != hl7_code:
                     output.append(f"// useContext mapping: {context_item['source_label']} -> v3-ActCode#{hl7_code}")
-                output.append(f"* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#{hl7_code}")
+                output.append(f"* useContext[SLS-tag][=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#{hl7_code}")
             else:
                 output.append(
-                    f"* useContext[=].valueCodeableConcept = "
+                    f"* useContext[SLS-tag][=].valueCodeableConcept = "
                     f"{LOCAL_CONTEXT_CODESYSTEM_URL}#{context_item['code']}"
                 )
 

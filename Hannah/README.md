@@ -33,7 +33,7 @@ The script:
 - Parses labels such as `SHIFT BH AGG`, `SHIFT SUD OPD`, and `SHIFT REPRO OTHER`
 - Uses HL7 `v3-ActCode` when a clean mapping exists (for example `SHIFT BH SEX -> v3-ActCode#SEX`)
 - Adds an inline comment showing the CSV-to-HL7 translation when mapped
-- Defines a local `CodeSystem` called `ShiftCustomActContextCodes` for values with no HL7 mapping, using prefixed custom codes such as `BHAGG`, `SUDOPD`, and `REPROOTHER`
+- Defines a local `CodeSystem` called `ShiftCustomActSensitivityCodes` for values with no HL7 mapping, using prefixed custom codes such as `BHAGG`, `SUDOPD`, and `REPROOTHER`
 
 7. Generates a bundle instance named `ShiftBHBundledTerminologyResources` that includes all generated CodeSystems and ValueSets.
 
