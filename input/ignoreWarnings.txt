@@ -80,3 +80,8 @@ Because the expansion uses system 'http://www.cms.gov/Medicare/Coding/HCPCSRelea
 # defined expansion identifiers
 Type_Specific_Checks_DT_URL_Resolve
 
+# Hannah displays
+#Wrong Display Name%
+
+# Invalid codes could be old/deprecated, or new codes that are not yet supported by tx.fhir.org
+VALUESET_INCLUDE_INVALID_CONCEPT_CODE
