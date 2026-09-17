@@ -37,7 +37,26 @@ The script:
 
 7. Generates a bundle instance named `ShiftBHBundledTerminologyResources` that includes all generated CodeSystems and ValueSets.
 
-8. Writes the output as UTF-8 without a BOM so Sushi can consume the FSH file correctly.
+8. Writes the output as UTF-8 without a BOM using the repository's existing LF line endings so Sushi can consume the FSH file correctly.
+
+## Special handling for CSV artifacts
+
+Some source CSVs contain leading apostrophes introduced by spreadsheet/text encoding. These apostrophes are formatting markers, not part of the terminology code or display:
+
+- Code fields are normalized with the leading apostrophe removed before they are written as FSH codes. For example, CSV `'635.00` becomes FSH `#635.00`.
+- A display value is omitted when it is only the corresponding code, including the encoded form such as `'11612-9`. Real descriptions are retained, including descriptions that legitimately contain apostrophes.
+- Do not treat a leading apostrophe in a CSV code as a meaningful code character. The normalization is performed in `add_code()` and again at final FSH emission so generated output remains clean even when source columns have inconsistent encoding.
+
+## Sensitivity mappings
+
+The generator emits `ShiftSensitivityCodeMap` for the custom-to-HL7 mappings:
+
+- `BHCORE` -> `v3-ActCode#BH`
+- `BHSEX` -> `v3-ActCode#SEX`
+- `SEX` -> `v3-ActCode#SEX`
+- `SUD` -> `v3-ActCode#SUD`
+
+Mapped source codes remain defined in `ShiftCustomActSensitivityCodes` for ConceptMap provenance, but are excluded from the local-code portion of `ShiftAllSensitivityCodes`. Their HL7 target codes are included from `v3-ActCode` instead.
 
 ## Output
 
@@ -58,4 +77,4 @@ python .\Hannah\generate_fsh.py
 - The terminology row scan filters helper/report/supplement artifacts such as `_build_report`, `valuesetcount`, `valuesetdefinitions`, `supplement`, cache files, and other non-source CSVs.
 - Definition CSVs are loaded separately for ValueSet descriptions and local custom-code descriptions.
 - Source CSV ordering and unique-code checks are used to keep generated content deterministic.
-- The generator explicitly writes UTF-8 without a BOM because BOM-prefixed `.fsh` files are not handled reliably by Sushi.
+- The generator explicitly writes UTF-8 without a BOM and preserves the repository's LF line endings. BOM-prefixed `.fsh` files are not handled reliably by Sushi.

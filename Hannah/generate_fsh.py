@@ -36,6 +36,13 @@ ALL_CONTEXT_VALUESET_URL = (
     "http://SHIFT-Task-Force.github.io/SLS-ValueSets/ValueSet/"
     f"{ALL_CONTEXT_VALUESET_ID}"
 )
+V3_ACT_CODE_SYSTEM_URL = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+SENSITIVITY_CODE_MAP = {
+    "BHCORE": "BH",
+    "BHSEX": "SEX",
+    "SEX": "SEX",
+    "SUD": "SUD",
+}
 
 # List of all CSV files to process (relative to repository root)
 csv_patterns = [
@@ -111,9 +118,9 @@ def parse_context_part(part):
 
 def hl7_policy_code_for_context(context_item):
     """Return HL7 InformationSensitivityPolicy code if this context maps to one."""
-    candidate = context_item["base"].replace(" ", "")
-    if candidate == "BHCORE":
-        return "BH"
+    candidate = context_item["code"]
+    if candidate in SENSITIVITY_CODE_MAP:
+        return SENSITIVITY_CODE_MAP[candidate]
     if candidate in INFORMATION_SENSITIVITY_POLICY_CODES:
         return candidate
     return None
@@ -304,14 +311,16 @@ def process_all_csvs():
                 all_context_items[context_item["code"]] = context_item
 
     custom_context_codes = sorted(
-        code for code, context_item in all_context_items.items()
-        if not hl7_policy_code_for_context(context_item)
+        set(SENSITIVITY_CODE_MAP).union(
+            code for code, context_item in all_context_items.items()
+            if not hl7_policy_code_for_context(context_item)
+        )
     )
     if custom_context_codes:
         output.append(f"CodeSystem: {LOCAL_CONTEXT_CODESYSTEM_ID}")
         output.append('Title: "SHIFT Custom Sensitivity Codes"')
         output.append('Description: "Local useSensitivity Codes not present in v3-InformationSensitivityPolicy"')
-        output.append('* version = "0.2.0"')
+        output.append('* ^version = "0.2.0"')
         output.append("* ^experimental = false")
         output.append("* ^caseSensitive = true")
         for code in custom_context_codes:
@@ -321,16 +330,39 @@ def process_all_csvs():
         output.append("")
         generated_codesystems.append((LOCAL_CONTEXT_CODESYSTEM_ID, LOCAL_CONTEXT_CODESYSTEM_URL))
 
+    valueset_custom_context_codes = sorted(
+        code for code in custom_context_codes
+        if code not in SENSITIVITY_CODE_MAP
+    )
+
+    output.append("Instance: ShiftSensitivityCodeMap")
+    output.append("InstanceOf: ConceptMap")
+    output.append("Usage: #definition")
+    output.append('Title: "SHIFT Sensitivity Code Mapping"')
+    output.append('Description: "Maps SHIFT custom sensitivity codes to their HL7 v3 ActCode equivalents used by the generated ValueSets."')
+    output.append("* status = #active")
+    output.append("* experimental = false")
+    output.append('* version = "0.2.0"')
+    output.append('* date = "2026-08-01"')
+    output.append('* name = "ShiftSensitivityCodeMap"')
+    output.append(f'* group[+].source = "{LOCAL_CONTEXT_CODESYSTEM_URL}"')
+    output.append(f'* group[=].target = "{V3_ACT_CODE_SYSTEM_URL}"')
+    for source_code, target_code in SENSITIVITY_CODE_MAP.items():
+        output.append(f"* group[=].element[+].code = #{source_code}")
+        output.append(f"* group[=].element[=].target[+].code = #{target_code}")
+        output.append("* group[=].element[=].target[=].equivalence = #equivalent")
+    output.append("")
+
     standard_context_codes = sorted(
-        {
+        set(SENSITIVITY_CODE_MAP.values()).union(
             hl7_policy_code_for_context(context_item)
             for context_item in all_context_items.values()
             if hl7_policy_code_for_context(context_item)
-        }
+        )
     )
 
     output.append(f"Instance: {ALL_CONTEXT_VALUESET_ID}")
-    output.append("InstanceOf: ShiftSlsValueSet")
+    output.append("InstanceOf: ValueSet")
     output.append("Usage: #definition")
     output.append('Title: "SHIFT All Sensitivity Codes"')
     output.append('Description: "All custom SHIFT Sensitivity Codes and standards-based Sensitivity Codes used by the generated SHIFT ValueSets."')
@@ -341,12 +373,12 @@ def process_all_csvs():
     output.append('* version = "0.2.0"')
     output.append('* date = "2026-08-01"')
     output.append("* compose.inactive = true")
-    if custom_context_codes:
+    if valueset_custom_context_codes:
         output.append(f'* compose.include[+].system = "{LOCAL_CONTEXT_CODESYSTEM_URL}"')
-        for code in custom_context_codes:
+        for code in valueset_custom_context_codes:
             output.append(f"* compose.include[=].concept[+].code = #{code}")
     if standard_context_codes:
-        output.append('* compose.include[+].system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"')
+        output.append(f'* compose.include[+].system = "{V3_ACT_CODE_SYSTEM_URL}"')
         for code in standard_context_codes:
             output.append(f"* compose.include[=].concept[+].code = #{code}")
     output.append("")
@@ -365,8 +397,11 @@ def process_all_csvs():
             normalized = code.strip().lstrip("'")
             if not normalized:
                 return
+            normalized_display = (display or "").strip()
+            if normalized_display.lstrip("'") == normalized:
+                normalized_display = ""
             if normalized not in [c["code"] for c in codes_by_system[system_uri]]:
-                codes_by_system[system_uri].append({"code": normalized, "display": display})
+                codes_by_system[system_uri].append({"code": normalized, "display": normalized_display})
 
         for row in rows:
             # Support both newer CSVs (e.g. ICD Code + Code System) and older column names.
@@ -428,15 +463,14 @@ def process_all_csvs():
         output.append("* date = \"2026-08-01\"")
 
         for context_item in context_codes:
-            output.append("* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#focus")
             hl7_code = hl7_policy_code_for_context(context_item)
             if hl7_code:
                 if context_item["source_label"] != hl7_code:
                     output.append(f"// useContext mapping: {context_item['source_label']} -> v3-ActCode#{hl7_code}")
-                output.append(f"* useContext[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#{hl7_code}")
+                output.append(f"* useContext[SLS-tag][+].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#{hl7_code}")
             else:
                 output.append(
-                    f"* useContext[=].valueCodeableConcept = "
+                    f"* useContext[SLS-tag][+].valueCodeableConcept = "
                     f"{LOCAL_CONTEXT_CODESYSTEM_URL}#{context_item['code']}"
                 )
 
@@ -448,8 +482,9 @@ def process_all_csvs():
                 for code_dict in codes:
                     code_value = code_dict["code"].lstrip("'")
                     output.append(f"* compose.include[=].concept[+].code = #{code_value}")
-                    if code_dict["display"] and code_dict["display"] != code_dict["code"]:
-                        output.append('* compose.include[=].concept[=].display = "' + fsh_escape(code_dict['display']) + '"')
+                    display = code_dict["display"].strip()
+                    if display and display.lstrip("'") != code_value:
+                        output.append('* compose.include[=].concept[=].display = "' + fsh_escape(display) + '"')
 
         output.append(f"* expansion.timestamp = \"{generation_timestamp}\"")
         output.append(f"* expansion.identifier = \"urn:uuid:{uuid.uuid4()}\"")
@@ -479,7 +514,7 @@ def process_all_csvs():
     output_file = repo_root / "input" / "fsh" / "valuesets" / "Shift.fsh"
     output_file.parent.mkdir(parents=True, exist_ok=True)
     output_text = "\n".join(output).lstrip("\ufeff\r\n")
-    # Write UTF-8 explicitly without a BOM; Sushi does not handle BOM-prefixed .fsh files.
+    # Write UTF-8 without a BOM using the repository's existing LF line endings.
     output_file.write_text(output_text, encoding="utf-8", newline="")
 
     print(f"\nGenerated {output_file.resolve()}")
