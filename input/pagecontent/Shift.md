@@ -101,8 +101,8 @@ Potential mappings from custom SHIFT Sensitivity Codes to existing HL7 sensitivi
 | CPT | 10k–11k | 816 | AMA‑maintained |
 | HCPCS Level II | 7k–8k | 377 | Supplies, DME, drugs |
 | LOINC | 90k–100k | 3,609 | Labs, observations |
-| RxNorm | ~120k | 0 | No RxNorm codes currently selected |
+| RxNorm | ~120k | 9,974 | RxNorm concepts selected from the August 2026 sources |
 | SNOMED CT | 350k–360k | 11,073 | Clinical concepts |
-| **Total** |  | **27,367** | Explicit `compose` concepts; expansion entries are not counted again |
+| **Total** |  | **37,341** | Explicit `compose` concepts; expansion entries are not counted again |
 {: .grid}
 

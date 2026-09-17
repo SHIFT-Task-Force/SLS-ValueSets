@@ -398,6 +398,8 @@ def process_all_csvs():
             if not normalized:
                 return
             normalized_display = (display or "").strip()
+            if normalized_display.startswith("'") and "'" not in normalized_display[1:]:
+                normalized_display = normalized_display[1:]
             if normalized_display.lstrip("'") == normalized:
                 normalized_display = ""
             if normalized not in [c["code"] for c in codes_by_system[system_uri]]:
@@ -413,6 +415,14 @@ def process_all_csvs():
                     add_code(icd_code, "http://hl7.org/fhir/sid/icd-9-cm", row.get("ICD Description", row.get("DSM Disorder Description", row.get("Description", icd_code))).strip())
                 elif code_system.startswith("ICD-10"):
                     add_code(icd_code, "http://hl7.org/fhir/sid/icd-10-cm", row.get("ICD Description", row.get("DSM Disorder Description", row.get("Description", icd_code))).strip())
+
+            if row.get("Rx CUI"):
+                rx_cui = row.get("Rx CUI", "").strip().lstrip("'")
+                add_code(
+                    rx_cui,
+                    "http://www.nlm.nih.gov/research/umls/rxnorm",
+                    row.get("RxNorm Description", rx_cui).strip(),
+                )
 
             for col_name, system_uri in [
                 ("ICD-9", "http://hl7.org/fhir/sid/icd-9-cm"),
