@@ -280,6 +280,14 @@ def process_all_csvs():
         return False
 
     output = []
+    output.append("Profile: ShiftSlsValueSet")
+    output.append("Parent: SlsValueSet")
+    output.append('Title: "SHIFT SLS ValueSet Profile"')
+    output.append('Description: """')
+    output.append("Profile of ValueSet with specific requirement for SHIFT. This should be derived off the SLS RI IG, but is not as that is not formally published yet.")
+    output.append('"""')
+    output.append("* useContext[SLS-tag].valueCodeableConcept from ShiftAllSensitivityCodes (extensible)")
+    output.append("")
     output.append("// Generated from all ShiftBH, ShiftSUD, and ShiftRepro CSV files")
     output.append("// Combined ValueSets for SHIFT BH, SHIFT SUD, and SHIFT Repro\n")
 

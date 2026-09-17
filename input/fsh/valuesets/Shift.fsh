@@ -103,7 +103,7 @@ Description: "All custom SHIFT Sensitivity Codes and standards-based Sensitivity
 * compose.include[=].concept[+].code = #SUD
 * compose.include[=].concept[+].code = #BH
 
-Instance: ShiftContextCodeMap
+Instance: ShiftSensitivityCodeMap
 InstanceOf: ConceptMap
 Usage: #definition
 Title: "SHIFT Sensitivity Code Mapping"
@@ -112,7 +112,7 @@ Description: "Maps the SHIFT BH CORE, SHIFT SEX, and SHIFT SUD labels to their H
 * experimental = false
 * version = "0.2.0"
 * date = "2026-08-01"
-* name = "ShiftContextCodeMap"
+* name = "ShiftSensitivityCodeMap"
 * group[+].source = "http://SHIFT-Task-Force.github.io/SLS-ValueSets/CodeSystem/ShiftCustomActSensitivityCodes"
 * group[=].target = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * group[=].element[+].code = #BHCORE
