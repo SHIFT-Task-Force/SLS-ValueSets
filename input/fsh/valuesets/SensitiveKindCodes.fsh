@@ -25,7 +25,7 @@ Identified as: v3-ActCode#BH
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinBHCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinBHCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinBHCodes"
 * title = "ValueSet - SHIFT SLS Behavioral Health Codes"
 * description = """
 SHIFT SLS set of codes representing behavioral health conditions requiring special privacy protections
@@ -113,7 +113,7 @@ Identified as: v3-ActCode#SEX
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinSEXCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSEXCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSEXCodes"
 * title = "ValueSet - SHIFT SLS Sexuality and Reproductive Health Codes"
 * description = """
 SHIFT SLS set of codes representing sexuality and reproductive health requiring special privacy protections
@@ -277,7 +277,7 @@ Identified as: ExtraSensitiveCodes#ABORTION
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinAbortionCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinAbortionCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinAbortionCodes"
 * title = "ValueSet - SHIFT SLS Abortion Codes"
 * description = """
 SHIFT SLS set of codes representing abortion-related conditions, procedures, diagnostics, and medications requiring special privacy protections
@@ -350,7 +350,7 @@ Identified as: v3-ActCode#STD
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinSTDCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSTDCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSTDCodes"
 * title = "ValueSet - SHIFT SLS Sexually Transmitted Disease Codes"
 * description = """
 SHIFT SLS set of codes representing sexually transmitted diseases requiring special privacy protections
@@ -413,7 +413,7 @@ Identified as: v3-ActCode#HIV
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinHIVCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinHIVCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinHIVCodes"
 * title = "ValueSet - SHIFT SLS HIV Codes"
 * description = """
 SHIFT SLS set of codes representing HIV-related conditions and treatments requiring special privacy protections
@@ -462,7 +462,7 @@ Identified as: v3-ActCode#GDIS
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinGDISCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinGDISCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinGDISCodes"
 * title = "ValueSet - SHIFT SLS Genetic Disease Information Codes"
 * description = """
 SHIFT SLS set of codes representing genetic disease information requiring special privacy protections
@@ -502,7 +502,7 @@ Identified as: v3-ActCode#SDV
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinSDVCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSDVCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSDVCodes"
 * title = "ValueSet - SHIFT SLS Sexual Assault / Domestic Violence Codes"
 * description = """
 SHIFT SLS set of codes representing sexual assault and domestic violence requiring special privacy protections
@@ -571,7 +571,7 @@ Identified as: PSYTHPN, BH
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinPSYTHPNCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinPSYTHPNCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinPSYTHPNCodes"
 * title = "ValueSet - SHIFT SLS Psychiatric Notes Use Codes"
 * description = """
 SHIFT SLS set of codes representing psychiatric notes requiring special privacy protections. 
@@ -605,7 +605,7 @@ Identified as: v3-ActCode#OPIOIDUD
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinOpioidCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinOpioidCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinOpioidCodes"
 * title = "ValueSet - SHIFT SLS Opioid Codes"
 * description = """
 SHIFT SLS set of codes representing opioid abuse requiring special privacy protections.
@@ -687,7 +687,7 @@ Identified as: SUD
 * experimental = false
 * version = "0.1.0"
 * name = "ShiftMinHallucinogenCodes"
-* url = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinHallucinogenCodes"
+* url = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinHallucinogenCodes"
 * title = "ValueSet - SHIFT SLS Hallucinogen Codes"
 * description = """
 SHIFT SLS set of codes representing hallucinogen abuse requiring special privacy protections
@@ -718,16 +718,16 @@ Title: "ValueSet - SHIFT SLS Sensitive Kind Codes"
 Description: "SHIFT SLS set of codes representing kinds of sensitive information requiring special privacy protections"
 * ^experimental = false
 * ^version = "0.1.0"
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinHallucinogenCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinOpioidCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinBHCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSEXCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinAbortionCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSTDCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinHIVCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinGDISCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSDVCodes
-* codes from valueset http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinPSYTHPNCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinHallucinogenCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinOpioidCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinBHCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSEXCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinAbortionCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSTDCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinHIVCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinGDISCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSDVCodes
+* codes from valueset http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinPSYTHPNCodes
 
 
 
@@ -738,25 +738,25 @@ Title: "Bundle - SHIFT SLS Sensitive Kind Codes"
 Description: "SHIFT SLS Bundle containing ValueSets representing kinds of sensitive information requiring special privacy protections"
 * type = #collection
 * entry[+].resource = ShiftMinHallucinogenCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinHallucinogenCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinHallucinogenCodes"
 * entry[+].resource = ShiftMinOpioidCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinOpioidCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinOpioidCodes"
 * entry[+].resource = ShiftMinBHCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinBHCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinBHCodes"
 * entry[+].resource = ShiftMinSEXCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSEXCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSEXCodes"
 * entry[+].resource = ShiftMinAbortionCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinAbortionCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinAbortionCodes"
 * entry[+].resource = ShiftMinSTDCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSTDCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSTDCodes"
 * entry[+].resource = ShiftMinHIVCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinHIVCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinHIVCodes"
 * entry[+].resource = ShiftMinGDISCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinGDISCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinGDISCodes"
 * entry[+].resource = ShiftMinSDVCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSDVCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSDVCodes"
 * entry[+].resource = ShiftMinPSYTHPNCodes
-* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinPSYTHPNCodes"
+* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinPSYTHPNCodes"
 //* entry[+].resource = ShiftMinSensitiveCodes
-//* entry[=].fullUrl = "http://johnmoehrke.github.io/SLSValueSets/ValueSet/ShiftMinSensitiveCodes"
+//* entry[=].fullUrl = "http://SHIFT-Task-Force.github.io/SLSValueSets/ValueSet/ShiftMinSensitiveCodes"
 
