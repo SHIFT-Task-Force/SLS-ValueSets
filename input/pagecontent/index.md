@@ -1,5 +1,9 @@
 Privacy Consent driven access control through data sensitivity tagging. These ValueSets and SLS are in support of the [SHIFT Task Force's demo patients IG](https://build.fhir.org/ig/SHIFT-Task-Force/demo-fhir-data)
 
+<div markdown="1" class="dragon">
+This project is open source, but that does not make every included code system or terminology available for unrestricted use. The project's license applies only to material it has the right to license; codes and other terminology content remain subject to the terms set by their respective owners. Check the applicable source and license terms before using or redistributing that content. See [the included IP statements](download.html#ip-statements).
+</div>
+
 <div markdown="1" class="stu-note">
 
 Published here are many variety of sensitive codes in ValueSets, but they are included only as examples. Formal ValueSet building is being done in HL7 as part of the [HL7 Cross-Paradigm Sensitive Data and Sensitivity Flags Library and Guidance](https://confluence.hl7.org/spaces/CGP/pages/321160258/Cross-Paradigm+Sensitive+Data+and+Sensitivity+Flags+Library+and+Guidance).

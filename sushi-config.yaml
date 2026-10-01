@@ -2,24 +2,19 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: johnmoehrke.slsvaluesets
-canonical: http://johnmoehrke.github.io/SLSValueSets
-name: JohnMoehrkeSLSValueSets
-title: JohnMoehrke SLS ValueSets Implementation Guide
-description: An Implementation Guide for Security Labeling Services (SLS) ValueSets that are NOT those from the SHIFT Task Force.
+id: SHIFT-Task-Force.SLS-ValueSets
+canonical: http://SHIFT-Task-Force.github.io/SLS-ValueSets
+name: SHIFTTaskForceSLSValueSets
+title: SHIFT Public SLS ValueSets Implementation Guide
+description: A SHIFT Task Force Implementation Guide for Security Labeling Services (SLS) ValueSets that show the concept of Sensitivity ValueSets.
 status: active
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build
 publisher:
-  name: John Moehrke
-  url: http://johnmoehrke.github.io
-contact:
-  - name: John Moehrke (himself)
-    telecom:
-      - system: email
-        value: JohnMoehrke@gmail.com
+  name: SHIFT-Task-Force
+  url: https://www.shiftinterop.org/
 license: CC-BY-4.0
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 
@@ -39,7 +34,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-publisher: 'true'
   apply-version: 'true'
   pin-canonicals: pin-multiples
-  auto-oid-root: 1.3.6.1.4.1.66281.18
+  auto-oid-root: 1.3.6.1.4.1.66281.3.1
   
 
 dependencies:
