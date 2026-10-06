@@ -49,6 +49,8 @@ dependencies:
 pages:
   index.md:
     title: "IG Home"
+  minShift.md:
+    title: "Minimal SHIFT SLS ValueSets"
   LeapSls.md:
     title: "Leap SLS valueSets"
   synthea.md:
@@ -64,6 +66,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Minimal SHIFT SLS ValueSets: minShift.html
   Artifacts: artifacts.html
   About: download.html
 

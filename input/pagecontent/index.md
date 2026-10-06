@@ -9,6 +9,17 @@ This project is open source, but that does not make every included code system o
 Published here are many variety of sensitive codes in ValueSets, but they are included only as examples. Formal ValueSet building is being done in HL7 as part of the [HL7 Cross-Paradigm Sensitive Data and Sensitivity Flags Library and Guidance](https://confluence.hl7.org/spaces/CGP/pages/321160258/Cross-Paradigm+Sensitive+Data+and+Sensitivity+Flags+Library+and+Guidance).
 </div>
 
+The ValueSets are compliant with the profile on ValueSet defined in the [Security Labeling Service (SLS) Reference Implementation (RI) API Definition](https://build.fhir.org/ig/SHIFT-Task-Force/sls-ri-ig/branches/main/index.html). The ValueSets include forced expansion, as the expansion and the date of the expansion are used during the Labeling process to determine data that needs to be reevaluated due to fresher ValueSet or ValueSet expansion being available. The [SLS Reference Implementation GitHub Repository](https://github.com/SHIFT-Task-Force/sls-ri) will use an expansion passed in, but if no expansion is provided it will utilize tx.fhir.org to perform the expansion with a date stamp at that moment.
+
+The [SHIFT GitHub](https://github.com/SHIFT-Task-Force) has:
+
+- [SHIFT SLS ValueSets](https://github.com/SHIFT-Task-Force/Shift-ValueSets) (This publication source)
+- [SHIFT SLS Reference Implementation](https://github.com/SHIFT-Task-Force/sls-ri)
+- [SHIFT SLS Implementation Guide](https://github.com/SHIFT-Task-Force/sls-ri-ig) - Definition of the RI API, and profiling of ValueSet for Sensitive Topics.
+  - [SLS RI API Definition](https://build.fhir.org/ig/SHIFT-Task-Force/sls-ri-ig/branches/main/index.html)
+- [SHIFT SLS Demo Data](https://github.com/SHIFT-Task-Force/sls-demo-data) - Use-cases that SHIFT is working on.
+  - [SHIFT Task Force's demo patients IG](https://build.fhir.org/ig/SHIFT-Task-Force/demo-fhir-data)
+
 ### Sensitive data as Venn diagram
 
 Normal data is all data that is identifiable and not specifically sensitive, any data that is sensitive would be Restricted. "Normal" refers to the normal average curve, thus the majority of data. Sensitive data can be categorized into sensitivity topics, and some data may fall into multiple sensitive categories, as illustrated in the Venn diagram below.
@@ -23,13 +34,9 @@ Normal data is often not tagged as Normal, but rather is just the absence of any
 
 The data are tagged purely due to their data content, and not due to any other factors such as the Patient consent status. The labeling does not imply that there is any particular access control policy in place, but rather that the data is sensitive and may require special handling. The access control policies would be defined separately, and could use the presence of these sensitivity tag to make decisions about who can access the data and under what circumstances.
 
-### SHIFT SLS ValueSets
+### Minimal SHIFT SLS ValueSets
 
-The SHIFT SLS ValueSets are a set of ValueSets that are being developed in support of the SHIFT demo use-cases and the SHIFT SLS Reference Implementation. They are based on the codes that are being used in the SHIFT demo data, and are intended to be used as configuration files for the SLS-RI. They are not intended to be comprehensive, but rather to support the specific use-cases that SHIFT is working on.
-
-- SHIFT [SLS ValueSets](https://build.fhir.org/ig/SHIFT-Task-Force/SLS-ValueSets/)
-- SHIFT [SLS Reference Implementation GitHub Repository](https://github.com/SHIFT-Task-Force/sls-ri), and 
-- [SLS RI API Definition](https://build.fhir.org/ig/SHIFT-Task-Force/sls-ri-ig/branches/main/index.html).
+The [Minimal SHIFT SLS ValueSets](minShift.html) are a set of ValueSets that are being developed in support of the [SHIFT demo use-cases](https://build.fhir.org/ig/SHIFT-Task-Force/demo-fhir-data) and the [SHIFT SLS Reference Implementation](https://github.com/SHIFT-Task-Force/sls-ri). They are based on the codes that are being used in the SHIFT demo data, and are intended to be used as configuration files for the SLS-RI. They are not intended to be comprehensive, but rather to support the specific use-cases that SHIFT is working on, and show how the ValueSet profile is used.
 
 ### Leap SLS implicit valueSets
 
